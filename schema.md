@@ -7,8 +7,8 @@
 | `username`          | string    | not null, indexed, unique |
 | `email`             | string    | not null, indexed, unique |      
 | `img_url`           | string    |                           |  
-| `followers_user_ids`| array     |                           | 
-| `following_user_ids`| array     |                           | 
+| `followers_user_ids`| array     | *ACCOMPLISH THRU ASSOC*   | 
+| `following_user_ids`| array     | *ACCOMPLISH THRU ASSOC*   | 
 | `password_digest`   | string    | not null                  |
 | `session_token`     | string    | not null, indexed, unique |
 | `created_at`        | datetime  | not null                  |
@@ -26,8 +26,8 @@
 | `id`              | integer   | not null, primary key          |
 | `title`           | string    | not null                       |
 | `img_url`         | string    |                                |
-| `artist_id`       | integer   | not null, indexed, foreign key |     
-| `album_id`        | string    | not null                       |
+| `artist_id`       | integer   | not null, indexed, foreign key |   
+| `album_id`        | integer   |                                |
 | `created_at`      | datetime  | not null                       |
 | `updated_at`      | datetime  | not null                       |
 
@@ -42,7 +42,7 @@
 |:------------------|:---------:|:-------------------------------|
 | `id`              | integer   | not null, primary key          |
 | `title`           | string    | not null                       |
-| `artist_id`       | integer   | not null, indexed, foreign key |     
+| `artist_id`       | integer   | not null, indexed, foreign key | 
 | `created_at`      | datetime  | not null                       |
 | `updated_at`      | datetime  | not null                       |
 
@@ -55,7 +55,7 @@
 | column name       | data type | details                         |
 |:------------------|:---------:|:--------------------------------|
 | `id`              | integer   | not null, primary key           |
-| `name`            | string    | not null, unique                |     
+| `title`           | string    | not null, unique                |  
 | `user_id`         | integer   | not null, indexed, foreign key  | 
 | `created_at`      | datetime  | not null                        |
 | `updated_at`      | datetime  | not null                        |   
@@ -70,7 +70,7 @@
 |:------------------|:---------:|:--------------------------------|
 | `id`              | integer   | not null, primary key           |
 | `user_id`         | integer   | not null, indexed, foreign key  |
-| `track_id`        | integer   | not null, indexed, foreign key  |         
+| `track_id`        | integer   | not null, indexed, foreign key  |  
 | `created_at`      | datetime  | not null                        |
 | `updated_at`      | datetime  | not null                        |
 
@@ -86,7 +86,7 @@
 | `id`              | integer   | not null, primary key           |
 | `body`            | text      | not null                        |
 | `author_id`       | integer   | not null, indexed, foreign key  |
-| `track_id`        | integer   | not null, indexed, foreign key  |         
+| `track_id`        | integer   | not null, indexed, foreign key  |   
 | `created_at`      | datetime  | not null                        |
 | `updated_at`      | datetime  | not null                        |
 

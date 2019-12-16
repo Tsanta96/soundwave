@@ -1,5 +1,45 @@
 {
   "name": "soundwave",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-react": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-redux": "^7.1.3",
+    "react-router-dom": "^5.1.2",
+    "redux": "^4.0.4",
+    "webpack": "^4.41.3",
+    "webpack-cli": "^3.3.10"
+  },
+  "devDependencies": {},
+  "description": "Soundwave is a clone of the popular music sharing site, SoundCloud. This is my fullstack project for App Academy.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "engines": {
+    "node": "10.15.3",
+    "npm": "6.11.3"
+  },
+  "scripts": {
+    "postinstall": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch --mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tsanta96/soundwave.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tsanta96/soundwave/issues"
+  },
+  "homepage": "https://github.com/Tsanta96/soundwave#readme"
 }

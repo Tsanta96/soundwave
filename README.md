@@ -1,5 +1,7 @@
 # README
 
+Soundwave is a clone of the popular music sharing site, SoundCloud. This is my fullstack project for App Academy.
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
