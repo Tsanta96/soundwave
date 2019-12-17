@@ -5,5 +5,5 @@ class Like < ApplicationRecord
     #belongs to a user
     belongs_to :user, 
     foreign_key: :user_id, 
-    className: :User
+    class_name: :User
 end

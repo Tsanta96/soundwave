@@ -6,6 +6,6 @@ class Comment < ApplicationRecord
     #can only have one author
     belongs_to :author,
     foreign_key: :author_id,
-    className: :User
+    class_name: :User
 
 end

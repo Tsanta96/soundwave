@@ -5,7 +5,7 @@ class Playlist < ApplicationRecord
     #playlist belongs to a user
     belongs_to :user, 
     foreign_key: :user_id,
-    className: :User
+    class_name: :User
 
     #playlist has many tracks
     has_many :tracks 
