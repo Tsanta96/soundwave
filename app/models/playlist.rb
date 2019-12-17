@@ -8,7 +8,6 @@ class Playlist < ApplicationRecord
     class_name: :User
 
     #playlist has many tracks
-    has_many :tracks 
-    foreign_key: 
+
 
 end
