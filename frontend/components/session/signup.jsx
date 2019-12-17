@@ -10,6 +10,7 @@ class Signup extends React.Component {
             password: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDemoSubmit = this.handleDemoSubmit.bind(this);
     }
 
     handleInput(field) {
@@ -21,13 +22,39 @@ class Signup extends React.Component {
     handleSubmit(e) {
         e.preventDefault()
         this.props.createNewUser(this.state)
-            .then(console.log("hello")); //track index
+            .then(() => this.props.history.push('/tracks')); // ROUTE TO TRACK INDEX
     };
+
+    // For Demo User
+    handleDemoSubmit(e) {
+        e.preventDefault()
+        
+        const demoUser = {
+            username: "DemoUser22",
+            email: "Demo@soundwave.com",
+            password: "DemoUserPass"
+        }
+        
+        this.props.login(demoUser)
+            .then(() => this.props.history.push('/tracks'));
+    }
+
+    renderErrors() {
+        if (this.props.errors) {
+            return Object.values(this.props.errors)
+                .map((error, idx) => (<li key={idx}>{error}</li>)
+            )
+        }
+    }
+
 
     render() {
         return (
             <div className="session-form">
-                <h2>Sign Up!</h2>
+                <ul className="form-errors">
+                    {this.renderErrors()}
+                </ul>
+                <h2>Sign Up</h2>
                 <form>
                     <label>Username:
                         <input 
@@ -51,6 +78,7 @@ class Signup extends React.Component {
                         />
                     </label>
                     <button onClick={this.handleSubmit}>Sign Up</button>
+                    <button onClick={this.handleDemoSubmit}>Demo</button>
                 </form>
             </div>
             )

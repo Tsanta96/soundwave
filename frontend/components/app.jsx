@@ -1,15 +1,26 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import SignupContainer from './session/signup_container';
+import LoginContainer from './session/login_container';
 import TrackIndex from './tracks/track_index'
+import NavBarContainer from './nav_bar/nav_bar_container';
+import { AuthRoute, ProtectedRoute } from '../utils/route_utils';
 
 const App = () => {
     return (
         <div>
-            <TrackIndex />
-            <Route path="/signup" component={SignupContainer}/>
+            <Route path="/" component={NavBarContainer}/>
+            <AuthRoute path="/signup" component={SignupContainer}/>
+            <AuthRoute path="/login" component={LoginContainer}/>
+            <ProtectedRoute path="/tracks" component={TrackIndex} />
         </div>
     )
 }
 
 export default App;
+
+/* 
+<ProtectedRoute path="/profile/:id" component={ProfileComponent} />
+<ProtectedRoute path="/create/" component={CreateAudioComponent} />
+<ProtectedRoute path="/stream" component={StreamComponent} /> 
+*/
