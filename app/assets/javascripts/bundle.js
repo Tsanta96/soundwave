@@ -185,7 +185,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var App = function App() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-    path: "/",
+    path: "/nav/",
     component: _nav_bar_nav_bar_container__WEBPACK_IMPORTED_MODULE_5__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "body-view"
@@ -200,7 +200,7 @@ var App = function App() {
     path: "/login",
     component: _session_login_container__WEBPACK_IMPORTED_MODULE_3__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_utils_route_utils__WEBPACK_IMPORTED_MODULE_7__["ProtectedRoute"], {
-    path: "/tracks",
+    path: "/nav/tracks",
     component: _tracks_track_index__WEBPACK_IMPORTED_MODULE_4__["default"]
   })));
 };
@@ -232,8 +232,22 @@ __webpack_require__.r(__webpack_exports__);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "home"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "home-img"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Discover Tracks with SoundWave"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Add your own songs and discover what other musicians are working on.")));
+    className: "blue-bar"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "home-view"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "home-header"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "home-logo"
+  }, "SoundWave"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "auth-btns"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/login",
+    id: "login"
+  }, "Log In"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/signup",
+    id: "signup"
+  }, "Sign Up"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Discover Tracks with SoundWave"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Add your own songs and discover what other musicians are working on."))));
 });
 
 /***/ }),

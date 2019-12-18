@@ -3,22 +3,77 @@
     height: 100%;
 }
 
-.home-img {
+.blue-bar {
+    background-color: blue;
+    height: 15px;
+}
+
+.home-view {
     background-image: url("https://images.pexels.com/photos/1238941/pexels-photo-1238941.jpeg?cs=srgb&dl=grayscale-photography-of-person-playing-turntable-1238941.jpg&fm=jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     height: 700px;
+    margin-top: 10px;
+}
+
+.home-header {
+    display: flex;
+    justify-content: space-between
+}
+
+.home-logo {
+    font-size: 30px;
+    text-align: left;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 40px;
+    color: #ccefff;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+
+.auth-btns {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    width: 200px;
+    font-size: 14px;
+    margin-top: 30px;
+    margin-right: 100px;
+    font-size: 14px;
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+}
+
+#login {
+    border: 1px solid #ccefff;
+    border-radius: 3px;
+    padding: 5px 15px;
+    text-decoration: none;
+    color: #ccefff;
+}
+
+#login:hover {
+    border: 1px solid white;
+}
+
+#signup {
+    background-color: #ccefff;
+    border: 1px solid #ccefff;
+    border-radius: 3px;
+    padding: 5px 25px;
+    text-decoration: none;
+    color: black;
 }
 
 .home h1 {
     margin: 5px auto;
-    margin-top: 130px;
+    padding-top: 80px;
     color: white;
     text-align: center;
     font-family: 'Quicksand', sans-serif;
     font-size: 50px;
-    font-weight: 1000px;
 }
 
 .home p {
@@ -30,4 +85,4 @@
     font-weight: 1000px;
 }
 
-background-image: url("https://images.pexels.com/photos/1238941/pexels-photo-1238941.jpeg?cs=srgb&dl=grayscale-photography-of-person-playing-turntable-1238941.jpg&fm=jpg");
+

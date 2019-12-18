@@ -10,12 +10,12 @@ import { AuthRoute, ProtectedRoute } from '../utils/route_utils';
 const App = () => {
     return (
         <div>
-            <Route path="/" component={NavBarContainer}/>
+            <Route path="/nav/" component={NavBarContainer}/>
             <div className="body-view">
                 <Route exact path="/" component={Home} />
                 <AuthRoute path="/signup" component={SignupContainer}/>
                 <AuthRoute path="/login" component={LoginContainer}/>
-                <ProtectedRoute path="/tracks" component={TrackIndex} />
+                <ProtectedRoute path="/nav/tracks" component={TrackIndex} />
             </div>
         </div>
     )

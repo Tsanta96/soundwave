@@ -15,7 +15,7 @@
     padding: 20px;
 }
 
-.auth-btns {
+/* .auth-btns {
     display: flex;
     align-items: center;
     margin-right: 25px;
@@ -25,9 +25,9 @@
     border-radius: 10px;
     font-weight: 1000;
     height: 30px;
-}
+} */
 
-#login {
+/* #login {
     padding: 6px;
     text-decoration: none;
     color: #00aeff;
@@ -48,7 +48,7 @@
 #signup:hover {
     background-color: white;
     border-radius: 10px 0 0 10px;
-}
+} */
 
 /* profile icon and logout */
 
