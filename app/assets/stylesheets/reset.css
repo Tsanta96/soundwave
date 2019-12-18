@@ -50,3 +50,7 @@ q:before, q:after {
 blockquote, q {
     quotes: """";
 }
+
+.body-view {
+    margin: 0 40px;
+}
