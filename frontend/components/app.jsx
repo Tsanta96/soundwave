@@ -4,18 +4,21 @@ import SignupContainer from './session/signup_container';
 import LoginContainer from './session/login_container';
 import TrackIndex from './tracks/track_index'
 import NavBarContainer from './nav_bar/nav_bar_container';
-import Home from './home/home'
+import HomeContainer from './home/home_container';
+import Modal from './modal/modal.jsx';
+import GreetingContainer from './greeting/greeting_container';
 import { AuthRoute, ProtectedRoute } from '../utils/route_utils';
 
 const App = () => {
     return (
         <div>
+            <Modal />
             <Route path="/nav/" component={NavBarContainer}/>
             <div className="body-view">
-                <Route exact path="/" component={Home} />
+                <Route exact path="/" component={HomeContainer} />
                 <AuthRoute path="/signup" component={SignupContainer}/>
                 <AuthRoute path="/login" component={LoginContainer}/>
-                <ProtectedRoute path="/nav/tracks" component={TrackIndex} />
+                <Route path="/nav/tracks" component={TrackIndex} />
             </div>
         </div>
     )

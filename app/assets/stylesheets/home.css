@@ -23,10 +23,9 @@
 }
 
 .home-logo {
-    font-size: 30px;
+    font-size: 40px;
     text-align: left;
     font-family: 'Quicksand', sans-serif;
-    font-size: 40px;
     color: #ccefff;
     padding-left: 30px;
     padding-top: 30px;
@@ -37,9 +36,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 30px;
+    height: 40px;
     width: 200px;
-    font-size: 14px;
     margin-top: 30px;
     margin-right: 100px;
     font-size: 14px;
@@ -47,6 +45,10 @@
 }
 
 #login {
+    font-size: 14px;
+    height: 30px;
+    width: 80px;
+    background-color: Transparent;
     border: 1px solid #ccefff;
     border-radius: 3px;
     padding: 5px 15px;
@@ -56,15 +58,23 @@
 
 #login:hover {
     border: 1px solid white;
+    cursor: pointer;
 }
 
 #signup {
+    font-size: 14px;
+    height: 30px;
+    width: 100px;
     background-color: #ccefff;
     border: 1px solid #ccefff;
     border-radius: 3px;
     padding: 5px 25px;
     text-decoration: none;
     color: black;
+}
+
+#signup:hover {
+    cursor: pointer;
 }
 
 .home h1 {

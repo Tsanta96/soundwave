@@ -22,7 +22,7 @@ class Signup extends React.Component {
     handleSubmit(e) {
         e.preventDefault()
         this.props.createNewUser(this.state)
-            .then(() => this.props.history.push('/tracks')); // ROUTE TO TRACK INDEX
+            .then(() => this.props.history.push('/nav/tracks')); // ROUTE TO TRACK INDEX
     };
 
     // For Demo User
@@ -36,7 +36,7 @@ class Signup extends React.Component {
         }
         
         this.props.login(demoUser)
-            .then(() => this.props.history.push('/tracks'));
+            .then(() => this.props.history.push('/nav/tracks'));
     }
 
     renderErrors() {
