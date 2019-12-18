@@ -816,18 +816,15 @@ function (_React$Component) {
   }, {
     key: "handleSubmit",
     value: function handleSubmit(e) {
-      var _this3 = this;
-
       e.preventDefault();
-      this.props.createNewUser(this.state).then(function () {
-        return _this3.props.history.push('/nav/tracks');
-      }); // ROUTE TO TRACK INDEX
+      this.props.createNewUser(this.state);
+      console.log(this); // .then(() => this.props.history.push('/nav/tracks')); // ROUTE TO TRACK INDEX
     }
   }, {
     key: "handleDemoSubmit",
     // For Demo User
     value: function handleDemoSubmit(e) {
-      var _this4 = this;
+      var _this3 = this;
 
       e.preventDefault();
       var demoUser = {
@@ -836,7 +833,7 @@ function (_React$Component) {
         password: "DemoUserPass"
       };
       this.props.login(demoUser).then(function () {
-        return _this4.props.history.push('/nav/tracks');
+        return _this3.props.history.push('/nav/tracks');
       });
     }
   }, {

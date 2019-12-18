@@ -89,6 +89,7 @@
 .home p {
     /* margin: 100px auto; */
     color: #ccefff;
+    font-weight: bolder;
     text-align: center;
     font-family: 'Quicksand', sans-serif;
     font-size: 30px;

@@ -22,7 +22,8 @@ class Signup extends React.Component {
     handleSubmit(e) {
         e.preventDefault()
         this.props.createNewUser(this.state)
-            .then(() => this.props.history.push('/nav/tracks')); // ROUTE TO TRACK INDEX
+            console.log(this);
+            // .then(() => this.props.history.push('/nav/tracks')); // ROUTE TO TRACK INDEX
     };
 
     // For Demo User
