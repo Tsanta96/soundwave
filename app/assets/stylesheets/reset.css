@@ -51,6 +51,7 @@ blockquote, q {
     quotes: """";
 }
 
+/* Added margins */
 .body-view {
     margin: 0 40px;
 }
