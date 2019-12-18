@@ -1,0 +1,31 @@
+.home {
+    display: grid;
+    height: 100%;
+}
+
+.home-img {
+    background-image: url("https://images.pexels.com/photos/1238941/pexels-photo-1238941.jpeg?cs=srgb&dl=grayscale-photography-of-person-playing-turntable-1238941.jpg&fm=jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 700px;
+}
+
+.home h1 {
+    margin: 5px auto;
+    margin-top: 130px;
+    color: white;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 50px;
+    font-weight: 1000px;
+}
+
+.home p {
+    /* margin: 100px auto; */
+    color: #ccefff;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    font-weight: 1000px;
+}

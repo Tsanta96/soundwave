@@ -4,12 +4,14 @@ import SignupContainer from './session/signup_container';
 import LoginContainer from './session/login_container';
 import TrackIndex from './tracks/track_index'
 import NavBarContainer from './nav_bar/nav_bar_container';
+import Home from './home/home'
 import { AuthRoute, ProtectedRoute } from '../utils/route_utils';
 
 const App = () => {
     return (
         <div>
             <Route path="/" component={NavBarContainer}/>
+            <Route exact path="/" component={Home} />
             <AuthRoute path="/signup" component={SignupContainer}/>
             <AuthRoute path="/login" component={LoginContainer}/>
             <ProtectedRoute path="/tracks" component={TrackIndex} />
