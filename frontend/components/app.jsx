@@ -6,7 +6,6 @@ import TrackIndex from './tracks/track_index'
 import NavBarContainer from './nav_bar/nav_bar_container';
 import HomeContainer from './home/home_container';
 import Modal from './modal/modal.jsx';
-import GreetingContainer from './greeting/greeting_container';
 import { AuthRoute, ProtectedRoute } from '../utils/route_utils';
 
 const App = () => {
