@@ -3,12 +3,23 @@ import { Link } from 'react-router-dom';
 
 //Add links to navbar to navigate
 class NavBar extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.handleLogout = this.handleLogout.bind(this);
+    }
+
+    handleLogout() {
+        this.props.logout()
+            .then(this.props.history.push('/'));
+    }
+
     render() {
-        const { currentUser, logout } = this.props
+        const { currentUser } = this.props
         const authAction = currentUser ? (
             <div className="profile-icon">
                 <h2>{currentUser.username}</h2>
-                <button onClick={logout}>Log Out</button>
+                <button onClick={this.handleLogout}>Log Out</button>
             </div>
         ) : (
             <div className="auth-btns">

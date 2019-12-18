@@ -3,6 +3,7 @@
     flex-direction: column;
     background-color: #0099cc;
     height: 350px;
+    border-radius: 20px;
 }
 
 .form-errors {

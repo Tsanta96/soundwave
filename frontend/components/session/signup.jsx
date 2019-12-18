@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 class Signup extends React.Component {
     constructor(props) {
@@ -22,8 +23,8 @@ class Signup extends React.Component {
     handleSubmit(e) {
         e.preventDefault()
         this.props.createNewUser(this.state)
-            console.log(this);
-            // .then(() => this.props.history.push('/nav/tracks')); // ROUTE TO TRACK INDEX
+            .then(() => this.props.history.push('/nav/tracks'))
+                .then(this.props.closeModal);
     };
 
     // For Demo User
@@ -37,7 +38,8 @@ class Signup extends React.Component {
         }
         
         this.props.login(demoUser)
-            .then(() => this.props.history.push('/nav/tracks'));
+            .then(() => this.props.history.push('/nav/tracks'))
+                .then(this.props.closeModal);
     }
 
     renderErrors() {
@@ -86,4 +88,4 @@ class Signup extends React.Component {
         }
     }
     
-export default Signup;
+export default withRouter(Signup);

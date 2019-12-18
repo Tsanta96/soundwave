@@ -16,8 +16,6 @@ const App = () => {
             <Route path="/nav/" component={NavBarContainer}/>
             <div className="body-view">
                 <Route exact path="/" component={HomeContainer} />
-                <AuthRoute path="/signup" component={SignupContainer}/>
-                <AuthRoute path="/login" component={LoginContainer}/>
                 <Route path="/nav/tracks" component={TrackIndex} />
             </div>
         </div>
