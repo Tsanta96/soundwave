@@ -1,0 +1,79 @@
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00b8e6;
+    padding: 5px;
+    height: 100px;
+}
+
+.logo {
+    /* border: 2px solid #ccefff; */
+    font-size: 45px;
+    font-family: 'Quicksand', sans-serif;
+    color: #ccefff;
+    margin-left: 40px;
+    padding: 20px;
+}
+
+.auth-btns {
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+    font-size: 18px;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #ccefff;
+    border-radius: 10px;
+    /* padding: 10px; */
+    font-weight: 1000;
+    height: 30px;
+}
+
+#login {
+    padding: 6px;
+    text-decoration: none;
+    color: #00aeff;
+}
+
+#signup {
+    padding: 6px;
+    text-decoration: none;
+    color: #00aeff;
+    border-right: 1px solid #00aeff;
+}
+
+#login:hover {
+    background-color: white;
+    border-radius: 0 10px 10px 0;
+}
+
+#signup:hover {
+    background-color: white;
+    border-radius: 10px 0 0 10px;
+}
+
+/* profile icon and logout */
+
+.profile-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* margin-right: 10px; */
+    padding: 10px;
+    background-color: #00b8e6;
+    border-left: 1px solid black;
+    height: 90px;
+    width: 80px;
+}
+
+.profile-icon h2 {
+    margin: 0 auto;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.profile-icon button {
+    margin-left: 10px;
+    width: 70px;
+    height: 30px;
+}

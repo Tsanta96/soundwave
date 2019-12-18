@@ -1,18 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+//Add links to navbar to navigate
 class NavBar extends React.Component {
     render() {
         const { currentUser, logout } = this.props
         const authAction = currentUser ? (
-            <div>
-                <h2>Welcome {currentUser.username}</h2>
+            <div className="profile-icon">
+                <h2>{currentUser.username}</h2>
                 <button onClick={logout}>Log Out</button>
             </div>
         ) : (
-            <div>
-                <Link to="/signup">Sign Up</Link>
-                <Link to="/login">Log In</Link>
+            <div className="auth-btns">
+                <Link to="/signup" id="signup">Sign Up</Link>
+                <Link to="/login" id="login">Log In</Link>
             </div>
         );
 

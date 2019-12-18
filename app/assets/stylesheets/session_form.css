@@ -1,0 +1,71 @@
+.session-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #0099cc;
+    height: 350px;
+}
+
+.form-errors {
+    background-color: aqua;
+}
+
+.form-type {
+    margin: auto;
+    padding-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    color: #f2f2f2;
+    /* margin-left ; */
+}
+
+.session-form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.session-form label {
+    padding: 10px 0;
+}
+
+.session-form label {
+    /* flex: end; */
+}
+
+label {
+    font-size: 20px;
+}
+
+label input {
+    border-radius: 2px;
+    margin-left: 10px;
+    height: 20px;
+}
+
+.form-btn {
+    width: 100px;
+    height: 35px;
+    margin-left: 140px; 
+    margin-top: 5px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.form-btn:hover {
+    background-color: #b3ecff;
+}
+
+#login-btn {
+    margin-top: 30px;
+}
+
+.email {
+    margin-left: 50px;
+}
+
+.password {
+    margin-left: 12px;
+}

@@ -50,12 +50,9 @@ class Signup extends React.Component {
 
     render() {
         return (
-            <div className="session-form">
-                <ul className="form-errors">
-                    {this.renderErrors()}
-                </ul>
-                <h2>Sign Up</h2>
-                <form>
+            <div className="session-container">
+                <h2 className="form-type">Sign Up</h2>
+                <form className="session-form">
                     <label>Username:
                         <input 
                             type="text"
@@ -64,22 +61,25 @@ class Signup extends React.Component {
                         />
                     </label>
                     <label>Email:
-                        <input
+                        <input className="email"
                             type="text"
                             value={this.state.email}
                             onChange={this.handleInput('email')}
                         />
                     </label>
                     <label>Password:
-                        <input
+                        <input className="password"
                             type="password"
                             value={this.state.password}
                             onChange={this.handleInput('password')}
                         />
                     </label>
-                    <button onClick={this.handleSubmit}>Sign Up</button>
-                    <button onClick={this.handleDemoSubmit}>Demo</button>
+                    <button className="form-btn" onClick={this.handleSubmit}>Sign Up</button>
+                    <button className="form-btn" onClick={this.handleDemoSubmit}>Demo</button>
                 </form>
+                <ul className="form-errors">
+                    {this.renderErrors()}
+                </ul>
             </div>
             )
         }

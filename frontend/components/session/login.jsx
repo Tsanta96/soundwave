@@ -31,12 +31,9 @@ class Login extends React.Component {
 
     render() {
         return (
-            <div className="session-form">
-                <ul>
-                    {this.renderErrors()}
-                </ul>
-                <h2>Log In</h2>
-                <form>
+            <div className="session-container">
+                <h2 className="form-type">Log In</h2>
+                <form className="session-form">
                     <label>Username:
                         <input
                             type="text"
@@ -51,8 +48,11 @@ class Login extends React.Component {
                             onChange={this.handleInput('password')}
                         />
                     </label>
-                    <button onClick={this.handleSubmit}>Log In</button>
+                    <button className="form-btn" id="login-btn" onClick={this.handleSubmit}>Log In</button>
                 </form>
+                <ul className="form-errors">
+                    {this.renderErrors()}
+                </ul>
             </div>
         );
     }
