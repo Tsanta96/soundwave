@@ -12,6 +12,12 @@ class Signup extends React.Component {
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleDemoSubmit = this.handleDemoSubmit.bind(this);
+        this.changeForm = this.changeForm.bind(this);
+    }
+
+    changeForm() {
+        this.props.removeErrors();
+        this.props.openModal('login');
     }
 
     handleInput(field) {
@@ -50,7 +56,7 @@ class Signup extends React.Component {
     renderErrors() {
         if (this.props.errors) {
             return Object.values(this.props.errors)
-                .map((error, idx) => (<li key={idx}>-{error}</li>)
+                .map((error, idx) => (<li key={idx}>*{error}</li>)
             )
         }
     }
@@ -85,12 +91,13 @@ class Signup extends React.Component {
                             onChange={this.handleInput('password')}
                         />
                     </label>
+                    <ul className="form-errors">
+                        {this.renderErrors()}
+                    </ul>
                     <button className="form-btn" onClick={this.handleSubmit}>Sign Up</button>
                     <button className="form-btn" onClick={this.handleDemoSubmit}>Demo</button>
                 </form>
-                <ul className="form-errors">
-                    {this.renderErrors()}
-                </ul>
+                <p className="switch-form">Or <button onClick={this.changeForm}>Login</button></p>
             </div>
             )
         }

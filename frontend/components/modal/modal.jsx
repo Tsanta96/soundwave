@@ -1,11 +1,12 @@
 import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
+import { removeErrors } from '../../actions/session_actions';
 import { connect } from 'react-redux';
 import LoginContainer from '../session/login_container';
 import SignupContainer from '../session/signup_container';
 
 
-const Modal = ({modal, closeModal}) => {
+const Modal = ({modal, closeModal, removeErrors}) => {
     if (!modal) {
         return null;
     }
@@ -22,9 +23,9 @@ const Modal = ({modal, closeModal}) => {
     }
 
     return (
-        <div className="modal-background">
-            <button id="close-out" onClick={closeModal}>x</button>
-            <div className="modal-child"> 
+        <div className="modal-background" onClick={closeModal}>
+            <button id="close-out" onClick={()=>{closeModal();removeErrors()}}>x</button>
+            <div className="modal-child" onClick={e => e.stopPropagation()}> 
                 { component }
             </div>
         </div>
@@ -37,7 +38,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    closeModal: () => dispatch(closeModal())
+    closeModal: () => dispatch(closeModal()),
+    removeErrors: () => dispatch(removeErrors())
 })
 
 export default connect(mapStateToProps,mapDispatchToProps)(Modal)
