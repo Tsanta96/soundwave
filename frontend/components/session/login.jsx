@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { openModal } from '../../actions/modal_actions';
 
 class Login extends React.Component {
     constructor(props) {
@@ -9,6 +10,12 @@ class Login extends React.Component {
             password: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.changeForm = this.changeForm.bind(this);
+    }
+
+    changeForm() {
+        this.props.removeErrors();
+        this.props.openModal('signup');
     }
 
     handleInput(field) {
@@ -27,7 +34,7 @@ class Login extends React.Component {
     renderErrors() {
         if (this.props.errors) {
             return Object.values(this.props.errors)
-                .map((error, idx) => <li key={idx}>-{error}</li>)
+                .map((error, idx) => <li key={idx}>*{error}</li>)
         }
     }
 
@@ -52,11 +59,12 @@ class Login extends React.Component {
                             onChange={this.handleInput('password')}
                         />
                     </label>
+                    <ul className="form-errors">
+                        {this.renderErrors()}
+                    </ul>
                     <button className="form-btn" id="login-btn" onClick={this.handleSubmit}>Log In</button>
                 </form>
-                <ul className="form-errors">
-                    {this.renderErrors()}
-                </ul>
+                <p className="switch-form">Or <button onClick={this.changeForm}>Sign up</button></p>
             </div>
         );
     }
