@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-const Home = ({ currentUser, logout, openModal }) => {
+const Home = ({ openModal }) => {
     const sessionLinks = () => (
         <nav className="auth-btns">
             <button id="login" onClick={() => openModal('login')}>Login</button>
@@ -30,4 +29,4 @@ const Home = ({ currentUser, logout, openModal }) => {
 export default Home;
 
     // < Link to = "/login" id = "login" > Log In</Link >
-    //     <Link to="/signup" id="signup">Sign Up</Link>
+    // <Link to="/signup" id="signup">Sign Up</Link>

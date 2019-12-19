@@ -1,12 +1,5 @@
-+ set up auth for signin, logout
-+ display errors
-
-+ New git branch
-
-+ style page
-    + have login/signup be replaced by logout
-+ User can add photo
-+ look into importing audio
++ Figure out how to import files onto site
++ Set up back end for tracks
 
 
 Questions:

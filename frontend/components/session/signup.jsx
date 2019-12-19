@@ -30,6 +30,8 @@ class Signup extends React.Component {
     // For Demo User
     handleDemoSubmit(e) {
         e.preventDefault()
+
+        let errs = this.props.errors
         
         const demoUser = {
             username: "DemoUser22",
@@ -37,9 +39,12 @@ class Signup extends React.Component {
             password: "DemoUserPass"
         }
         
-        this.props.login(demoUser)
-            .then(() => this.props.history.push('/nav/tracks'))
-                .then(this.props.closeModal);
+        this.props.createNewUser(demoUser)
+            .then(() => this.props.history.push('/nav/tracks')),
+                    this.props.login(demoUser)
+                        .then(() => this.props.history.push('/nav/tracks'))
+                            .then(this.props.closeModal)
+                                .then(errs = "");
     }
 
     renderErrors() {

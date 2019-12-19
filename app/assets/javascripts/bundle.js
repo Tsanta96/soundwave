@@ -250,14 +250,10 @@ var App = function App() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-
 
 
 var Home = function Home(_ref) {
-  var currentUser = _ref.currentUser,
-      logout = _ref.logout,
-      openModal = _ref.openModal;
+  var openModal = _ref.openModal;
 
   var sessionLinks = function sessionLinks() {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
@@ -291,7 +287,7 @@ var Home = function Home(_ref) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home); // < Link to = "/login" id = "login" > Log In</Link >
-//     <Link to="/signup" id="signup">Sign Up</Link>
+// <Link to="/signup" id="signup">Sign Up</Link>
 
 /***/ }),
 
@@ -813,14 +809,17 @@ function (_React$Component) {
       var _this4 = this;
 
       e.preventDefault();
+      var errs = this.props.errors;
       var demoUser = {
         username: "DemoUser22",
         email: "Demo@soundwave.com",
         password: "DemoUserPass"
       };
-      this.props.login(demoUser).then(function () {
+      this.props.createNewUser(demoUser).then(function () {
         return _this4.props.history.push('/nav/tracks');
-      }).then(this.props.closeModal);
+      }), this.props.login(demoUser).then(function () {
+        return _this4.props.history.push('/nav/tracks');
+      }).then(this.props.closeModal).then(errs = "");
     }
   }, {
     key: "renderErrors",
@@ -33821,7 +33820,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
