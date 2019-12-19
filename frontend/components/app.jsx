@@ -15,7 +15,7 @@ const App = () => {
             <Route path="/nav/" component={NavBarContainer}/>
             <div className="body-view">
                 <Route exact path="/" component={HomeContainer} />
-                <Route path="/nav/tracks" component={TrackIndex} />
+                <ProtectedRoute path="/nav/tracks" component={TrackIndex} />
             </div>
         </div>
     )

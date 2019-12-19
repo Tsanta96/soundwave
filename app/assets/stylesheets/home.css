@@ -5,7 +5,7 @@
 
 .blue-bar {
     background-color: blue;
-    height: 15px;
+    height: 5px;
 }
 
 .home-view {
@@ -13,8 +13,8 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    height: 700px;
-    margin-top: 10px;
+    height: 720px;
+    margin-top: 5px;
 }
 
 .home-header {

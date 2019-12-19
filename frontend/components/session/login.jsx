@@ -27,7 +27,7 @@ class Login extends React.Component {
     renderErrors() {
         if (this.props.errors) {
             return Object.values(this.props.errors)
-                .map((error, idx) => <li key={idx}>{error}</li>)
+                .map((error, idx) => <li key={idx}>-{error}</li>)
         }
     }
 
@@ -36,16 +36,18 @@ class Login extends React.Component {
             <div className="session-container">
                 <h2 className="form-type">Log In</h2>
                 <form className="session-form">
-                    <label>Username:
+                    <label>
                         <input
                             type="text"
+                            placeholder="  Username"
                             value={this.state.username}
                             onChange={this.handleInput('username')}
                         />
                     </label>
-                    <label>Password:
+                    <label>
                         <input
                             type="password"
+                            placeholder="  Password"
                             value={this.state.password}
                             onChange={this.handleInput('password')}
                         />

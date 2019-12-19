@@ -1,21 +1,29 @@
 .session-container {
     display: flex;
     flex-direction: column;
-    background-color: #0099cc;
-    height: 350px;
-    border-radius: 20px;
+    background-color: white;
+    height: 570px;
+    width: 400x;
+    /* border-radius: 20px; */
 }
 
 .form-errors {
-    background-color: aqua;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    bottom: 50px;
+}
+
+.for-errors li {
+    padding: 5px 0;
 }
 
 .form-type {
     margin: auto;
     padding-top: 20px;
     font-family: 'Roboto', sans-serif;
-    font-size: 30px;
-    color: #f2f2f2;
+    font-size: 35px;
+    color: #387997;
+;
     /* margin-left ; */
 }
 
@@ -27,12 +35,17 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.session-form label {
-    padding: 10px 0;
+.session-form label:first-of-type {
+    border-top: 2px solid #ccefff;
+    padding-top: 60px;
 }
 
 .session-form label {
-    /* flex: end; */
+    padding: 10px 0 20px 0;
+}
+
+.session-form label {
+    width: 350px;
 }
 
 label {
@@ -40,33 +53,53 @@ label {
 }
 
 label input {
+    border: 2px solid #ccefff;
+    height: 35px;
+    width: 345px;
     border-radius: 2px;
-    margin-left: 10px;
-    height: 20px;
+}
+
+input:focus {
+    border: 2px solid #549fb8;
 }
 
 .form-btn {
-    width: 100px;
-    height: 35px;
-    margin-left: 140px; 
-    margin-top: 5px;
-    border-radius: 10px;
-    font-size: 15px;
-    cursor: pointer;
+    height: 40px;
+    margin-top: 20px;
+    background-color: #387997;
+    border-color: #ccefff;
+    font-size: 14px;
+    color: white;
+    font-weight: 200px;
+
+    border-radius: 2px;
+
 }
 
 .form-btn:hover {
-    background-color: #b3ecff;
+    background-color: #549fb8;
 }
 
 #login-btn {
     margin-top: 30px;
 }
 
-.email {
-    margin-left: 50px;
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: rgb(95, 93, 93);
 }
 
-.password {
-    margin-left: 12px;
-} 
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: rgb(95, 93, 93);
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: rgb(95, 93, 93);
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: rgb(95, 93, 93);
+}
