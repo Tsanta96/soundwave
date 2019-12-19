@@ -23,9 +23,9 @@ const Modal = ({modal, closeModal, removeErrors}) => {
     }
 
     return (
-        <div className="modal-background">
+        <div className="modal-background" onClick={closeModal}>
             <button id="close-out" onClick={()=>{closeModal();removeErrors()}}>x</button>
-            <div className="modal-child"> 
+            <div className="modal-child" onClick={e => e.stopPropagation()}> 
                 { component }
             </div>
         </div>

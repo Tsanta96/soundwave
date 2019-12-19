@@ -387,7 +387,8 @@ var Modal = function Modal(_ref) {
   }
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "modal-background"
+    className: "modal-background",
+    onClick: closeModal
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     id: "close-out",
     onClick: function onClick() {
@@ -395,7 +396,10 @@ var Modal = function Modal(_ref) {
       removeErrors();
     }
   }, "x"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "modal-child"
+    className: "modal-child",
+    onClick: function onClick(e) {
+      return e.stopPropagation();
+    }
   }, component));
 }; //Modal Container
 
@@ -913,7 +917,7 @@ function (_React$Component) {
         className: "form-btn",
         onClick: this.handleDemoSubmit
       }, "Demo")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        "class": "switch-form"
+        className: "switch-form"
       }, "Or ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         onClick: this.changeForm
       }, "Login")));

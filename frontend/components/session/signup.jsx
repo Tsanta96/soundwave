@@ -97,7 +97,7 @@ class Signup extends React.Component {
                     <button className="form-btn" onClick={this.handleSubmit}>Sign Up</button>
                     <button className="form-btn" onClick={this.handleDemoSubmit}>Demo</button>
                 </form>
-                <p class="switch-form">Or <button onClick={this.changeForm}>Login</button></p>
+                <p className="switch-form">Or <button onClick={this.changeForm}>Login</button></p>
             </div>
             )
         }
