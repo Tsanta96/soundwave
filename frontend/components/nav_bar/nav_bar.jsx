@@ -17,7 +17,7 @@ class NavBar extends React.Component {
     render() {
         const { currentUser } = this.props
         const authAction = currentUser ? (
-            <div className="profile-icon">
+            <div className="nav-bar-profile-icon">
                 <h2>{currentUser.username}</h2>
                 <button onClick={this.handleLogout}>Log Out</button>
             </div>
@@ -31,6 +31,9 @@ class NavBar extends React.Component {
         return (
             <header className="nav-bar">
                 <h1 className="logo">SoundWave</h1>
+                <div className="nav-bar-upload">
+                    <Link to="/nav/upload">Upload</Link>
+                </div>
                 <div>
                     {authAction}
                 </div>

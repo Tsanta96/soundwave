@@ -8,14 +8,11 @@ import {
 const TracksReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
     let newState = Object.assign({}, oldState);
-    switch (action) {
+    switch (action.type) {
         case RECEIVE_ALL_TRACKS:
             return Object.assign({}, oldState, action.tracks);
         case RECEIVE_TRACK:
-            newState[action.track.id] = action.track;
-            return newState;
-        case RECEIVE_TRACK_ERRORS:
-            return track.errors 
+            return Object.assign({}, oldState, action.track);
         case REMOVE_TRACK:
             delete newState[trackId];
             return newState;

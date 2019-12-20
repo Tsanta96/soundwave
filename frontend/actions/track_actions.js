@@ -40,14 +40,14 @@ export const fetchTrack = trackId => dispatch => (
 
 export const createTrack = newTrack => dispatch => (
     trackUtils.createTrack(newTrack)
-        .then((track) => dispatch(receiveTrack(track))),
-            ((err) => dispatch(receiveTrackErrors(err)))
+        .then((track) => dispatch(receiveTrack(track)),
+            (err) => dispatch(receiveTrackErrors(err.responseJSON)))
 );
 
 export const updateTrack = trackInfo => dispatch => (
     trackUtils.updateTrack(trackInfo)
-        .then((trackInfo) => dispatch(receiveTrack(trackInfo))),
-            ((err) => dispatch(receiveTrackErrors(err)))
+        .then((trackInfo) => dispatch(receiveTrack(trackInfo)),
+            ((err) => dispatch(receiveTrackErrors(err))))
 );
 
 export const deleteTrack = trackId => dispatch => (

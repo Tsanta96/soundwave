@@ -21,7 +21,7 @@ class Api::TracksController < ApplicationController
         if @track.save
             render "api/tracks/show"
         else  
-            render json: ["Upload unsuccessful"], status: 400
+            render json: @track.errors.full_messages, status: 400
         end
     end
 
@@ -48,7 +48,7 @@ class Api::TracksController < ApplicationController
     private 
 
     def track_params 
-        params.require(:track).permit(:title, :artist_id, :track_url)
+        params.require(:track).permit(:title, :artist_id, :track_url, :img_url)
     end
 
 end
