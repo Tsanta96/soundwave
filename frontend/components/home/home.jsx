@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Home = ({ openModal }) => {
+const Home = ({ openModal, removeErrors }) => {
     const sessionLinks = () => (
         <nav className="auth-btns">
             <button id="login" onClick={() => openModal('login')}>Login</button>
-            <button id="signup" onClick={() => openModal('signup')}>Signup</button>
+            <button id="signup" onClick={() => {openModal('signup');removeErrors()}}>Signup</button>
         </nav>
     );
 
