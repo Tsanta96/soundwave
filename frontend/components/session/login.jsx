@@ -41,28 +41,28 @@ class Login extends React.Component {
     render() {
         return (
             <div className="session-container">
-                <h2 className="form-type">Log In</h2>
+                <h2 className="session-form-type">Log In</h2>
                 <form className="session-form">
-                    <label>
+                    <label className="session-label">
                         <input
                             type="text"
-                            placeholder="  Username"
+                            placeholder="Username"
                             value={this.state.username}
                             onChange={this.handleInput('username')}
                         />
                     </label>
-                    <label>
+                    <label className="session-label">
                         <input
                             type="password"
-                            placeholder="  Password"
+                            placeholder="Password"
                             value={this.state.password}
                             onChange={this.handleInput('password')}
                         />
                     </label>
-                    <ul className="form-errors">
+                    <ul className="session-form-errors">
                         {this.renderErrors()}
                     </ul>
-                    <button className="form-btn" id="login-btn" onClick={this.handleSubmit}>Log In</button>
+                    <button className="session-form-btn" id="login-btn" onClick={this.handleSubmit}>Log In</button>
                 </form>
                 <p className="switch-form">Or <button onClick={this.changeForm}>Sign up</button></p>
             </div>

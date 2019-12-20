@@ -6,18 +6,14 @@
     width: 400x;
 }
 
-.form-errors {
+.session-form-errors {
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     bottom: 50px;
     color: #387997;
 }
 
-.for-errors li {
-    padding: 5px 0;
-}
-
-.form-type {
+.session-form-type {
     margin: auto;
     padding-top: 20px;
     font-family: 'Roboto', sans-serif;
@@ -48,22 +44,23 @@
     padding: 10px;
 }
 
-label {
+.session-label {
     font-size: 20px;
 }
 
-label input {
+.session-label input {
     border: 2px solid #ccefff;
     height: 35px;
     width: 345px;
     border-radius: 2px;
+    padding-left: 10px;
 }
 
 input:focus {
     border: 2px solid #549fb8;
 }
 
-.form-btn {
+.session-form-btn {
     height: 40px;
     margin-top: 20px;
     background-color: #387997;
@@ -76,7 +73,7 @@ input:focus {
 
 }
 
-.form-btn:hover {
+.session-form-btn:hover {
     background-color: #549fb8;
 }
 
