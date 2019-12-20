@@ -3,6 +3,11 @@ class User < ApplicationRecord
     validates :email, presence: true, uniqueness: true
     validates :password, length: { minimum: 6, null: true}
 
+    has_many :tracks,
+    foreign_key: :artist_id,
+    class_name: :Track  
+
+
     attr_reader :password 
 
     after_initialize :ensure_session_token
