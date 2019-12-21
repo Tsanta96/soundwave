@@ -8,7 +8,7 @@ import NavBarContainer from './nav_bar/nav_bar_container';
 import HomeContainer from './home/home_container';
 import Modal from './modal/modal.jsx';
 import UploadTrackContainer from './upload_nav/upload_track_container';
-import YouTracks from './upload_nav/you_tracks';
+import YouTracksContainer from './upload_nav/you_tracks_container';
 
 
 const App = () => {
@@ -19,7 +19,7 @@ const App = () => {
             <div className="body-view">
                 <Route exact path="/" component={HomeContainer}/>
                 <Route path="/nav/upload" component={UploadTrackContainer}/>
-                <Route path="/nav/you/tracks" component={YouTracks}/>
+                <Route path="/nav/you/tracks" component={YouTracksContainer}/>
                 <ProtectedRoute path="/nav/tracks" component={TrackIndex}/>
             </div>
         </div>

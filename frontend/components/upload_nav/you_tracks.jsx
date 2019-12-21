@@ -1,25 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import TrackItem from '../tracks/track_item';
 
-const YouTracks = () => {
-    return (
-        <div>
-            <div className="upload-nav">
-                <Link to="/nav/upload">Upload</Link>
-                <Link to="/nav/you/tracks">Your Tracks</Link>
-            </div>
+class YouTracks extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    componentDidMount() {
+        this.props.fetchTracks();
+    }
+
+    render() {
+        debugger;
+        return (
             <div>
-                <h1> Your Tracks: 
-                <div>
-                    <h1>Track Index</h1>
-                    <p>Track 1</p>
-                    <p>Track 2</p>
-                    <p>Track 3</p>
+                <div className="upload-nav">
+                    <Link to="/nav/upload">Upload</Link>
+                    <Link to="/nav/you/tracks">Your Tracks</Link>
                 </div>
-                </h1>
+                <div>
+                    <h1>Your tracks</h1>
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
 
 export default YouTracks;

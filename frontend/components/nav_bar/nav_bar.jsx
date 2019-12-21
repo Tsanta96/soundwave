@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router';
 
 //Add links to navbar to navigate
 class NavBar extends React.Component {
@@ -7,6 +8,13 @@ class NavBar extends React.Component {
         super(props);
 
         this.handleLogout = this.handleLogout.bind(this);
+        this.handleUploadButton = this.handleUploadButton.bind(this);
+    }
+
+    handleUploadButton(e) {
+        e.preventDefault()
+        this.props.fetchTracks()
+            .then(this.props.history.push('/nav/upload'))
     }
 
     handleLogout() {
@@ -32,7 +40,7 @@ class NavBar extends React.Component {
             <header className="nav-bar">
                 <h1 className="logo">SoundWave</h1>
                 <div className="nav-bar-upload">
-                    <Link to="/nav/upload">Upload</Link>
+                    <button onClick={this.handleUploadButton}>Upload</button>
                 </div>
                 <div>
                     {authAction}
@@ -42,7 +50,7 @@ class NavBar extends React.Component {
     }
 }
 
-export default NavBar;
+export default withRouter(NavBar);
 
 
 // const authAction = currentUser ? (
