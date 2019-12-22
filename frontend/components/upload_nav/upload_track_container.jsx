@@ -14,7 +14,8 @@ const mapStateToProps = state => {
 
     return {
         tracks: tracksArr,
-        currentUser: state.session.currentUser
+        currentUser: state.session.currentUser,
+        errors: state.errors.track
     }
 };
 

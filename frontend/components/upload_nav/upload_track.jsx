@@ -20,6 +20,14 @@ class UploadTrackForm extends React.Component {
         }
     }
 
+    renderErrors() {
+        if (this.props.errors) {
+            return Object.values(this.props.errors)
+                .map((error, idx) => (<li key={idx}>*{error}</li>)
+            )
+        }
+    }
+
     handleSubmit(e) {
         e.preventDefault()
         this.props.createTrack(this.state);
@@ -66,6 +74,9 @@ class UploadTrackForm extends React.Component {
                         <br></br>
                         </label>
                         <button className="upload-track-form-submit" onClick={this.handleSubmit}>Upload</button>
+                        <div className="upload-form-errors">
+                            {this.renderErrors()}
+                        </div>
                     </form>
                 </div>
             </div>
