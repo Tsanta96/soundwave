@@ -5,6 +5,14 @@ export const fetchTracks = () => (
     })
 )
 
+//Grab artists tracks
+export const fetchArtistTracks = artistId => (
+    $.ajax({
+        method: 'GET',
+        url: `api/tracks/artist_tracks/${artistId}`
+    })
+)
+
 export const fetchTrack = trackId => (
     $.ajax({
         method: 'GET',

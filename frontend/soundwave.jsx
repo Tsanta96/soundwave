@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
-import { fetchTracks, fetchTrack, createTrack, deleteTrack } from './utils/track_utils';
+import { fetchTracks, fetchTrack, createTrack, deleteTrack, fetchArtistTracks } from './utils/track_utils';
 
 
 
@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ReactDOM.render(<Root store={store}/>, root);
 })
 
+window.fetchArtistTracks = fetchArtistTracks;
 window.fetchTracks = fetchTracks;
 window.fetchTrack = fetchTrack;
 window.createTrack = createTrack;

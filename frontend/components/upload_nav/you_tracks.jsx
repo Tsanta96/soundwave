@@ -12,6 +12,7 @@ class YouTracks extends React.Component {
     }
 
     render() {
+        debugger;
         return (
             <div>
                 <div className="upload-nav">

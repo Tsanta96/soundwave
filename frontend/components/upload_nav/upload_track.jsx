@@ -22,7 +22,13 @@ class UploadTrackForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault()
-        this.props.createTrack(this.state);
+        this.props.createTrack(this.state)
+            .then(() => {
+                console.log('2: fetch tracks', this.props.currentUser)
+                console.log('2: fetch tracks', this.props.tracks)
+                this.props.fetchTracks()
+                // console.log('2.1: fetch tracks after', this.props)
+            });
     }
 
 

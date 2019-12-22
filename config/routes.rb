@@ -5,8 +5,6 @@ Rails.application.routes.draw do
     resources :users 
     resource :session, only: [:new, :create, :destroy]
     resources :tracks, only: [:index, :show, :create, :update, :destroy] 
-    resources :artists, only: [:show] do 
-      put '/artist-tracks' => 'artists#artist_tracks'
-    end
+    get '/tracks/artist_tracks/:artist_id' => 'tracks#artist_tracks'
   end
 end

@@ -6,7 +6,7 @@ import { fetchTracks } from '../../actions/track_actions';
 const mapStateToProps = state => {
     let stateTracksArr = Object.values(state.entities.tracks);
     let tracksArr = [];
-    for (let i = 0; i < stateTracksArr.length; i++) {
+    for (let i = 0; i < stateTracksArr.length - 1; i++) {
         let temp = Object.keys(stateTracksArr[i]).join("")
         let val = stateTracksArr[i][temp];
         tracksArr.push(val);

@@ -5,6 +5,12 @@ class Api::TracksController < ApplicationController
         render :index
     end
 
+    def artist_tracks
+        #Might need to find current user first and use that user instead of 'current_user'
+        @tracks = User.find_by_id(params[:artist_id]).tracks
+        render :index
+    end 
+
     def show 
         @track = Track.find_by_id(params[:id])
         
