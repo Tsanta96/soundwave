@@ -13,7 +13,10 @@ const Home = ({ openModal, removeErrors }) => {
             <div className="blue-bar">
                 <div className="home-view">
                     <div className="home-header">
-                        <h2 className="home-logo">SoundWave</h2>
+                        <div className="home-logo">
+                            <img src="https://d313rqwfqaf3f.cloudfront.net/design/wave_lightblue.svg" height="45" width="45"></img>
+                            <h2>SoundWave</h2>
+                        </div>
                         <div className="modal-btns">
                             {sessionLinks()}
                         </div>

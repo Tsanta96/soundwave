@@ -1,3 +1,4 @@
+//grabs in object of object nested in object nested in array
 export const destructured = array => {
     let newArr = [];
 

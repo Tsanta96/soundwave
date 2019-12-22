@@ -23,12 +23,18 @@
 }
 
 .home-logo {
+    display: flex;
+    flex-direction: row;
     font-size: 40px;
     text-align: left;
     font-family: 'Quicksand', sans-serif;
     color: #ccefff;
-    padding-left: 30px;
+    padding-left: 15px;
     padding-top: 30px;
+}
+
+.home-logo img{
+    padding-right: 15px;
 }
 
 .auth-btns {

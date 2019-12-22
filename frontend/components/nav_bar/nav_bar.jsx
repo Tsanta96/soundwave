@@ -13,8 +13,7 @@ class NavBar extends React.Component {
 
     handleUploadButton(e) {
         e.preventDefault()
-        this.props.fetchTracks()
-            .then(this.props.history.push('/nav/upload'))
+            this.props.history.push('/nav/upload')
     }
 
     handleLogout() {
@@ -38,7 +37,10 @@ class NavBar extends React.Component {
 
         return (
             <header className="nav-bar">
-                <h1 className="logo">SoundWave</h1>
+                <div className="nav-bar-logo">
+                    <img src="http://d313rqwfqaf3f.cloudfront.net/design/wave_lightblue.svg" height="45" width="45"></img>
+                    <h1 className="logo">SoundWave</h1>
+                </div>
                 <div className="nav-bar-upload">
                     <button onClick={this.handleUploadButton}>Upload</button>
                 </div>
