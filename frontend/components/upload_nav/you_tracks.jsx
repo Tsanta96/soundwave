@@ -12,7 +12,6 @@ class YouTracks extends React.Component {
     }
 
     render() {
-        debugger;
         return (
             <div>
                 <div className="upload-nav">
@@ -20,7 +19,7 @@ class YouTracks extends React.Component {
                     <Link to="/nav/you/tracks">Your Tracks</Link>
                 </div>
                 <div>
-                    <h1>Your tracks</h1>
+                    <h1>{this.props.tracks.map((track, idx) => <TrackItem key={track.id} idx={idx} track={track}/>)}</h1>
                 </div>
             </div>
         )
