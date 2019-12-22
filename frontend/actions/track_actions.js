@@ -52,14 +52,11 @@ export const fetchTrack = trackId => dispatch => (
     .then((track) => dispatch(receiveTrack(track)))
 );
 
-export const createTrack = newTrack => dispatch => {
-    return trackUtils.createTrack(newTrack)
-        .then((track) => {
-                console.log("createTrack: 1")
-                dispatch(receiveTrack(track))
-            },
+export const createTrack = newTrack => dispatch => (
+    trackUtils.createTrack(newTrack)
+        .then((track) => dispatch(receiveTrack(track)),
             (err) => dispatch(receiveTrackErrors(err.responseJSON)))
-}
+)
 
 
 export const updateTrack = trackInfo => dispatch => (
