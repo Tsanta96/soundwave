@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import TrackItem from '../tracks/track_item';
+import TrackItemContainer from '../tracks/track_item_container';
 
 class YouTracks extends React.Component {
     constructor(props) {
@@ -21,7 +21,7 @@ class YouTracks extends React.Component {
                     <Link to="/nav/you/tracks">Your Tracks</Link>
                 </div>
                 <div>
-                    <h1>{this.props.tracks.map((track, idx) => <TrackItem key={track.id} idx={idx} track={track}/>)}</h1>
+                    <h1>{this.props.tracks.map((track, idx) => <TrackItemContainer key={track.id} idx={idx} track={track}/>)}</h1>
                 </div>
             </div>
         )

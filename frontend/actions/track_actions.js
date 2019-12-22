@@ -69,7 +69,8 @@ export const updateTrack = trackInfo => dispatch => (
         ((err) => dispatch(receiveTrackErrors(err))))
 );
 
-export const deleteTrack = trackId => dispatch => (
+export const deleteTrack = trackId => dispatch => {
+    console.log("delete track");
     trackUtils.deleteTrack(trackId)
     .then(() => dispatch(removeTrack()))
-);
+};

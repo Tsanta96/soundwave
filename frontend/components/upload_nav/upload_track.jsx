@@ -23,6 +23,12 @@ class UploadTrackForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault()
         this.props.createTrack(this.state);
+        this.setState({
+            title: "",
+            img_url: "",
+            track_url: "",
+            artist_id: this.props.currentUser.id
+        })
     }
 
     render() {
