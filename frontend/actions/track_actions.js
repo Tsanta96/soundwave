@@ -42,10 +42,14 @@ export const fetchTracks = () => dispatch => (
     })
 );
 
-export const fetchArtistTracks = artistId => dispatch => (
-    trackUtils.fetchArtistTracks(artistId)
-    .then((tracks) => dispatch(receiveArtistTracks(tracks)))
-)
+export const fetchArtistTracks = artistId => dispatch => {
+    console.log("fetchArtistTracks");
+    return trackUtils.fetchArtistTracks(artistId)
+    .then((tracks) => {
+        dispatch(receiveArtistTracks(tracks))
+        console.log("setting in state");
+    })
+};
 
 export const fetchTrack = trackId => dispatch => (
     trackUtils.fetchTrack(trackId)

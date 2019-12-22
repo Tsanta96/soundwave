@@ -12,7 +12,7 @@ const TracksReducer = (oldState = {}, action) => {
         case RECEIVE_ALL_TRACKS:
             return Object.assign({}, oldState, action.tracks);
         case RECEIVE_ARTIST_TRACKS:
-            return Object.assign({}, oldState, action.tracks);
+            return Object.assign({}, action.tracks);
         case RECEIVE_TRACK:
             return Object.assign({}, oldState, action.track);
         case REMOVE_TRACK:

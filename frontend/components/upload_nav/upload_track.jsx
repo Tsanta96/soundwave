@@ -25,8 +25,6 @@ class UploadTrackForm extends React.Component {
         this.props.createTrack(this.state);
     }
 
-
-
     render() {
         return (
             <div>

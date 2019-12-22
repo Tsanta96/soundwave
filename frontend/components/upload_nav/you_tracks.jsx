@@ -8,7 +8,9 @@ class YouTracks extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchTracks();
+        console.log("componentDidMount");
+        this.props.fetchArtistTracks(this.props.currentUser.id);
+        console.log(this.props.tracks)
     }
 
     render() {

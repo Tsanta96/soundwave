@@ -25,7 +25,8 @@ class Api::TracksController < ApplicationController
         @track = Track.new(track_params)
         
         if @track.save
-            render "api/tracks/show"
+            render :index
+            # render "api/tracks/show"
         else  
             render json: @track.errors.full_messages, status: 400
         end
