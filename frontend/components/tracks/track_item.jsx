@@ -9,7 +9,6 @@ class TrackItem extends React.Component {
 
     handleDelete(trackId, artistId) {
         const delSong = confirm("Are you sure you want to delete this song?");
-        console.log(this.props);
         if (delSong === true) {
             this.props.deleteTrack(trackId)
             this.props.fetchArtistTracks(artistId);

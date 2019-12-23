@@ -24,6 +24,29 @@
     /* padding: 20px; */
 }
 
+.nav-bar-right-side {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-bar-right-side .nav-upload-button {
+    width: 80px;
+    background-color: #00b8e6;
+    border-top: none;
+    border-right: none;
+    border-left: 1px solid black;
+}
+
+.nav-bar-right-side .nav-upload-button:hover {
+    width: 80px;
+    background-color: #247f96;
+    border-top: none;
+    border-right: none;
+    border-left: 1px solid black;
+    color: white;
+    cursor: pointer;
+}
+
 .nav-bar-profile-icon {
     display: flex;
     flex-direction: column;

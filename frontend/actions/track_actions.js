@@ -36,19 +36,12 @@ const removeTrack = trackId => ({
 //thunk action creators 
 export const fetchTracks = () => dispatch => (
     trackUtils.fetchTracks()
-    .then((tracks) => {
-        dispatch(receiveAllTracks(tracks))
-        console.log("fetchTracks: 3", tracks)
-    })
+        .then((tracks) => dispatch(receiveAllTracks(tracks)))
 );
 
 export const fetchArtistTracks = artistId => dispatch => {
-    console.log("fetchArtistTracks");
     return trackUtils.fetchArtistTracks(artistId)
-    .then((tracks) => {
-        dispatch(receiveArtistTracks(tracks))
-        console.log("setting in state");
-    })
+    .then((tracks) => dispatch(receiveArtistTracks(tracks)))
 };
 
 export const fetchTrack = trackId => dispatch => (
@@ -65,12 +58,11 @@ export const createTrack = newTrack => dispatch => (
 
 export const updateTrack = trackInfo => dispatch => (
     trackUtils.updateTrack(trackInfo)
-    .then((trackInfo) => dispatch(receiveTrack(trackInfo)),
-        ((err) => dispatch(receiveTrackErrors(err))))
+        .then((trackInfo) => dispatch(receiveTrack(trackInfo)),
+            ((err) => dispatch(receiveTrackErrors(err))))
 );
 
-export const deleteTrack = trackId => dispatch => {
-    console.log("delete track");
+export const deleteTrack = trackId => dispatch => (
     trackUtils.deleteTrack(trackId)
-    .then(() => dispatch(removeTrack()))
-};
+        .then(() => dispatch(removeTrack()))
+);

@@ -8,16 +8,14 @@ class YouTracks extends React.Component {
     }
 
     componentDidMount() {
-        console.log("componentDidMount");
         this.props.fetchArtistTracks(this.props.currentUser.id);
-        console.log(this.props.tracks)
     }
 
     render() {
         return (
             <div>
                 <div className="upload-nav">
-                    <NavLink to="/nav/upload" className="upload" activeClasName="chosen">Upload</NavLink>
+                    <NavLink to="/nav/upload" className="upload" activeClassName="chosen">Upload</NavLink>
                     <NavLink to="/nav/you/tracks" className="your-tracks" activeClassName="chosen">Your Tracks</NavLink>
                 </div>
                 <div>

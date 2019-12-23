@@ -8,7 +8,6 @@ const mapStateToProps = state => {
     for (let i = 0; i < stateTracksArr.length - 1; i++) {
         let temp = Object.keys(stateTracksArr[i]).join("")
         let val = stateTracksArr[i][temp];
-        console.log('val', val)
         tracksArr.push(val);
     }
 

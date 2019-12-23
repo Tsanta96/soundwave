@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { withRouter } from 'react-router';
 
 //Add links to navbar to navigate
@@ -41,11 +41,9 @@ class NavBar extends React.Component {
                     <img src="http://d313rqwfqaf3f.cloudfront.net/design/wave_lightblue.svg" height="45" width="45"></img>
                     <h1 className="logo">SoundWave</h1>
                 </div>
-                <div className="nav-bar-upload">
-                    <button onClick={this.handleUploadButton}>Upload</button>
-                </div>
-                <div>
-                    {authAction}
+                <div className="nav-bar-right-side">
+                    <button className="nav-upload-button" onClick={this.handleUploadButton}>Upload</button>
+                    <div>{authAction}</div>
                 </div>
             </header>
         )
