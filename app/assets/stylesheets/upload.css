@@ -1,0 +1,56 @@
+.upload-track-view h1 {
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-seri;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.upload-track-form {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    border: 1px solid lightgray;
+    height: 450px;
+    background-color: #c6f4ff;
+}
+
+.upload-track-form > label {
+    padding-bottom: 90px;
+    font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-seri;
+    font-size: 20px;
+    padding-left: 30px;
+    color: rgb(121, 121, 121);
+
+}
+
+.upload-track-form .title {
+    padding-top: 40px;
+}
+
+.upload-track-form input[type=text] {
+    border-radius: 2px;
+    /* border: 1px solid lightgray; */
+    font-size: 20px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 70%;
+    height: 23px;
+    margin-left: 20px;
+}
+
+.upload-track-form input[type=file] {
+    margin-left: 20px;
+}
+
+.upload-track-form-submit {
+    height: 70px;
+    background-color: #00b8e6;
+    color: white;
+    font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-seri;
+    font-size: 25px;
+}
+
+.upload-track-form-submit:hover{
+    background-color: #0083a3;
+    cursor: pointer;
+}

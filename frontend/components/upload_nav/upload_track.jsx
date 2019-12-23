@@ -46,10 +46,10 @@ class UploadTrackForm extends React.Component {
                     <NavLink to="/nav/upload" className="upload" activeClassName="chosen">Upload</NavLink>
                     <NavLink to="/nav/you/tracks" className="your-tracks" activeClassName="chosen">Your Tracks</NavLink>
                 </div>
-                <div>
+                <div className="upload-track-view">
                     <h1>Upload Track!</h1>
                     <form className="upload-track-form">
-                        <label>Title:
+                        <label className="title">Title:
                         <input
                             type="text"
                             value={this.state.title}
@@ -57,7 +57,7 @@ class UploadTrackForm extends React.Component {
                         />
                         <br></br>
                         </label>
-                        <label>Upload Image
+                        <label className="upload-img">Upload Image
                         <input
                             type="file"
                             value={this.state.img_url}
@@ -65,7 +65,7 @@ class UploadTrackForm extends React.Component {
                         />
                         <br></br>
                         </label>
-                        <label>Upload Track
+                        <label className="upload-track">Upload Track
                         <input
                             type="file"
                             value={this.state.track_url}

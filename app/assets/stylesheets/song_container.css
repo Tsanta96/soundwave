@@ -33,18 +33,37 @@
     position: relative;
 }
 
-.song-container-name-delete {
+.song-container-name-edit-delete {
     display: flex;
     flex-direction: row;
 }
 
-.song-container-name-delete .delete {
+.song-container-name-edit-delete .delete {
     position: absolute;
     right: 0px;
     top: 10px;
 }
 
+.song-container-name-edit-delete .edit {
+    position: absolute;
+    right: 80px;
+    top: 10px;
+}
+
 .delete {
+    border: none;
+    width: 60px;
+    height: 30px;
+    background-color: lightblue;
+}
+
+.delete:hover {
+    background-color: rgb(52, 126, 151);
+    color: white;
+    cursor: pointer;
+}
+
+.edit {
     border: none;
     width: 60px;
     height: 30px;

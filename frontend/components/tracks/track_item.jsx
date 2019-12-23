@@ -5,6 +5,12 @@ class TrackItem extends React.Component {
         super(props);
 
         // this.props.deleteTrack = this.props.deleteTrack.bind(this);
+        this.state = {
+            id: this.props.track.id,
+            title: this.props.track.title,
+            artistId: this.props.artistId,
+            imgUrl: this.props.imgUrl
+        }
     }
 
     handleDelete(trackId, artistId) {
@@ -15,6 +21,10 @@ class TrackItem extends React.Component {
         }
     }
 
+    // handleEdit(track) {
+
+    // }
+
     render() {
         const { track, idx } = this.props
         return (
@@ -22,8 +32,9 @@ class TrackItem extends React.Component {
                 <div className="song-container">
                     <img src={track.imgUrl} height="120" width="120" className="song-img"></img>
                     <div className="song-content">
-                        <div className="song-container-name-delete">
+                        <div className="song-container-name-edit-delete">
                             <h1 className="song-name">{track.title}</h1>
+                            <button className="edit" onClick={() => this.handleEdit(track)}>Edit</button>
                             <button className="delete" onClick={() => this.handleDelete(track.id, track.artistId)}>Delete</button>
                         </div>
                         <h2 className="artist-name">{currentUser.username}</h2>

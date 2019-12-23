@@ -85,6 +85,20 @@
 .nav-bar-profile-icon button {
     width: 70px;
     height: 30px;
+    background-color: #00b8e6;
+    border: none;
+    border-radius: 5px;
+    color: white;
 } 
+
+.nav-bar-profile-icon button:hover {
+    width: 70px;
+    height: 30px;
+    background-color: #009ec5;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
 
 

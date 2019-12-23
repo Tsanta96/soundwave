@@ -26,7 +26,6 @@ class Api::TracksController < ApplicationController
         
         if @track.save
             render :index
-            # render "api/tracks/show"
         else  
             render json: @track.errors.full_messages, status: 400
         end
@@ -38,7 +37,11 @@ class Api::TracksController < ApplicationController
 
     def update 
         @track = Track.find_by_id(params[:id])
-        
+        if @track.update
+            render :show
+        else  
+            render json: @track.errors.full_messages, status: 400
+        end
     end
 
     def destroy 

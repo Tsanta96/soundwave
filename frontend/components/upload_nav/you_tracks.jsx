@@ -16,7 +16,7 @@ class YouTracks extends React.Component {
             <div>
                 <div className="upload-nav">
                     <NavLink to="/nav/upload" className="upload" activeClassName="chosen">Upload</NavLink>
-                    <NavLink to="/nav/you/tracks" className="your-tracks" activeClassName="chosen">Your Tracks</NavLink>
+                    <NavLink to="/nav/you/tracks" className="your-tracks" activeClassName="chosen">Your tracks</NavLink>
                 </div>
                 <div className="your-tracks-body">
                     <h1>Your tracks</h1>
