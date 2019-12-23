@@ -16,7 +16,6 @@ class TrackItem extends React.Component {
     }
 
     render() {
-        // debugger;
         const { track, idx } = this.props
         return (
             <div>

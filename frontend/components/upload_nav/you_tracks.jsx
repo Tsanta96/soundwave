@@ -18,7 +18,8 @@ class YouTracks extends React.Component {
                     <NavLink to="/nav/upload" className="upload" activeClassName="chosen">Upload</NavLink>
                     <NavLink to="/nav/you/tracks" className="your-tracks" activeClassName="chosen">Your Tracks</NavLink>
                 </div>
-                <div>
+                <div className="your-tracks-body">
+                    <h1>Your tracks</h1>
                     <h1>{this.props.tracks.map((track, idx) => <TrackItemContainer key={track.id} idx={idx} track={track}/>)}</h1>
                 </div>
             </div>

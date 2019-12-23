@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const root = document.getElementById('root');
     let preloadedState = undefined;
     if (window.currentUser) {
-        console.log(currentUser)
         preloadedState = {
             session: {
                 currentUser: window.currentUser
