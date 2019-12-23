@@ -38,8 +38,8 @@ class NavBar extends React.Component {
         return (
             <header className="nav-bar">
                 <div className="nav-bar-logo">
-                    <img src="http://d313rqwfqaf3f.cloudfront.net/design/wave_lightblue.svg" height="45" width="45"></img>
-                    <h1 className="logo">SoundWave</h1>
+                    <img src="http://d313rqwfqaf3f.cloudfront.net/design/wave_white.svg" height="40" width="40"></img>
+                    {/* <h1 className="logo">SoundWave</h1> */}
                 </div>
                 <div className="nav-bar-right-side">
                     <button className="nav-upload-button" onClick={this.handleUploadButton}>Upload</button>

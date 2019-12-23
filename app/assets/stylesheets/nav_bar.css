@@ -2,19 +2,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #00b8e6;
-    padding: 5px;
-    height: 80px;
+    background-color: #333333;
+    /* padding: 5px; */
+    height: 46px;
 }
 
 .nav-bar-logo {
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 69px;
+    height: 46px;
+    background-color: #00b8e6;
+    margin: 0 0 0 90px;
 }
 
-.nav-bar-logo img{
-    padding: 0 15px 0 15px;
+.nav-bar-logo img {
+    margin: 0 auto;
 }
 
 .logo {
@@ -27,19 +31,33 @@
 .nav-bar-right-side {
     display: flex;
     flex-direction: row;
+    color: lightgray;
+    margin-right: 90px;
 }
 
 .nav-bar-right-side .nav-upload-button {
     width: 80px;
-    background-color: #00b8e6;
+    font-size: 14px;
+    background-color: #333333;
     border-top: none;
     border-right: none;
+    border-bottom: 1px solid black;
     border-left: 1px solid black;
+    color: lightgray;
 }
 
 .nav-bar-right-side .nav-upload-button:hover {
+    background-color: black;
     width: 80px;
-    background-color: #247f96;
+    border-top: none;
+    border-right: none;
+    border-left: 1px solid black;
+    color: white;
+    cursor: pointer;
+}
+
+.nav-bar-right-side .nav-upload-button:focus {
+    width: 80px;
     border-top: none;
     border-right: none;
     border-left: 1px solid black;
@@ -49,23 +67,22 @@
 
 .nav-bar-profile-icon {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
-    padding: 10px;
-    background-color: #00b8e6;
+    align-items: center;
+    /* padding: 10px; */
+    background-color: #333333;
     border-left: 1px solid black;
-    height: 70px;
-    width: 80px;
+    height: 46px;
+    width: 180px;
 }
 
 .nav-bar-profile-icon h2 {
-    margin: 0 auto;
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
 }
 
 .nav-bar-profile-icon button {
-    margin-left: 10px;
     width: 70px;
     height: 30px;
 } 

@@ -5,26 +5,34 @@
     align-items: center;
     height: 40px;
     margin-bottom: 10px;
-    border-bottom: 1px solid lightgray;
 }
 
 .upload-nav .upload {
-    padding: 12px 143px;
+    /* padding: 12px 215px; */
+    text-align: center;
+    /* align-content: center; */
+    padding-bottom: 5px;
+    width: 50%;
     text-decoration: none;
     color: black;
     font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    border-bottom: 2px solid lightgray;
 }
 
 .upload-nav .your-tracks {
-    padding: 12px 130px;
-    width: 200px;
+    /* padding: 12px 165px; */
+    padding-bottom: 5px;
+    width: 50%;
+    text-align: center;
     text-decoration: none;
     color: black;
     font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    border-bottom: 2px solid lightgray;
+
 }
 
 
 .upload-nav a.chosen {
-    border-bottom: 2px solid #ccefff;
+    border-bottom: 2px solid #00b8e6;
 }
 
