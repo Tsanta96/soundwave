@@ -37,6 +37,7 @@ class Api::TracksController < ApplicationController
     # window.createTrack(newtrack)
 
     def update 
+        @track = Track.find_by_id(params[:id])
         
     end
 

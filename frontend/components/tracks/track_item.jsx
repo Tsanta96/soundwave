@@ -21,18 +21,21 @@ class TrackItem extends React.Component {
         const { track, idx } = this.props
         return (
             <div>
-                <h1>{idx}: {track.title}
-                    <ul>
-                        <li>Artist id: {track.artistId}</li>
-                        <img src={track.imgUrl}></img>
+                <div className="song-container">
+                    <img src={track.imgUrl} height="120" width="120" className="song-img"></img>
+                    <div className="song-content">
+                        <div className="song-container-name-delete">
+                            <h1 className="song-name">{track.title}</h1>
+                            <button className="delete" onClick={() => this.handleDelete(track.id, track.artistId)}>Delete</button>
+                        </div>
+                        <h2 className="artist-name">{currentUser.username}</h2>
                         <audio
                             controls
-                            src={track.trackUrl}
-                            >Track: {track.trackUrl}
+                            src={track.trackUrl}>
+                            Track: {track.trackUrl}
                         </audio>
-                        <button onClick={() => this.handleDelete(track.id, track.artistId)}>X</button>
-                    </ul>
-                </h1>
+                    </div>
+                </div>
             </div>
         )
     }

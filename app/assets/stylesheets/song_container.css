@@ -1,0 +1,55 @@
+.song-container {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    width: 600px;
+    height: 120px;
+    background-image: linear-gradient(#ccefff, rgb(180, 200, 255))
+}
+
+.song-container .song-name {
+    padding-left: 10px;
+    padding-top: 10px;
+    font-family: Interstate, Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+.song-container .artist-name {
+    padding-left: 10px;
+    font-family: Interstate, Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+
+.song-container audio {
+    background-color: #f1f3f4;
+    border-radius: none;
+    height: 50px;
+    width: 450px;
+}
+
+.song-container .song-content {
+    position: relative;
+}
+
+.song-container-name-delete {
+    display: flex;
+    flex-direction: row;
+}
+
+.song-container-name-delete .delete {
+    position: absolute;
+    right: 0px;
+    top: 10px;
+}
+
+.delete {
+    border: none;
+    width: 60px;
+    height: 30px;
+    background-color: lightblue;
+}
+
+
+

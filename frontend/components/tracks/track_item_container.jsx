@@ -3,7 +3,7 @@ import TrackItem from './track_item';
 import { deleteTrack, fetchArtistTracks } from "../../actions/track_actions";
 
 const mapStateToProps = state => ({
-
+    currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -11,4 +11,4 @@ const mapDispatchToProps = dispatch => ({
     fetchArtistTracks: (artistId) => dispatch(fetchArtistTracks(artistId))
 })
 
-export default connect(null, mapDispatchToProps)(TrackItem);
+export default connect(mapStateToProps, mapDispatchToProps)(TrackItem);
