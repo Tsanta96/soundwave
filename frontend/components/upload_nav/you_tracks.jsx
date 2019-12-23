@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import TrackItemContainer from '../tracks/track_item_container';
 
 class YouTracks extends React.Component {
@@ -17,8 +17,8 @@ class YouTracks extends React.Component {
         return (
             <div>
                 <div className="upload-nav">
-                    <Link to="/nav/upload">Upload</Link>
-                    <Link to="/nav/you/tracks">Your Tracks</Link>
+                    <NavLink to="/nav/upload" className="upload" activeClasName="chosen">Upload</NavLink>
+                    <NavLink to="/nav/you/tracks" className="your-tracks" activeClassName="chosen">Your Tracks</NavLink>
                 </div>
                 <div>
                     <h1>{this.props.tracks.map((track, idx) => <TrackItemContainer key={track.id} idx={idx} track={track}/>)}</h1>

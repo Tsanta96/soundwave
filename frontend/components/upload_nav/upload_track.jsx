@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 class UploadTrackForm extends React.Component {
     constructor(props) {
@@ -43,8 +43,8 @@ class UploadTrackForm extends React.Component {
         return (
             <div>
                 <div className="upload-nav">
-                    <Link to="/nav/upload">Upload</Link>
-                    <Link to="/nav/you/tracks">Your Tracks</Link>
+                    <NavLink to="/nav/upload" className="upload" activeClassName="chosen">Upload</NavLink>
+                    <NavLink to="/nav/you/tracks" className="your-tracks" activeClassName="chosen">Your Tracks</NavLink>
                 </div>
                 <div>
                     <h1>Upload Track!</h1>

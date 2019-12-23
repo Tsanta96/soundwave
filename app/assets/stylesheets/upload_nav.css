@@ -1,0 +1,30 @@
+.upload-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.upload-nav .upload {
+    padding: 12px 143px;
+    text-decoration: none;
+    color: black;
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+}
+
+.upload-nav .your-tracks {
+    padding: 12px 130px;
+    width: 200px;
+    text-decoration: none;
+    color: black;
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+}
+
+
+.upload-nav a.chosen {
+    border-bottom: 2px solid #ccefff;
+}
+
