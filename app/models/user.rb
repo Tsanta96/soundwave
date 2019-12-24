@@ -7,7 +7,7 @@ class User < ApplicationRecord
     foreign_key: :artist_id,
     class_name: :Track  
 
-    # has_many_attached :tracks
+    has_many_attached :trackz
 
 
     attr_reader :password 
