@@ -48,7 +48,7 @@ class Signup extends React.Component {
                     this.props.login(demoUser)
                         .then(() => this.props.history.push('/nav/tracks'))
                             .then(this.props.closeModal)
-                                .then(setTimeout(this.props.removeErrors, 1000));
+                                .then(setTimeout(this.props.removeErrors, 1000)); //switch this with closeModal?
     }
 
     renderErrors() {

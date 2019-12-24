@@ -3,6 +3,7 @@ import * as trackUtils from '../utils/track_utils';
 export const RECEIVE_ALL_TRACKS = "RECEIVE_ALL_TRACKS";
 export const RECEIVE_TRACK = "RECEIVE_TRACK";
 export const RECEIVE_TRACK_ERRORS = "RECEIVE_TRACK_ERRORS";
+export const REMOVE_TRACK_ERRORS = "REMOVE_TRACK_ERRORS";
 export const REMOVE_TRACK = "RECEIVE_ALL_TRACKS";
 export const RECEIVE_ARTIST_TRACKS = "RECEIVE_ARTIST_TRACKS";
 
@@ -24,6 +25,10 @@ const receiveTrack = track => ({
 const receiveTrackErrors = errors => ({
     type: RECEIVE_TRACK_ERRORS,
     errors
+})
+
+export const removeTrackErrors = () => ({
+    type: REMOVE_TRACK_ERRORS
 })
 
 const removeTrack = trackId => ({

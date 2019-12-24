@@ -22,6 +22,15 @@
 
 }
 
+.upload-track-form > label:last-of-type {
+    padding-bottom: 30px;
+    /* margin-bottom: 30px; */
+    font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-seri;
+    font-size: 20px;
+    padding-left: 30px;
+    color: rgb(121, 121, 121);
+}
+
 .upload-track-form .title {
     padding-top: 40px;
 }
@@ -42,9 +51,24 @@
     margin-left: 20px;
 }
 
+.upload-form-errors {
+    height: 40px;
+    margin-bottom: 20px;
+    margin-left: 25px;
+    color: rgb(255, 95, 95);
+    /* color: rgb(0, 121, 190); */
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-seri;
+    font-size: 13px;
+}
+
+.upload-form-errors li{
+    list-style: none;
+}
+
 .upload-track-form-submit {
     height: 70px;
     background-color: #00b8e6;
+    /* margin-top: 25px; */
     color: white;
     font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-seri;
     font-size: 25px;

@@ -23,17 +23,17 @@ class NavBar extends React.Component {
 
     render() {
         const { currentUser } = this.props
-        const authAction = currentUser ? (
-            <div className="nav-bar-profile-icon">
-                <h2>{currentUser.username}</h2>
-                <button onClick={this.handleLogout}>Log Out</button>
-            </div>
-        ) : (
-            <div className="auth-btns">
-                <Link to="/signup" id="signup">Sign Up</Link>
-                <Link to="/login" id="login">Log In</Link>
-            </div>
-        );
+        // const authAction = currentUser ? (
+        //     <div className="nav-bar-profile-icon">
+        //         <h2>{currentUser.username}</h2>
+        //         <button onClick={this.handleLogout}>Log Out</button>
+        //     </div>
+        // ) : (
+        //     <div className="auth-btns">
+        //         <Link to="/signup" id="signup">Sign Up</Link>
+        //         <Link to="/login" id="login">Log In</Link>
+        //     </div>
+        // );
 
         return (
             <header className="nav-bar">
@@ -43,7 +43,10 @@ class NavBar extends React.Component {
                 </div>
                 <div className="nav-bar-right-side">
                     <button className="nav-upload-button" onClick={this.handleUploadButton}>Upload</button>
-                    <div>{authAction}</div>
+                    <div className="nav-bar-profile-icon">
+                        <h2>{currentUser.username}</h2>
+                        <button onClick={this.handleLogout}>Log Out</button>
+                    </div>
                 </div>
             </header>
         )

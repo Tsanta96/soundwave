@@ -14,11 +14,19 @@ class UploadTrackForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    componentDidMount() {
+        this.props.removeTrackErrors();
+    }
+
     handleInput(field) {
         return e => {
             this.setState({ [field]: e.currentTarget.value })
         }
     }
+
+    // handleFile(e) {
+    //     e.preventDefault();
+    // }
 
     renderErrors() {
         if (this.props.errors) {
@@ -44,7 +52,7 @@ class UploadTrackForm extends React.Component {
             <div>
                 <div className="upload-nav">
                     <NavLink to="/nav/upload" className="upload" activeClassName="chosen">Upload</NavLink>
-                    <NavLink to="/nav/you/tracks" className="your-tracks" activeClassName="chosen">Your Tracks</NavLink>
+                    <NavLink to="/nav/you/tracks" className="your-tracks" activeClassName="chosen">Your tracks</NavLink>
                 </div>
                 <div className="upload-track-view">
                     <h1>Upload Track!</h1>
@@ -73,10 +81,10 @@ class UploadTrackForm extends React.Component {
                         />
                         <br></br>
                         </label>
-                        <button className="upload-track-form-submit" onClick={this.handleSubmit}>Upload</button>
                         <div className="upload-form-errors">
                             {this.renderErrors()}
                         </div>
+                        <button className="upload-track-form-submit" onClick={this.handleSubmit}>Upload</button>
                     </form>
                 </div>
             </div>
