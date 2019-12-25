@@ -23,7 +23,7 @@ class Api::TracksController < ApplicationController
 
     def create 
         @track = Track.new(track_params)
-        
+
         if @track.save
             render :index
         else  
@@ -32,7 +32,7 @@ class Api::TracksController < ApplicationController
     end
 
     # "create" test
-    # newtrack = ({track: {title: "song3", artist_id: 1, track_url: "song3.com"}})
+    # newtrack = ({track: {title: "song3", artist_id: 1}})
     # window.createTrack(newtrack)
 
     def update 
@@ -59,7 +59,7 @@ class Api::TracksController < ApplicationController
     private 
 
     def track_params 
-        params.require(:track).permit(:title, :artist_id, :track_url, :img_url)
+        params.require(:track).permit(:title, :artist_id, :track_file, :img_url)
     end
 
 end

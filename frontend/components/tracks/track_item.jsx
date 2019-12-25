@@ -40,8 +40,8 @@ class TrackItem extends React.Component {
                         <h2 className="artist-name">{currentUser.username}</h2>
                         <audio
                             controls
-                            src={track.trackUrl}>
-                            Track: {track.trackUrl}
+                            src={track.trackFile}>
+                            Track: {track.trackFile}
                         </audio>
                     </div>
                 </div>

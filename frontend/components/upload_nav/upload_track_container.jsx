@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { createTrack, fetchTracks, removeTrackErrors } from '../../actions/track_actions';
+import { createTrack, fetchTracks, removeTrackErrors, fetchArtistTracks } from '../../actions/track_actions';
 import UploadTrackForm from './upload_track';
 
 const mapStateToProps = state => {
@@ -21,7 +21,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => ({
     createTrack: (newTrack) => dispatch(createTrack(newTrack)),
     fetchTracks: (tracks) => dispatch(fetchTracks(tracks)),
-    removeTrackErrors: () => dispatch(removeTrackErrors())
+    removeTrackErrors: () => dispatch(removeTrackErrors()),
+    fetchArtistTracks: (artistId) => dispatch(fetchArtistTracks(artistId))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(UploadTrackForm);

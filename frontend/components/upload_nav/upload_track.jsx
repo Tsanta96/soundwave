@@ -8,10 +8,11 @@ class UploadTrackForm extends React.Component {
         this.state = {
             title: "",
             img_url: "",
-            track_url: "",
+            trackFile: "",
             artist_id: this.props.currentUser.id
         }
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleFile = this.handleFile.bind(this);
     }
 
     componentDidMount() {
@@ -20,13 +21,15 @@ class UploadTrackForm extends React.Component {
 
     handleInput(field) {
         return e => {
-            this.setState({ [field]: e.currentTarget.value })
+            this.setState({ [field]: e.currentTarget.value });
         }
     }
 
-    // handleFile(e) {
-    //     e.preventDefault();
-    // }
+    handleFile(field) {
+        return e => {
+            this.setState({ [field]: e.currentTarget.files[0] });
+        }
+    }
 
     renderErrors() {
         if (this.props.errors) {
@@ -37,14 +40,22 @@ class UploadTrackForm extends React.Component {
     }
 
     handleSubmit(e) {
-        e.preventDefault()
-        this.props.createTrack(this.state);
+        e.preventDefault();
+   
+        const formData = new FormData();
+        formData.append('track[title]', this.state.title);
+        formData.append('track[img_url]', this.state.img_url);
+        formData.append('track[track_file]', this.state.trackFile);
+        formData.append('track[artist_id]', this.props.currentUser.id);
+        this.props.createTrack(formData);
+
         this.setState({
             title: "",
-            img_url: "",
-            track_url: "",
             artist_id: this.props.currentUser.id
         })
+        document.getElementById("upload-imgUrl").value = "";
+        document.getElementById("upload-trackFile").value = "";
+
     }
 
     render() {
@@ -58,7 +69,7 @@ class UploadTrackForm extends React.Component {
                     <h1>Upload Track!</h1>
                     <form className="upload-track-form">
                         <label className="title">Title:
-                        <input
+                        <input id="upload-title"
                             type="text"
                             value={this.state.title}
                             onChange={this.handleInput("title")}
@@ -66,18 +77,20 @@ class UploadTrackForm extends React.Component {
                         <br></br>
                         </label>
                         <label className="upload-img">Upload Image
-                        <input
+                        <input id="upload-imgUrl"
                             type="file"
-                            value={this.state.img_url}
-                            onChange={this.handleInput("img_url")}
+                            // value={this.state.img_url}
+                            // onChange={this.handleInput("img_url")}
+                            onChange={this.handleFile("img_url")}
                         />
                         <br></br>
                         </label>
                         <label className="upload-track">Upload Track
-                        <input
+                        <input id="upload-trackFile"
                             type="file"
-                            value={this.state.track_url}
-                            onChange={this.handleInput("track_url")}
+                            // value={this.state.trackFile}
+                            // onChange={this.handleInput("track_url")}
+                            onChange={this.handleFile("trackFile")}
                         />
                         <br></br>
                         </label>

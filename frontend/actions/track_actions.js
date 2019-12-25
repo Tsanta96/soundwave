@@ -57,8 +57,8 @@ export const fetchTrack = trackId => dispatch => (
 export const createTrack = newTrack => dispatch => (
     trackUtils.createTrack(newTrack)
         .then((track) => dispatch(receiveTrack(track)),
-            (err) => dispatch(receiveTrackErrors(err.responseJSON)))
-)
+            ((err) => dispatch(receiveTrackErrors(err.responseJSON))))
+);
 
 
 export const updateTrack = trackInfo => dispatch => (
