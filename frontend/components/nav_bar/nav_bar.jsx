@@ -9,11 +9,17 @@ class NavBar extends React.Component {
 
         this.handleLogout = this.handleLogout.bind(this);
         this.handleUploadButton = this.handleUploadButton.bind(this);
+        this.handleDiscoverButton = this.handleDiscoverButton.bind(this);
     }
 
     handleUploadButton(e) {
         e.preventDefault()
             this.props.history.push('/nav/upload')
+    }
+
+    handleDiscoverButton(e) {
+        e.preventDefault()
+            this.props.history.push('/nav/tracks')
     }
 
     handleLogout() {
@@ -41,6 +47,9 @@ class NavBar extends React.Component {
                 <div className="nav-bar-logo">
                     <img src="http://d313rqwfqaf3f.cloudfront.net/design/wave_white.svg" height="40" width="40"></img>
                     {/* <h1 className="logo">SoundWave</h1> */}
+                </div>
+                <div className="nav-bar-left-side">
+                    <button className="nav-discover-button" onClick={this.handleDiscoverButton}>Discover</button>
                 </div>
                 <div className="nav-bar-right-side">
                     <button className="nav-upload-button" onClick={this.handleUploadButton}>Upload</button>

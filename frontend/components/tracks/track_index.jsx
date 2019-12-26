@@ -1,14 +1,22 @@
 import React from 'react';
+import TrackItemContainer from './track_item_container';
 
 class TrackIndex extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    componentDidMount() {
+        this.props.fetchTracks();
+    }
+
     render() {
         return (
-            <div>
-                <h1>Track Index</h1>
-                <p>Track 1</p>
-                <p>Track 2</p>
-                <p>Track 3</p>
+            <div className="discover-tracks">
+                <h1>Discover</h1>
+                {this.props.tracks.map((track, idx) => <TrackItemContainer key={track.id} idx={idx} track={track}/>)}
             </div>
+
         )
     }
 }

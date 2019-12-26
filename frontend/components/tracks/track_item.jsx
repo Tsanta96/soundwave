@@ -38,7 +38,7 @@ class TrackItem extends React.Component {
                             <button className="edit" onClick={() => this.handleEdit(track)}>Edit</button>
                             <button className="delete" onClick={() => this.handleDelete(track.id, track.artistId)}>Delete</button>
                         </div>
-                        <h2 className="artist-name">{currentUser.username}</h2>
+                        <h2 className="artist-name">{track.artistId}</h2>
                         <audio
                             controls
                             src={track.trackFile}>
