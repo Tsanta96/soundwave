@@ -8,8 +8,7 @@ class TrackItem extends React.Component {
         this.state = {
             id: this.props.track.id,
             title: this.props.track.title,
-            artistId: this.props.artistId,
-            imgUrl: this.props.imgUrl
+            artistId: this.props.artistId
         }
     }
 
@@ -32,7 +31,7 @@ class TrackItem extends React.Component {
         return (
             <div>
                 <div className="song-container">
-                    <img src={track.imgUrl} height="120" width="120" className="song-img"></img>
+                    <img src={track.imgFile} height="120" width="120" className="song-img"></img>
                     <div className="song-content">
                         <div className="song-container-name-edit-delete">
                             <h1 className="song-name">{track.title}</h1>

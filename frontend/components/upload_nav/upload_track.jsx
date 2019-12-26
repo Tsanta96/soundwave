@@ -7,7 +7,7 @@ class UploadTrackForm extends React.Component {
 
         this.state = {
             title: "",
-            img_url: "",
+            imgFile: "",
             trackFile: "",
             artist_id: this.props.currentUser.id
         }
@@ -44,7 +44,7 @@ class UploadTrackForm extends React.Component {
    
         const formData = new FormData();
         formData.append('track[title]', this.state.title);
-        formData.append('track[img_url]', this.state.img_url);                
+        formData.append('track[img_file]', this.state.imgFile);                
         formData.append('track[track_file]', this.state.trackFile);
         formData.append('track[artist_id]', this.props.currentUser.id);
         this.props.createTrack(formData);   //Why does form data get sent up as an empty object {}? This makes it very hard to debug!
@@ -53,7 +53,7 @@ class UploadTrackForm extends React.Component {
             title: "",
             artist_id: this.props.currentUser.id
         })
-        document.getElementById("upload-imgUrl").value = "";
+        document.getElementById("upload-imgFile").value = "";
         document.getElementById("upload-trackFile").value = "";
 
     }
@@ -77,11 +77,11 @@ class UploadTrackForm extends React.Component {
                         <br></br>
                         </label>
                         <label className="upload-img">Upload Image
-                        <input id="upload-imgUrl"
+                        <input id="upload-imgFile"
                             type="file"
                             // value={this.state.img_url}
                             // onChange={this.handleInput("img_url")}
-                            onChange={this.handleFile("img_url")}
+                            onChange={this.handleFile("imgFile")}
                         />
                         <br></br>
                         </label>

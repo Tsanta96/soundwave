@@ -3,7 +3,7 @@ json.array! @tracks do |track|
         json.id track.id
         json.title track.title
         json.artistId track.artist_id
-        json.imgUrl track.img_url
+        json.imgFile url_for(track.img_file)
         json.trackFile url_for(track.track_file)
     end
 end
