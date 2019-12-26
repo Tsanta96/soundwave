@@ -13,6 +13,9 @@ class TrackItem extends React.Component {
         }
     }
 
+    // componentDidMount() {
+    // }
+
     handleDelete(trackId, artistId) {
         const delSong = confirm("Are you sure you want to delete this song?");
         if (delSong === true) {
@@ -22,7 +25,6 @@ class TrackItem extends React.Component {
     }
 
     // handleEdit(track) {
-
     // }
 
     render() {

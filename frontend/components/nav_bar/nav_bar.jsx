@@ -22,7 +22,8 @@ class NavBar extends React.Component {
     }
 
     render() {
-        const { currentUser } = this.props
+        console.log(this.props.currentUser);
+        // const { currentUser } = this.props
         // const authAction = currentUser ? (
         //     <div className="nav-bar-profile-icon">
         //         <h2>{currentUser.username}</h2>
@@ -44,7 +45,7 @@ class NavBar extends React.Component {
                 <div className="nav-bar-right-side">
                     <button className="nav-upload-button" onClick={this.handleUploadButton}>Upload</button>
                     <div className="nav-bar-profile-icon">
-                        <h2>{currentUser.username}</h2>
+                        <h2>{this.props.currentUser.username}</h2>
                         <button onClick={this.handleLogout}>Log Out</button>
                     </div>
                 </div>
@@ -54,16 +55,3 @@ class NavBar extends React.Component {
 }
 
 export default withRouter(NavBar);
-
-
-// const authAction = currentUser ? (
-//     <div>
-//         <h2>Welcome {currentUser.username}!</h2>
-//         <button onClick={this.props.logout}>LogOut</button>
-//     </div>
-// ) : (
-//         <div>
-//             <Link className="auth-btn" to="/signup">Sign Up</Link>
-//             <Link className="auth-btn" to="/login">Log In</Link>
-//         </div>
-//     )

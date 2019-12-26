@@ -4,15 +4,16 @@ import UploadTrackForm from './upload_track';
 
 const mapStateToProps = state => {
     let stateTracksArr = Object.values(state.entities.tracks);
-    let tracksArr = [];
-    for (let i = 0; i < stateTracksArr.length - 1; i++) {
-        let temp = Object.keys(stateTracksArr[i]).join("")
-        let val = stateTracksArr[i][temp];
-        tracksArr.push(val);
-    }
+
+    stateTracksArr = stateTracksArr.map(obj => {
+        Object.keys(obj).forEach(key => {
+            obj = obj[key]
+        })
+        return obj
+    })
 
     return {
-        tracks: tracksArr,
+        tracks: stateTracksArr,
         currentUser: state.session.currentUser,
         errors: state.errors.track
     }

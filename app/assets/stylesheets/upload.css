@@ -1,9 +1,3 @@
-.upload-track-view {
-    /* width: 700px; */
-    /* align-content: center;
-    margin: 0 auto; */
-}
-
 .upload-track-view h1 {
     font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-seri;
     font-size: 30px;
@@ -13,10 +7,11 @@
 .upload-track-form {
     display: flex;
     flex-direction: column;
-    align-content: space-around;
     border: 1px solid lightgray;
     height: 450px;
     background-color: #c6f4ff;
+    width: 60%;
+    margin: 0 auto;
 }
 
 .upload-track-form > label {
