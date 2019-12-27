@@ -33,7 +33,7 @@
 }
 
 .nav-bar-left-side .nav-discover-button {
-    width: 80px;
+    width: 104px;
     font-size: 14px;
     background-color: #333333;
     border: none;
@@ -42,8 +42,8 @@
 }
 
 .nav-bar-left-side .nav-discover-button:hover {
+    width: 104px;
     background-color: black;
-    width: 80px;
     border: none;
     color: white;
     cursor: pointer;
