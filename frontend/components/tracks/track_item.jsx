@@ -1,10 +1,10 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 class TrackItem extends React.Component {
     constructor(props) {
         super(props);
 
-        // this.props.deleteTrack = this.props.deleteTrack.bind(this);
         this.state = {
             id: this.props.track.id,
             title: this.props.track.title,
@@ -28,8 +28,24 @@ class TrackItem extends React.Component {
 
     render() {
         const { track, idx } = this.props
-        return (
-            <div>
+        const trackContainer = (this.props.match.path === '/nav/tracks') ? (
+                <div className="song-container">
+                    <img src={track.imgFile} height="120" width="120" className="song-img"></img>
+                    <div className="song-content">
+                        <div className="song-container-name-edit-delete">
+                            <h1 className="song-name">{track.title}</h1>
+                            {/* <button className="edit" onClick={() => this.handleEdit(track)}>Edit</button>
+                                <button className="delete" onClick={() => this.handleDelete(track.id, track.artistId)}>Delete</button> */}
+                        </div>
+                        <h2 className="artist-name">{track.userName}</h2>
+                        <audio
+                            controls
+                            src={track.trackFile}>
+                            Track: {track.trackFile}
+                        </audio>
+                    </div>
+                </div>
+            ) : (
                 <div className="song-container">
                     <img src={track.imgFile} height="120" width="120" className="song-img"></img>
                     <div className="song-content">
@@ -38,7 +54,7 @@ class TrackItem extends React.Component {
                             <button className="edit" onClick={() => this.handleEdit(track)}>Edit</button>
                             <button className="delete" onClick={() => this.handleDelete(track.id, track.artistId)}>Delete</button>
                         </div>
-                        <h2 className="artist-name">{track.userName}</h2> 
+                        <h2 className="artist-name">{track.userName}</h2>
                         <audio
                             controls
                             src={track.trackFile}>
@@ -46,9 +62,14 @@ class TrackItem extends React.Component {
                         </audio>
                     </div>
                 </div>
+            )
+
+        return (
+            <div>
+                {trackContainer}
             </div>
         )
     }
 }
 
-export default TrackItem;
+export default withRouter(TrackItem);
