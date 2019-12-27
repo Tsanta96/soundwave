@@ -4,8 +4,9 @@
     border: 1px solid black;
     width: 600px;
     height: 120px;
-    background-image: linear-gradient(#ccefff, rgb(180, 200, 255));
+    /* background-image: linear-gradient(#ccefff, rgb(180, 200, 255)); */
     /* background-image: linear-gradient(to right, #b1a59b, #9b664c); */
+    background-image: linear-gradient(#e9e9e9, #71e3ff);
 }
 
 .song-container .song-name {
