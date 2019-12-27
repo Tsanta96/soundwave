@@ -28,12 +28,12 @@
     /* padding: 20px; */
 }
 
-.nav-bar-left-side {
-    /* display: flex;
+/* .nav-bar-left-side {
+    display: flex;
     flex-direction: row;
     color: lightgray;
-    margin-right: 90px; */
-}
+    margin-right: 90px;
+} */
 
 .nav-bar-left-side .nav-discover-button {
     width: 80px;
