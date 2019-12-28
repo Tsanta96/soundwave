@@ -15,7 +15,7 @@ export const fetchArtistTracks = artistId => (
 
 export const fetchTrack = trackId => (
     $.ajax({
-        method: 'GET',
+        method: 'GET', 
         url: `api/tracks/${trackId}`
     })
 )

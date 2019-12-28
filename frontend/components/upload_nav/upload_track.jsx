@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 class UploadTrackForm extends React.Component {
     constructor(props) {
         super(props);
-
+        
         this.state = {
             title: "",
             imgFile: "",

@@ -53,7 +53,7 @@ export const fetchArtistTracks = artistId => dispatch => {
 
 export const fetchTrack = trackId => dispatch => (
     trackUtils.fetchTrack(trackId)
-    .then((track) => dispatch(receiveTrack(track)))
+        .then((track) => dispatch(receiveTrack(track)))
 );
 
 export const createTrack = newTrack => dispatch => (

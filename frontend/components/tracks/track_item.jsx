@@ -23,7 +23,9 @@ class TrackItem extends React.Component {
         }
     }
 
-    // handleEdit(track) {
+    // handleEdit(trackId) {
+    //     this.props.history.push('/nav/upload');
+    //     this.props.fetchTrack(trackId);
     // }
 
     render() {
@@ -51,7 +53,7 @@ class TrackItem extends React.Component {
                     <div className="song-content">
                         <div className="song-container-name-edit-delete">
                             <h1 className="song-name">{track.title}</h1>
-                            <button className="edit" onClick={() => this.handleEdit(track)}>Edit</button>
+                            <button className="edit" onClick={() => this.handleEdit(track.id)}>Edit</button>
                             <button className="delete" onClick={() => this.handleDelete(track.id, track.artistId)}>Delete</button>
                         </div>
                         <h2 className="artist-name">{track.userName}</h2>
