@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { currentTrack } from '../../actions/music_player_actions';
 
 class TrackItem extends React.Component {
     constructor(props) {
@@ -12,8 +13,21 @@ class TrackItem extends React.Component {
         }
     }
 
-    // componentDidMount() {
-    // }
+    componentDidMount() {
+        const { track } = this.props;
+        const that = this;
+        let audio = document.getElementById(`track-id-${track.id}`)
+
+        audio.addEventListener('play', () => {
+            console.log(track);
+            console.log(that);
+            that.props.currentTrack(track);
+        });
+
+        audio.addEventListener('pause', () => {
+            console.log(`track ${track.id} is PAUSED`)
+        })
+    }
 
     handleDelete(trackId, artistId) {
         const delSong = confirm("Are you sure you want to delete this song?");
@@ -40,7 +54,7 @@ class TrackItem extends React.Component {
                                 <button className="delete" onClick={() => this.handleDelete(track.id, track.artistId)}>Delete</button> */}
                         </div>
                         <h2 className="artist-name">{track.userName}</h2>
-                        <audio
+                        <audio id={`track-id-${track.id}`}
                             controls
                             src={track.trackFile}>
                             Track: {track.trackFile}
@@ -57,7 +71,7 @@ class TrackItem extends React.Component {
                             <button className="delete" onClick={() => this.handleDelete(track.id, track.artistId)}>Delete</button>
                         </div>
                         <h2 className="artist-name">{track.userName}</h2>
-                        <audio
+                        <audio id={`track-id-${track.id}`}
                             controls
                             src={track.trackFile}>
                             Track: {track.trackFile}

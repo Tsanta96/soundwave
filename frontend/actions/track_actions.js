@@ -37,7 +37,6 @@ const removeTrack = trackId => ({
 });
 
 
-
 //thunk action creators 
 export const fetchTracks = () => dispatch => (
     trackUtils.fetchTracks()
