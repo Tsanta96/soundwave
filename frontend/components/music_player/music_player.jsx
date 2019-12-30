@@ -11,6 +11,7 @@ class MusicPlayer extends React.Component {
         this.playAud = this.playAud.bind(this);
         this.pauseAud = this.pauseAud.bind(this);
         this.changeVol = this.changeVol.bind(this);
+        this.progressBar = this.progressBar.bind(this);
     }
 
     componentDidMount() {
@@ -22,11 +23,11 @@ class MusicPlayer extends React.Component {
 
     playAud() {
         this.state.player.play();
-        console.log(this.state);
+        // console.log(this.state);
     }
 
     pauseAud() {
-        console.log("test");
+        // console.log("test");
         this.state.player.pause();
     }
 
@@ -34,13 +35,12 @@ class MusicPlayer extends React.Component {
         this.state.player.volume = document.getElementById("vol-bar").value;
     }
 
-    // progressBar() {
-    //     const progressBar = document.getElementById('progress-bar');
-    //     console.log(this.state.player);
-    //     this.state.player.addEventListener('timeupdate', () => {
-    //         console.log(this.state.player.currentTime);
-    //     })
-    // }
+    progressBar() {
+        const progressBar = document.getElementById('progress-bar');
+        this.state.player.addEventListener('timeupdate', () => {
+            progressBar.value = (this.state.player.currentTime / this.state.player.duration);  
+        })
+    }
 
     render() {
         const { currentTrack } = this.props
@@ -50,9 +50,9 @@ class MusicPlayer extends React.Component {
                     <div className="music-player-container">
                         <audio id="music-player" src={currentTrack.trackFile}>
                         </audio>
-                        <input id="play-button" type="image" src="https://d313rqwfqaf3f.cloudfront.net/musicPlayer/play_icon.svg" onClick={this.playAud}/>
+                        <input id="play-button" type="image" src="https://d313rqwfqaf3f.cloudfront.net/musicPlayer/play_icon.svg" onClick={() => { this.playAud();this.progressBar()}}/>
                         <input id="pause-button" type="image" src="https://d313rqwfqaf3f.cloudfront.net/musicPlayer/pause_icon.svg" onClick={this.pauseAud}/>
-                        <progress id="progress-bar" value="0" max="100"></progress>
+                        <progress id="progress-bar" value="0" max="1"></progress>
                         <img id="vol-bar-img" src="" />
                         <input type="range" id="vol-bar" onChange={this.changeVol} step="0.025" min="0" max="1"/>
                     </div>

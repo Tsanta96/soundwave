@@ -25,7 +25,7 @@ class TrackItem extends React.Component {
         audio.addEventListener('pause', () => {
             console.log(`track ${track.id} is PAUSED`)
             console.log(audio.currentTime);
-        })
+        });
 
         // let audioTime = audio.currentTime;
         // if (audioTime !== 0) {
@@ -83,6 +83,7 @@ class TrackItem extends React.Component {
                         </audio>
                     </div>
                 </div>
+
             )
 
         return (
