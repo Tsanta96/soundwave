@@ -28,7 +28,6 @@ class NavBar extends React.Component {
     }
 
     render() {
-        console.log(this.props.currentUser);
         // const { currentUser } = this.props
         // const authAction = currentUser ? (
         //     <div className="nav-bar-profile-icon">
