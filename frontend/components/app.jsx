@@ -10,6 +10,7 @@ import Modal from './modal/modal.jsx';
 import UploadTrackContainer from './upload_nav/upload_track_container';
 import YouTracksContainer from './upload_nav/you_tracks_container';
 import TrackIndexContainer from './tracks/track_index_container';
+import MusicPlayerContainer from './music_player/music_player_container';
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
         <div>
             <Modal />
             <Route path="/nav/" component={NavBarContainer}/>
+            <Route path="/nav/" component={MusicPlayerContainer}/> 
             <div className="body-view">
                 <Route exact path="/" component={HomeContainer}/>
                 <Route path="/nav/upload" component={UploadTrackContainer}/>

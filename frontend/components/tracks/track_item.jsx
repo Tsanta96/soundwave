@@ -21,12 +21,19 @@ class TrackItem extends React.Component {
         audio.addEventListener('play', () => {
             console.log(track);
             console.log(that);
-            that.props.currentTrack(track);
+            that.props.fetchCurrentTrack(track);
         });
 
         audio.addEventListener('pause', () => {
             console.log(`track ${track.id} is PAUSED`)
+            console.log(audio.currentTime);
         })
+
+        // let audioTime = audio.currentTime;
+        // if (audioTime !== 0) {
+        //     audioTime.onchange = function () { console.log("test") };
+        //     console.log('test');
+        // }
     }
 
     handleDelete(trackId, artistId) {

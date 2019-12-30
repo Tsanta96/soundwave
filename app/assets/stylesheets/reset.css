@@ -54,4 +54,5 @@ blockquote, q {
 /* Added margins */
 .body-view {
     margin: 0 90px;
+    position: relative;
 }
