@@ -21,17 +21,27 @@ class MusicPlayer extends React.Component {
         })
     }
 
+    //This doesn't work yet. 
+    //Ask TA about the better approach. (this or state)
     componentDidUpdate() {
-        console.log(this.props.trackIds);
-    }
+        const that = this;
+        
+        this.props.trackIds.forEach((trackId) => {
+            if (document.getElementById(`track-id-${trackId}`) !== null ) {
+                let temp = document.getElementById(`track-id-${trackId}`);
+                temp.addEventListener('play', () => {
+                    that.state.player.load();
+                    that.state.player.play();
+                })
+            }
+        })
+    };
 
     playAud() {
         this.state.player.play();
-        // console.log(this.state);
     }
 
     pauseAud() {
-        // console.log("test");
         this.state.player.pause();
     }
 
@@ -47,7 +57,6 @@ class MusicPlayer extends React.Component {
     }
 
     render() {
-        // debugger;
         const { currentTrack } = this.props
         return (
             <div className="music-player-background">
