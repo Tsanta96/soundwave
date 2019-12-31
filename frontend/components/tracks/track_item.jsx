@@ -1,6 +1,5 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { currentTrack } from '../../actions/music_player_actions';
 
 class TrackItem extends React.Component {
     constructor(props) {
@@ -9,23 +8,51 @@ class TrackItem extends React.Component {
         this.state = {
             id: this.props.track.id,
             title: this.props.track.title,
-            artistId: this.props.artistId
+            artistId: this.props.artistId,
+            audio: undefined,
+            playing: false,
+            currElement: undefined
         }
+
+        this.fetchTrack = this.fetchTrack.bind(this);
+        this.pauseAud = this.pauseAud.bind(this);
+        this.resetPlaying = this.resetPlaying.bind(this);
     }
 
     componentDidMount() {
-        const { track } = this.props;
-        const that = this;
-        let audio = document.getElementById(`track-id-${track.id}`)
+        this.setState({ audio: document.getElementById(`music-player`) });
+    }
 
-        audio.addEventListener('play', () => {
-            that.props.fetchCurrentTrack(track);
-        });
+    componentDidUpdate() {
+        this.state.audio.addEventListener('pause', () => {
+            // if (this.state.audio.src !== this.state.currElement.src) {
+                this.setState({ playing: false });
+            // }
+        })
 
-        audio.addEventListener('pause', () => {
-            console.log(`track ${track.id} is PAUSED`)
-            console.log(audio.currentTime);
-        });
+        // this.state.audio.addEventListener('play', () => {
+        //     this.setState({ playing: true });
+        // }) 
+    }
+
+    resetPlaying() {
+        this.setState({ playing: false });
+    }
+
+    fetchTrack(trackId) {
+        console.log('fetch');
+        console.log(this.props.track);
+        this.props.fetchCurrentTrack(this.props.track);
+        this.setState({ currElement: document.getElementById(`track-id-${trackId}`)});
+        this.setState({ playing: true });
+        
+        // this.setState({ currElement: document.getElementById(`track-id-${trackId}`) });
+        // this.setState({ playing: true });
+    }
+
+    pauseAud() {
+        this.state.audio.pause();
+        this.setState({ playing: false});
     }
 
     handleDelete(trackId, artistId) {
@@ -43,41 +70,46 @@ class TrackItem extends React.Component {
 
     render() {
         const { track, idx } = this.props
+        const playPause = (this.state.playing === false) ? (
+            <div>
+                <input className="play-button" type="image" src="https://d313rqwfqaf3f.cloudfront.net/musicPlayer/play_icon.svg" onClick={() => this.fetchTrack(track.id) } />
+            </div>
+        ) : (
+            <div>
+                <input className="pause-button" type="image" src="https://d313rqwfqaf3f.cloudfront.net/musicPlayer/pause_icon.svg" onClick={this.pauseAud}/>            
+            </div>
+        )
+
         const trackContainer = (this.props.match.path === '/nav/tracks') ? (
                 <div className="song-container">
                     <img src={track.imgFile} height="120" width="120" className="song-img"></img>
                     <div className="song-content">
-                        <div className="song-container-name-edit-delete">
+                        <div className="song-container-name">
                             <h1 className="song-name">{track.title}</h1>
-                            {/* <button className="edit" onClick={() => this.handleEdit(track)}>Edit</button>
-                                <button className="delete" onClick={() => this.handleDelete(track.id, track.artistId)}>Delete</button> */}
                         </div>
                         <h2 className="artist-name">{track.userName}</h2>
-                        <audio id={`track-id-${track.id}`}
-                            controls
-                            src={track.trackFile}>
-                            Track: {track.trackFile}
+                        <audio id={`track-id-${track.id}`} src={track.trackFile}>
                         </audio>
+                        {playPause}
                     </div>
                 </div>
             ) : (
                 <div className="song-container">
                     <img src={track.imgFile} height="120" width="120" className="song-img"></img>
                     <div className="song-content">
-                        <div className="song-container-name-edit-delete">
+                        <div className="song-container-name">
                             <h1 className="song-name">{track.title}</h1>
+                        </div>
+                        <h2 className="artist-name">{track.userName}</h2>
+                        <audio id={`track-id-${track.id}`} src={track.trackFile}>
+                        </audio>
+                        {playPause}
+                        <div className="edit-delete">
                             <button className="edit" onClick={() => this.handleEdit(track.id)}>Edit</button>
                             <button className="delete" onClick={() => this.handleDelete(track.id, track.artistId)}>Delete</button>
                         </div>
-                        <h2 className="artist-name">{track.userName}</h2>
-                        <audio id={`track-id-${track.id}`}
-                            controls
-                            src={track.trackFile}>
-                            Track: {track.trackFile}
-                        </audio>
                     </div>
                 </div>
-
             )
 
         return (
@@ -89,3 +121,6 @@ class TrackItem extends React.Component {
 }
 
 export default withRouter(TrackItem);
+
+// const track = document.getElementById('track-id-1');
+// const musicPlayer = document.getElementById('music-player');

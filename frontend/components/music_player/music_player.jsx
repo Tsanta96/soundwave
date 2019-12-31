@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 class MusicPlayer extends React.Component {
     constructor(props) {
@@ -11,7 +12,7 @@ class MusicPlayer extends React.Component {
         this.playAud = this.playAud.bind(this);
         this.pauseAud = this.pauseAud.bind(this);
         this.changeVol = this.changeVol.bind(this);
-        this.progressBar = this.progressBar.bind(this);
+        // this.progressBar = this.progressBar.bind(this);
     }
 
     componentDidMount() {
@@ -21,20 +22,24 @@ class MusicPlayer extends React.Component {
         })
     }
 
-    //This doesn't work yet. 
-    //Ask TA about the better approach. (this or state)
     componentDidUpdate() {
-        const that = this;
-        
-        this.props.trackIds.forEach((trackId) => {
-            if (document.getElementById(`track-id-${trackId}`) !== null ) {
-                let temp = document.getElementById(`track-id-${trackId}`);
-                temp.addEventListener('play', () => {
-                    that.state.player.load();
-                    that.state.player.play();
-                })
-            }
+        this.state.player.play();
+        console.log(this.props.history.location);
+        const progressBar = document.getElementById('progress-bar');
+        this.state.player.addEventListener('timeupdate', () => {
+            progressBar.value = (this.state.player.currentTime / this.state.player.duration);
         })
+        // const that = this;
+        
+        // this.props.trackIds.forEach((trackId) => {
+        //     if (document.getElementById(`track-id-${trackId}`) !== null ) {
+        //         let temp = document.getElementById(`track-id-${trackId}`);
+        //         temp.addEventListener('play', () => {
+        //             that.state.player.load();
+        //             that.state.player.play();
+        //         })
+        //     }
+        // })
     };
 
     playAud() {
@@ -49,12 +54,8 @@ class MusicPlayer extends React.Component {
         this.state.player.volume = document.getElementById("vol-bar").value;
     }
 
-    progressBar() {
-        const progressBar = document.getElementById('progress-bar');
-        this.state.player.addEventListener('timeupdate', () => {
-            progressBar.value = (this.state.player.currentTime / this.state.player.duration);  
-        })
-    }
+    // progressBar() {
+    // }
 
     render() {
         const { currentTrack } = this.props
@@ -64,7 +65,7 @@ class MusicPlayer extends React.Component {
                     <div className="music-player-container">
                         <audio id="music-player" src={currentTrack.trackFile}>
                         </audio>
-                        <input id="play-button" type="image" src="https://d313rqwfqaf3f.cloudfront.net/musicPlayer/play_icon.svg" onClick={() => { this.playAud();this.progressBar()}}/>
+                        <input id="play-button" type="image" src="https://d313rqwfqaf3f.cloudfront.net/musicPlayer/play_icon.svg" onClick={this.playAud}/>
                         <input id="pause-button" type="image" src="https://d313rqwfqaf3f.cloudfront.net/musicPlayer/pause_icon.svg" onClick={this.pauseAud}/>
                         <progress id="progress-bar" value="0" max="1"></progress>
                         <img id="vol-bar-img" src="" />
@@ -85,6 +86,6 @@ class MusicPlayer extends React.Component {
     }
 }
 
-export default MusicPlayer;
+export default withRouter(MusicPlayer);
 
 // const testTrack = document.getElementById('track-id-1');

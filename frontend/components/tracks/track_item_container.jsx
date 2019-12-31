@@ -4,7 +4,8 @@ import { fetchTrack, deleteTrack, fetchArtistTracks } from "../../actions/track_
 import { fetchCurrentTrack } from '../../actions/music_player_actions';
 
 const mapStateToProps = state => ({
-    currentUser: state.session.currentUser
+    currentUser: state.session.currentUser,
+    currentTrack: state.ui.musicPlayer
 });
 
 const mapDispatchToProps = dispatch => ({
