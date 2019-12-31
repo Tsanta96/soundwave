@@ -21,6 +21,10 @@ class MusicPlayer extends React.Component {
         })
     }
 
+    componentDidUpdate() {
+        console.log(this.props.trackIds);
+    }
+
     playAud() {
         this.state.player.play();
         // console.log(this.state);
@@ -43,6 +47,7 @@ class MusicPlayer extends React.Component {
     }
 
     render() {
+        // debugger;
         const { currentTrack } = this.props
         return (
             <div className="music-player-background">
