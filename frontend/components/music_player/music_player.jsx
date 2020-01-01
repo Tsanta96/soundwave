@@ -23,8 +23,12 @@ class MusicPlayer extends React.Component {
     }
 
     componentDidUpdate() {
-        this.state.player.play();
-        console.log(this.props.history.location);
+        if ((this.state.player.paused) && (this.state.player.currentTime !== 0)) {
+            console.log('test');
+        } else {
+            this.state.player.play();
+        }
+        console.log(this.props.history);
         const progressBar = document.getElementById('progress-bar');
         this.state.player.addEventListener('timeupdate', () => {
             progressBar.value = (this.state.player.currentTime / this.state.player.duration);
