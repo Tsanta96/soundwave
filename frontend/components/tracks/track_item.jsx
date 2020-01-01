@@ -26,7 +26,7 @@ class TrackItem extends React.Component {
     componentDidUpdate() {
         const that = this;
         this.state.audio.addEventListener('pause', () => {
-                this.setState({ playing: false });
+            this.setState({ playing: false });
         })
 
         // this.state.audio.addEventListener('play', () => {
@@ -82,13 +82,17 @@ class TrackItem extends React.Component {
                 <div className="song-container">
                     <img src={track.imgFile} height="120" width="120" className="song-img"></img>
                     <div className="song-content">
-                        <div className="song-container-name">
-                            <h1 className="song-name">{track.title}</h1>
+                        <div className="discover-song-container-name">
+                            <p id="discover-song-name">{track.title}</p>
                         </div>
-                        <h2 className="artist-name">{track.userName}</h2>
+                        <p id="artist-name">{track.userName}</p>
                         <audio id={`track-id-${track.id}`} src={track.trackFile}>
                         </audio>
                         {playPause}
+                        <div className="discover-comments-likes">
+                            <img src="https://d313rqwfqaf3f.cloudfront.net/design/speech-bubble.svg" className="discover-comment" height="15" width="15"></img>
+                            <img src="https://d313rqwfqaf3f.cloudfront.net/design/like-icon.svg" className="discover-like" height="16" width="16"></img>
+                        </div>
                     </div>
                 </div>
             ) : (
@@ -102,9 +106,15 @@ class TrackItem extends React.Component {
                         <audio id={`track-id-${track.id}`} src={track.trackFile}>
                         </audio>
                         {playPause}
-                        <div className="edit-delete">
-                            <button className="edit" onClick={() => this.handleEdit(track.id)}>Edit</button>
-                            <button className="delete" onClick={() => this.handleDelete(track.id, track.artistId)}>Delete</button>
+                        <div className="bottom-container">
+                            <div className="edit-delete">
+                                <button className="edit" onClick={() => this.handleEdit(track.id)}>Edit</button>
+                                <button className="delete" onClick={() => this.handleDelete(track.id, track.artistId)}>Delete</button>
+                            </div>
+                            <div className="comments-likes">
+                                <img src="https://d313rqwfqaf3f.cloudfront.net/design/speech-bubble.svg" className="comment" height="15" width="15"></img>
+                                <img src="https://d313rqwfqaf3f.cloudfront.net/design/like-icon.svg" className="like" height="16" width="16"></img>
+                            </div>
                         </div>
                     </div>
                 </div>

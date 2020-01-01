@@ -1,3 +1,40 @@
+.discover-song-container-name {
+    width: 450px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+#discover-song-name {
+    font-size: 23px;
+    margin-left: 20px;
+    margin-top: 27px;
+    font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+    margin-bottom: 10px;
+}
+
+#artist-name {
+    margin-left: 20px;
+    font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+}
+
+.discover-comments-likes {
+    display: flex;
+    flex-direction: row;
+    margin-left: 250px;
+    /* margin-top: 20px; */
+}
+
+.discover-comment {
+    margin-top: 20px;
+}
+
+.discover-like {
+    margin-left: 40px;
+    margin-top: 17px;
+}
+
 .song-container {
     display: flex;
     flex-direction: row;
@@ -85,6 +122,28 @@
     width: 50px;
     height: 20px;
     background-color: lightblue;
+}
+
+.bottom-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.comments-likes {
+    display: flex;
+    flex-direction: row;
+    margin-left: 60px;
+}
+
+.comments-likes .comment {
+    font-size: 15px;
+    margin-top: 35px;
+}
+
+.comments-likes .like {
+    font-size: 15px;
+    margin-top: 32px;
+    margin-left: 40px;
 }
 
 
