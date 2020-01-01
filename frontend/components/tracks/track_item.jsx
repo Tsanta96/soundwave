@@ -24,14 +24,13 @@ class TrackItem extends React.Component {
     }
 
     componentDidUpdate() {
+        const that = this;
         this.state.audio.addEventListener('pause', () => {
-            // if (this.state.audio.src !== this.state.currElement.src) {
                 this.setState({ playing: false });
-            // }
         })
 
         // this.state.audio.addEventListener('play', () => {
-        //     this.setState({ playing: true });
+            
         // }) 
     }
 
@@ -40,7 +39,6 @@ class TrackItem extends React.Component {
     }
 
     fetchTrack(trackId) {
-        console.log('fetch');
         console.log(this.props.track);
         this.props.fetchCurrentTrack(this.props.track);
         this.setState({ currElement: document.getElementById(`track-id-${trackId}`)});
