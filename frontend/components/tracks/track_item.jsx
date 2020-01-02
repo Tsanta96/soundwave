@@ -61,16 +61,16 @@ class TrackItem extends React.Component {
         }
     }
 
-    commentsClick(e) {
-        e.preventDefault();
-        // this.props.history.push('/nav/track/comments');
-        if (this.props.history.location.pathname === '/nav/you/tracks') {
-            const audioEl = e.target.parentElement.parentElement.parentElement.children[2];
-            console.log("Chosen audio", audioEl);
-        } else if (this.props.history.location.pathname === '/nav/tracks') {
-            const audioEl = e.target.parentElement.parentElement.children[2];
-            console.log("Chosen audio", audioEl);
-        }
+    commentsClick(trackId) {
+        // e.preventDefault();
+        this.props.history.push(`/nav/track/comments/${trackId}`);
+        // if (this.props.history.location.pathname === '/nav/you/tracks') {
+        //     const audioEl = e.target.parentElement.parentElement.parentElement.children[2];
+        //     console.log("Chosen audio", audioEl);
+        // } else if (this.props.history.location.pathname === '/nav/tracks') {
+        //     const audioEl = e.target.parentElement.parentElement.children[2];
+        //     console.log("Chosen audio", audioEl);
+        // }
     }
 
     // handleEdit(trackId) {
@@ -102,7 +102,7 @@ class TrackItem extends React.Component {
                         </audio>
                         {playPause}
                         <div className="discover-comments-likes">
-                            <img src="https://d313rqwfqaf3f.cloudfront.net/design/speech-bubble.svg" className="discover-comment" height="15" width="15" onClick={this.commentsClick}></img>
+                            <img src="https://d313rqwfqaf3f.cloudfront.net/design/speech-bubble.svg" className="discover-comment" height="15" width="15" onClick={() => this.commentsClick(track.id)}></img>
                             <img src="https://d313rqwfqaf3f.cloudfront.net/design/like-icon.svg" className="discover-like" height="16" width="16"></img>
                         </div>
                     </div>
@@ -124,7 +124,7 @@ class TrackItem extends React.Component {
                                 <button className="delete" onClick={() => this.handleDelete(track.id, track.artistId)}>Delete</button>
                             </div>
                             <div className="comments-likes">
-                                <img src="https://d313rqwfqaf3f.cloudfront.net/design/speech-bubble.svg" className="comment" height="15" width="15" onClick={this.commentsClick}></img>
+                                <img src="https://d313rqwfqaf3f.cloudfront.net/design/speech-bubble.svg" className="comment" height="15" width="15" onClick={() => this.commentsClick(track.id)}></img>
                                 <img src="https://d313rqwfqaf3f.cloudfront.net/design/like-icon.svg" className="like" height="16" width="16"></img>
                             </div>
                         </div>

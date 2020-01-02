@@ -25,7 +25,7 @@ const App = () => {
                 <Route path="/nav/upload" component={UploadTrackContainer}/>
                 <Route path="/nav/you/tracks" component={YouTracksContainer}/>
                 <ProtectedRoute path="/nav/tracks" component={TrackIndexContainer}/>
-                <Route path="/nav/track/comments" component={CommentsContainer}/>
+                <Route path="/nav/track/comments/:id" component={CommentsContainer}/>
             </div>
         </div>
     )
