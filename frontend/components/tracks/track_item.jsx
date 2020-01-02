@@ -63,6 +63,7 @@ class TrackItem extends React.Component {
 
     commentsClick(e) {
         e.preventDefault();
+        // this.props.history.push('/nav/track/comments');
         if (this.props.history.location.pathname === '/nav/you/tracks') {
             const audioEl = e.target.parentElement.parentElement.parentElement.children[2];
             console.log("Chosen audio", audioEl);
@@ -101,7 +102,7 @@ class TrackItem extends React.Component {
                         </audio>
                         {playPause}
                         <div className="discover-comments-likes">
-                        <img src="https://d313rqwfqaf3f.cloudfront.net/design/speech-bubble.svg" className="discover-comment" height="15" width="15" onClick={this.commentsClick}></img>
+                            <img src="https://d313rqwfqaf3f.cloudfront.net/design/speech-bubble.svg" className="discover-comment" height="15" width="15" onClick={this.commentsClick}></img>
                             <img src="https://d313rqwfqaf3f.cloudfront.net/design/like-icon.svg" className="discover-like" height="16" width="16"></img>
                         </div>
                     </div>
