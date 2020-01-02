@@ -5,7 +5,13 @@ class User < ApplicationRecord
 
     has_many :tracks,
     foreign_key: :artist_id,
-    class_name: :Track  
+    class_name: :Track,  
+    dependent: :destroy
+
+    has_many :comments,
+    foreign_key: :author_id,
+    class_name: :comment,
+    dependent: :destroy
 
     # has_many_attached :tracks
 
