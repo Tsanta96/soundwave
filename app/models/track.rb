@@ -9,6 +9,10 @@ class Track < ApplicationRecord
     foreign_key: :artist_id,
     class_name: :User
 
+    has_many :comments,
+    foreign_key: :track_id,
+    class_name: :Comment
+
     has_one_attached :track_file
     has_one_attached :img_file
 
