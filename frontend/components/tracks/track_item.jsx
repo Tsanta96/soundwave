@@ -63,8 +63,13 @@ class TrackItem extends React.Component {
 
     commentsClick(e) {
         e.preventDefault();
-        const parentEl = e.target.parentElement.parentElement.parentElement.children[2];
-        console.log("Chosen audio", parentEl);
+        if (this.props.history.location.pathname === '/nav/you/tracks') {
+            const audioEl = e.target.parentElement.parentElement.parentElement.children[2];
+            console.log("Chosen audio", audioEl);
+        } else if (this.props.history.location.pathname === '/nav/tracks') {
+            const audioEl = e.target.parentElement.parentElement.children[2];
+            console.log("Chosen audio", audioEl);
+        }
     }
 
     // handleEdit(trackId) {
@@ -114,7 +119,7 @@ class TrackItem extends React.Component {
                         {playPause}
                         <div className="bottom-container">
                             <div className="edit-delete">
-                                <button className="edit" onClick={() => this.handleEdit(track.id)}>Edit</button>
+                                {/* <button className="edit" onClick={() => this.handleEdit(track.id)}>Edit</button> */}
                                 <button className="delete" onClick={() => this.handleDelete(track.id, track.artistId)}>Delete</button>
                             </div>
                             <div className="comments-likes">
