@@ -3,6 +3,7 @@ import * as commentUtils from '../utils/comment_utils';
 export const RECEIVE_ALL_COMMENTS = 'RECEIVE_COMMENTS';
 export const RECEIVE_COMMENT = 'RECEIVE_COMMENT';
 export const RECEIVE_COMMENT_ERRORS = 'RECEIVE_COMMENT_ERRORS';
+export const REMOVE_COMMENT = 'REMOVE_COMMENT';
 
 const receiveAllComments = comments => ({
     type: RECEIVE_ALL_COMMENTS,
@@ -19,6 +20,11 @@ const receiveCommentErrors = errors => ({
     errors
 })
 
+const removeComment = commentId => ({
+    type: REMOVE_COMMENT,
+    commentId
+})
+
 export const fetchComments = trackId => dispatch => (
     commentUtils.fetchComments(trackId)
         .then(comments => dispatch(receiveAllComments(comments)))
@@ -28,4 +34,9 @@ export const createComment = comment => dispatch => (
     commentUtils.createComment(comment)
         .then((comment => dispatch(receiveTrack(comment))),
             ((err) => dispatch(receiveCommentErrors(err))))
+);
+
+export const deleteComment = commentId => dispatch => (
+    commentUtils.deleteComment(commentId) 
+        .then(() => dispatch(removeComment()))
 );

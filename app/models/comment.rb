@@ -8,7 +8,7 @@ class Comment < ApplicationRecord
     foreign_key: :author_id,
     class_name: :User
     
-    belongs_to :track
+    belongs_to :track,
     foreign_key: :track_id,
     class_name: :Track 
     
