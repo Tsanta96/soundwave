@@ -22,12 +22,11 @@ class Api::TracksController < ApplicationController
     end
 
     def create 
-        @track = Track.new(track_params)
-
-        if @track.save
-            render :index
-        else  
-            render json: @track.errors.full_messages, status: 400
+        if params[:track][:img_file] == "" || params[:track][:track_file] == ""
+            render json: ["No field left behind"], status: 400
+        else @track = Track.new(track_params)
+            @track.save 
+            render :index 
         end
     end
 

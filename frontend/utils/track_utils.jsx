@@ -28,7 +28,7 @@ export const createTrack = formData => (
         contentType: false, 
         processData: false
     })
-)
+);
 
 export const updateTrack = track => (
     $.ajax({

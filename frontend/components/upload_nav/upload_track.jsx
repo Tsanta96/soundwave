@@ -79,8 +79,6 @@ class UploadTrackForm extends React.Component {
                         <label className="upload-img">Upload Image
                         <input id="upload-imgFile"
                             type="file"
-                            // value={this.state.img_url}
-                            // onChange={this.handleInput("img_url")}
                             onChange={this.handleFile("imgFile")}
                         />
                         <br></br>
@@ -88,8 +86,6 @@ class UploadTrackForm extends React.Component {
                         <label className="upload-track">Upload Track
                         <input id="upload-trackFile"
                             type="file"
-                            // value={this.state.trackFile}
-                            // onChange={this.handleInput("track_url")}
                             onChange={this.handleFile("trackFile")}
                         />
                         <br></br>

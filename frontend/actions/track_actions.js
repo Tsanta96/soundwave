@@ -61,11 +61,10 @@ export const createTrack = newTrack => dispatch => (
             ((err) => dispatch(receiveTrackErrors(err.responseJSON))))
 );
 
-
 export const updateTrack = trackInfo => dispatch => (
     trackUtils.updateTrack(trackInfo)
         .then((trackInfo) => dispatch(receiveTrack(trackInfo)),
-            ((err) => dispatch(receiveTrackErrors(err))))
+            ((err) => dispatch(receiveTrackErrors(err.responsJSON))))
 );
 
 export const deleteTrack = trackId => dispatch => (

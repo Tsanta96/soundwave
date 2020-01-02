@@ -3,7 +3,7 @@ class Track < ApplicationRecord
     validates :artist_id, presence: true
 
     validate :ensure_track_file
-    # validate :ensure_img_file
+    validate :ensure_img_file
     
     belongs_to :artist,
     foreign_key: :artist_id,
@@ -22,9 +22,9 @@ class Track < ApplicationRecord
         end
     end
 
-    # def ensure_img_file 
-    #     unless self.img_file.attached?
-    #         errors[:img_file] << "Must be attached"
-    #     end
-    # end
+    def ensure_img_file 
+        unless self.img_file.attached?
+            errors[:img_file] << "Must be attached"
+        end
+    end
 end
