@@ -17,6 +17,7 @@ class TrackItem extends React.Component {
         this.fetchTrack = this.fetchTrack.bind(this);
         this.pauseAud = this.pauseAud.bind(this);
         this.resetPlaying = this.resetPlaying.bind(this);
+        this.commentsClick = this.commentsClick.bind(this);
     }
 
     componentDidMount() {
@@ -43,9 +44,6 @@ class TrackItem extends React.Component {
         this.props.fetchCurrentTrack(this.props.track);
         this.setState({ currElement: document.getElementById(`track-id-${trackId}`)});
         this.setState({ playing: true });
-        
-        // this.setState({ currElement: document.getElementById(`track-id-${trackId}`) });
-        // this.setState({ playing: true });
     }
 
     pauseAud() {
@@ -59,6 +57,12 @@ class TrackItem extends React.Component {
             this.props.deleteTrack(trackId)
             this.props.fetchArtistTracks(artistId);
         }
+    }
+
+    commentsClick(e) {
+        e.preventDefault();
+        const parentEl = e.target.parentElement.parentElement.parentElement.children[2];
+        console.log("Chosen audio", parentEl);
     }
 
     // handleEdit(trackId) {
@@ -90,7 +94,7 @@ class TrackItem extends React.Component {
                         </audio>
                         {playPause}
                         <div className="discover-comments-likes">
-                            <img src="https://d313rqwfqaf3f.cloudfront.net/design/speech-bubble.svg" className="discover-comment" height="15" width="15"></img>
+                        <img src="https://d313rqwfqaf3f.cloudfront.net/design/speech-bubble.svg" className="discover-comment" height="15" width="15" onClick={this.commentsClick}></img>
                             <img src="https://d313rqwfqaf3f.cloudfront.net/design/like-icon.svg" className="discover-like" height="16" width="16"></img>
                         </div>
                     </div>
@@ -112,7 +116,7 @@ class TrackItem extends React.Component {
                                 <button className="delete" onClick={() => this.handleDelete(track.id, track.artistId)}>Delete</button>
                             </div>
                             <div className="comments-likes">
-                                <img src="https://d313rqwfqaf3f.cloudfront.net/design/speech-bubble.svg" className="comment" height="15" width="15"></img>
+                                <img src="https://d313rqwfqaf3f.cloudfront.net/design/speech-bubble.svg" className="comment" height="15" width="15" onClick={this.commentsClick}></img>
                                 <img src="https://d313rqwfqaf3f.cloudfront.net/design/like-icon.svg" className="like" height="16" width="16"></img>
                             </div>
                         </div>

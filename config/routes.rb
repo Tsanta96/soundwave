@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do 
     resources :users 
     resource :session, only: [:new, :create, :destroy]
-    resources :tracks, only: [:index, :show, :create, :update, :destroy] 
+    resources :tracks, only: [:index, :show, :create, :update, :destroy]
+    resources :comments, only: [:create, :update, :destroy] 
     get '/tracks/artist_tracks/:artist_id' => 'tracks#artist_tracks'
+    get '/comments/track_comments/:track_id' => 'comments#track_comments'
   end
 end

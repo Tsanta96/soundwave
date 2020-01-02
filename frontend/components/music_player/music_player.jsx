@@ -23,11 +23,10 @@ class MusicPlayer extends React.Component {
     }
 
     componentDidUpdate() {
-        console.log(this.props.history.location.pathname);
         if ((this.state.player.paused) 
         && (this.state.player.currentTime !== 0) 
         && (this.props.history.location.pathname !== '/nav/tracks' && this.props.history.location.pathname !== '/nav/you/tracks')) {
-            console.log("test");
+            console.log("Ever hits this?");
         } else {
             this.state.player.play();
         }
