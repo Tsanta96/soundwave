@@ -5,11 +5,21 @@ class Api::CommentsController < ApplicationController
     end 
 
     def create 
+        debugger
+        @comment = Comment.new(comment_params)
 
+        if @comment.save
+            render :index 
+        else 
+            render json: @comment.errors.full_messages, status: 400
+        end
     end 
 
     def destroy 
-
+        @comment = Comment.find_by_id(params[:id])
+        if @comment 
+            @comment.delete 
+        end
     end
 
     private 
