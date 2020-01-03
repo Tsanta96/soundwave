@@ -39,7 +39,7 @@ Continuous play was made easy due to the front end routing provided by React's H
 track itself is never actually interrupted upon switching pages. It did however require some strategy to 
 allow for intended play and pause of the current track in the music player while on different pages. 
 
-![Continuous_Play](app/assets/gifs/upload_track.gif)
+![Continuous_Play](app/assets/gifs/continuous_play.gif)
 
 ## Technologies 
 
