@@ -19,8 +19,8 @@ more functionality as well as tweaking some of the styling moving forward.
 
 ### Discover Page
 
-This is the first page that User's see when they login/signup and displays the tracks from all the users on the site. 
-It currently displays the tracks in the order that they were uploaded to the site but I plan on revisiting this and 
+This is the first page that User's see when they login/signup which displays the tracks from all the users on the site. 
+It currently displays the tracks in the order that they were uploaded but I plan on revisiting this and 
 adding filters to allow for different organizations of the tracks. 
 
 ![Discover](app/assets/gifs/discover_page.gif)
