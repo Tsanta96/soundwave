@@ -9,7 +9,7 @@ export const createComment = comment => (
     $.ajax({
         type: 'POST',
         url: `api/comments`,
-        data: comment 
+        data: { comment } 
     })
 )
 

@@ -1,15 +1,15 @@
 class Api::CommentsController < ApplicationController 
 
-    def index 
-        @comments = Comment.all
+    def track_comments
+        @comments = Track.find_by_id(params[:track_id]).comments 
+        render :index
     end 
 
     def create 
-        debugger
         @comment = Comment.new(comment_params)
 
         if @comment.save
-            render :index 
+            render :index
         else 
             render json: @comment.errors.full_messages, status: 400
         end

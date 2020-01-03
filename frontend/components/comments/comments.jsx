@@ -1,4 +1,5 @@
 import React from 'react';
+import CommentItem from './comment_item';
 
 class Comments extends React.Component {
     constructor(props) {
@@ -9,32 +10,49 @@ class Comments extends React.Component {
             author_id: this.props.currentUser.id,
             track_id: this.props.trackId
         }
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    componentDidMount() {
+        this.props.fetchComments(this.props.trackId);
+        this.props.fetchTrack(this.props.trackId);
     }
 
     handleInput() {
         return e => {
-            this.setState({ [body]: e.currentTarget.value})
+            this.setState({ body: e.currentTarget.value})
         }
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.createComment(this.state)
+        this.props.createComment(this.state);
+
+        this.setState({ body: "" });
     }
 
     render() {
         return (
             <div>
-                <form>
+                <div className="comment-title">
+                    <h1>Comments</h1>
+                </div>
+                <form className="comments-form">
                     <label className="comment-body">
-                        <input 
+                        <textarea rows="4" cols="80"
                             type="textArea"
+                            placeholder="Say something about this track"
                             value={this.state.body}
                             onChange={this.handleInput('body')}
                         />
                     </label>
-                    <button onClick={this.handleSubmit}>Comment</button>
+                    <button className="comment-button" onClick={this.handleSubmit}>Comment</button>
                 </form>
+                <div>
+                    <ul className="comments-box">
+                        {this.props.comments.map((comment, idx) => <CommentItem key={comment.id} idx={idx} comment={comment} />)}
+                    </ul>
+                </div>
             </div>
         )
     }

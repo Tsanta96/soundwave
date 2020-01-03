@@ -29,7 +29,6 @@ class TrackItem extends React.Component {
         
         this.state.audio.addEventListener('pause', () => {
             this.setState({ playing: false });
-            console.log("paused");
         })
         removeEventListener('pause', this.state.audio);
 
@@ -63,6 +62,7 @@ class TrackItem extends React.Component {
 
     commentsClick(trackId) {
         // e.preventDefault();
+        this.props.removeAllComments();
         this.props.history.push(`/nav/track/comments/${trackId}`);
         // if (this.props.history.location.pathname === '/nav/you/tracks') {
         //     const audioEl = e.target.parentElement.parentElement.parentElement.children[2];
@@ -120,7 +120,7 @@ class TrackItem extends React.Component {
                         {playPause}
                         <div className="bottom-container">
                             <div className="edit-delete">
-                                {/* <button className="edit" onClick={() => this.handleEdit(track.id)}>Edit</button> */}
+                                <button className="edit" onClick={() => this.handleEdit(track.id)}>Edit</button>
                                 <button className="delete" onClick={() => this.handleDelete(track.id, track.artistId)}>Delete</button>
                             </div>
                             <div className="comments-likes">

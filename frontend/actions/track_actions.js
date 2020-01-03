@@ -6,6 +6,7 @@ export const RECEIVE_TRACK_ERRORS = "RECEIVE_TRACK_ERRORS";
 export const REMOVE_TRACK_ERRORS = "REMOVE_TRACK_ERRORS";
 export const REMOVE_TRACK = "RECEIVE_ALL_TRACKS";
 export const RECEIVE_ARTIST_TRACKS = "RECEIVE_ARTIST_TRACKS";
+export const EMPTY_TRACKS = "EMPTY_TRACKS";
 
 const receiveAllTracks = tracks => ({
     type: RECEIVE_ALL_TRACKS,
@@ -35,6 +36,10 @@ const removeTrack = trackId => ({
     type: REMOVE_TRACK,
     trackId
 });
+
+// export const emptyTracks = () => ({
+//     type: EMPTY_TRACKS
+// })
 
 
 //thunk action creators 
