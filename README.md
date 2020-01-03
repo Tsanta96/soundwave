@@ -52,9 +52,9 @@ allow for intended play and pause of the current track in the music player while
 ## Design
 
 The design was based off of the SoundCloud website and although I took some noticable liberties 
-with some of the styling, I frequently referred back to Soundcloud's website to drum up inspiration.
+on some of the styling, I frequently referred back to Soundcloud's website to drum up inspiration.
 A prime example of this is the custom logo I added which is a wave with the sort of soundwave 
-decoration that is recognized on the SouncCloud logo.
+decoration that is recognized on the actual SouncCloud logo.
 
 ![SoundWave_Logo](app/assets/images/soundwave_logo_img.png "SoundWave Logo") 
 
