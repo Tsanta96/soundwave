@@ -48,8 +48,14 @@ class NavBar extends React.Component {
                         <img src="http://d313rqwfqaf3f.cloudfront.net/design/wave_white.svg" height="40" width="40"></img>
                     </div>
                     <button className="nav-discover-button" onClick={this.handleDiscoverButton}>Discover</button>
+                    <button className="nav-stream-button">Stream</button>
+                    <button className="nav-library-button">Library</button>
+                </div>
+                <div className="nav-bar-search">
+                    <input className="search-input" type="text" placeholder="Search"></input>
                 </div>
                 <div className="nav-bar-right-side">
+                    <button className="nav-upgrade-button">Upgrade</button>
                     <button className="nav-upload-button" onClick={this.handleUploadButton}>Upload</button>
                     <div className="nav-bar-profile-icon">
                         <h2>{this.props.currentUser.username}</h2>

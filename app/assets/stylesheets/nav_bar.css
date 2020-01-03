@@ -49,6 +49,50 @@
     cursor: pointer;
 }
 
+.nav-bar-left-side .nav-stream-button {
+    width: 104px;
+    font-size: 14px;
+    background-color: #333333;
+    border: none;
+    border-right: 1px solid black;
+    color: lightgray;
+}
+
+/* .nav-bar-left-side .nav-stream-button:hover {
+    width: 104px;
+    background-color: black;
+    border: none;
+    color: white;
+    cursor: pointer;
+} */
+
+.nav-bar-left-side .nav-library-button {
+    width: 104px;
+    font-size: 14px;
+    background-color: #333333;
+    border: none;
+    border-right: 1px solid black;
+    color: lightgray;
+}
+
+/* .nav-bar-left-side .nav-library-button:hover {
+    width: 104px;
+    background-color: black;
+    border: none;
+    color: white;
+    cursor: pointer;
+} */
+
+.nav-bar-search .search-input {
+    width: 500px;
+    height: 25px;
+    border-radius: 6px;
+    border: 1px solid black;
+    padding-left: 7px;
+    font-size: 14px;
+    background-color: rgb(223, 223, 223);
+}
+
 .nav-bar-right-side {
     display: flex;
     flex-direction: row;
@@ -77,6 +121,17 @@
     cursor: pointer;
 }
 
+.nav-bar-right-side .nav-upgrade-button {
+    width: 80px;
+    font-size: 14px;
+    background-color: #333333;
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    color: #00b8e6;
+}
+
 .nav-bar-right-side .nav-upload-button:focus {
     width: 80px;
     border-top: none;
@@ -101,6 +156,9 @@
 .nav-bar-profile-icon h2 {
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
+    border: 1px solid #00b8e6;
+    padding: 10px;
+    border-radius: 50px;
 }
 
 .nav-bar-profile-icon button {
