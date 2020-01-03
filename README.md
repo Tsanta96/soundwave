@@ -1,6 +1,6 @@
 # SoundWave
 
-(https://sound-wave-aa.herokuapp.com/#/ "Live Demo")
+[Live Demo](https://sound-wave-aa.herokuapp.com/#/ "Live Demo")
 
 SoundWave is a music streaming website inspired by SoundCloud. It shares a lot of 
 the same functionality and is similar in style to SoundCloud but has it's own blue 
