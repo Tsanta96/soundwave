@@ -11,7 +11,7 @@ more functionality as well as tweaking some of the styling moving forward.
 ## Features
 
 - Secure frontend to backend authentication system using BCrypt.
-- Users can upload (or delete) their own audio tracks with an accompanying image.
+- Users can upload (or delete) their own audio tracks and provide an accompanying image.
 - Users have a library of their own tracks, "Your Tracks".
 - Users can view all the tracks that have been uploaded to the site on the "Discover" page.
 - Users can leave comments on tracks.
