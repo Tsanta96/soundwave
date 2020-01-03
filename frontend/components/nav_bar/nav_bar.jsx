@@ -55,7 +55,7 @@ class NavBar extends React.Component {
                     <input className="search-input" type="text" placeholder="Search"></input>
                 </div>
                 <div className="nav-bar-right-side">
-                    <button className="nav-upgrade-button">Upgrade</button>
+                    <button className="nav-upgrade-button" onClick={() => this.props.history.push('/nav/upgrade')}>Upgrade</button>
                     <button className="nav-upload-button" onClick={this.handleUploadButton}>Upload</button>
                     <div className="nav-bar-profile-icon">
                         <h2>{this.props.currentUser.username}</h2>

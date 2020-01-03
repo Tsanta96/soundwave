@@ -133,6 +133,16 @@
     color: #00b8e6;
 }
 
+.nav-bar-right-side .nav-upgrade-button:hover {
+    background-color: black;
+    width: 80px;
+    border-top: none;
+    border-right: none;
+    border-left: 1px solid black;
+    color: #00b8e6;
+    cursor: pointer;
+}
+
 .nav-bar-right-side .nav-upload-button:focus {
     width: 80px;
     border-top: none;

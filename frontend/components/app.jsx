@@ -12,6 +12,7 @@ import YouTracksContainer from './upload_nav/you_tracks_container';
 import TrackIndexContainer from './tracks/track_index_container';
 import MusicPlayerContainer from './music_player/music_player_container';
 import CommentsContainer from './comments/comments_container';
+import UpgradeComponent from './upgrade/upgrade';
 
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
                 <Route path="/nav/you/tracks" component={YouTracksContainer}/>
                 <ProtectedRoute path="/nav/tracks" component={TrackIndexContainer}/>
                 <Route path="/nav/track/comments/:id" component={CommentsContainer}/>
+                <Route path="/nav/upgrade" component={UpgradeComponent}/>
             </div>
         </div>
     )
