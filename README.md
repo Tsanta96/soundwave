@@ -56,7 +56,7 @@ with some of the styling, I frequently referred back to Soundcloud's website to 
 A prime example of this is the custom logo I added which is a wave with the sort of soundwave 
 decoration that is recognized on the SouncCloud logo.
 
-[SoundWave_Logo](app/assets/images/soundwave_logo_img.png)
+[SoundWave_Logo](app/assets/images/soundwave_logo_img.png "SoundWave Logo") 
 
 ## Future Features
 
