@@ -46,7 +46,6 @@ class NavBar extends React.Component {
                 <div className="nav-bar-left-side">
                     <div className="nav-bar-logo">
                         <img src="http://d313rqwfqaf3f.cloudfront.net/design/wave_white.svg" height="40" width="40"></img>
-                        {/* <h1 className="logo">SoundWave</h1> */}
                     </div>
                     <button className="nav-discover-button" onClick={this.handleDiscoverButton}>Discover</button>
                 </div>

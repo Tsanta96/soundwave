@@ -34,17 +34,6 @@ class MusicPlayer extends React.Component {
         this.state.player.addEventListener('timeupdate', () => {
             progressBar.value = (this.state.player.currentTime / this.state.player.duration);
         })
-        // const that = this;
-        
-        // this.props.trackIds.forEach((trackId) => {
-        //     if (document.getElementById(`track-id-${trackId}`) !== null ) {
-        //         let temp = document.getElementById(`track-id-${trackId}`);
-        //         temp.addEventListener('play', () => {
-        //             that.state.player.load();
-        //             that.state.player.play();
-        //         })
-        //     }
-        // })
     };
 
     playAud() {
