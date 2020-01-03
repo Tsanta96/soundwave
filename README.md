@@ -71,5 +71,5 @@ These additions are:
 
 ## Acknowledgments
 
-* SoundCloud for serving as the key inspiration to this project
+* SoundCloud for serving as the inspiration to this project
 * The Instructors at App Academy that were able to offer guidance
