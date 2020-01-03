@@ -19,6 +19,7 @@
 
 .nav-bar-logo img {
     margin: 0 auto;
+    cursor: pointer;
 }
 
 .logo {

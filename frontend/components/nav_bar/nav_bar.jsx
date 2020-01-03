@@ -45,7 +45,7 @@ class NavBar extends React.Component {
             <header className="nav-bar">
                 <div className="nav-bar-left-side">
                     <div className="nav-bar-logo">
-                        <img src="http://d313rqwfqaf3f.cloudfront.net/design/wave_white.svg" height="40" width="40"></img>
+                        <img src="http://d313rqwfqaf3f.cloudfront.net/design/wave_white.svg" height="40" width="40" onClick={() => this.props.history.push('/nav/tracks')}></img>
                     </div>
                     <button className="nav-discover-button" onClick={this.handleDiscoverButton}>Discover</button>
                     <button className="nav-stream-button">Stream</button>
