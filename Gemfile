@@ -1,3 +1,4 @@
+#gem source -a http://rubygems.org/
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -53,7 +54,7 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'annotate'
-  gem 'rb-readline'
+  #gem 'rb-readline'
 end
 
 group :test do
