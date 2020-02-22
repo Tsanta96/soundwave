@@ -8,6 +8,14 @@ theme to it. This was my first independent full stack project and was designed a
 built within a 3 week timespan, however I plan on continuing to add
 more functionality as well as tweaking some of the styling moving forward. 
 
+## Technologies 
+
+- Ruby on Rails (backend)
+- React-Redux (frontend)
+- Postgresql (database management)
+- AWS (data hosting)
+- Heroku (domain hosting)
+
 ## Features
 
 - Secure frontend to backend authentication system using BCrypt.
@@ -40,14 +48,6 @@ track itself is never actually interrupted upon switching pages. It did however 
 allow for intended play and pause of the current track in the music player while on different pages. 
 
 ![Continuous_Play](app/assets/gifs/continuous_play.gif)
-
-## Technologies 
-
-- Ruby on Rails (backend)
-- React-Redux (frontend)
-- Postgresql (database management)
-- AWS (data hosting)
-- Heroku (domain hosting)
 
 ## Design
 
