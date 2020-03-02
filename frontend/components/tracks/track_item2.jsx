@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-class TrackItem extends React.Component {
+class TrackItem2 extends React.Component {
     constructor(props) {
         super(props);
 
@@ -9,72 +9,23 @@ class TrackItem extends React.Component {
             id: this.props.track.id,
             title: this.props.track.title,
             artistId: this.props.artistId,
-            audio: undefined,
-            playing: false,
-            currElement: undefined
+            // playing: false,
+            // currSongId: undefined
         }
-
-        this.fetchTrack = this.fetchTrack.bind(this);
-        this.pauseAud = this.pauseAud.bind(this);
-        this.resetPlaying = this.resetPlaying.bind(this);
-        this.commentsClick = this.commentsClick.bind(this);
     }
 
     componentDidMount() {
-        this.setState({ audio: document.getElementById(`music-player`) });
+        this.setState({ audio: document.getElementById('music-player')});
     }
 
-    componentDidUpdate(prevProps) {
-        console.log("CurrentTrack", this.state);
-        // console.log("prevProps", prevProps);
-        // console.log("componentDidUpdate ---> currElement", this.state.currElement)
-        // console.log("something new---------------------");
-        // console.log(this.state);
-        this.state.audio.addEventListener('pause', () => {
-            this.setState({ playing: false });
-        })
-        removeEventListener('pause', this.state.audio);
-        this.state.audio.addEventListener('play', () => {
-            // console.log(this.state.audio);
-        })
-    }
+    // componentDidUpdate(prevProps) {
 
-    resetPlaying() {
-        this.setState({ playing: false });
-    }
+    // }
 
     fetchTrack(e, trackId) {
         e.preventDefault();
-        // this.pauseAud();
-        // console.log(e.currentTarget.parentElement.previousSibling);
-        // console.log("===");
-        // console.log(this.state.currElement);
-        // console.log("top of fetchTrack", this.state.currElement);
-        
-        //if the same track is loaded, then just play 
-        //else load and play new track
-        // if (e.currentTarget.parentElement.previousSibling === this.state.currElement) {
-        //     console.log("TRUE");
-        //     this.state.audio.currentTime = 0;
-        //     this.state.audio.play();
-        //     this.setState({ playing: true });
-        // } else {
-            // console.log("FALSE");
-            this.setState({ currElement: undefined })
-            this.props.fetchCurrentTrack(this.props.track);
-            this.setState({ currElement: document.getElementById(`track-id-${trackId}`) });
-            this.setState({ playing: true });
-        // }
-    }
-
-    pauseAud(e) {
-        // console.log(e.currentTarget.parentElement.previousSibling);
-        // e.currentTarget.parentElement.previousSibling.pause();
-        // e.currentTarget.parentElement.previousSibling.pause()
-        // console.log("Audio paused")
-        // console.log("Paused currEle", this.state.currElement);
-        this.state.audio.pause();
-        this.setState({ playing: false })
+        this.props.fetchCurrentTrack(this.props.track);
+        // this.setState({ currSongId: e.target.parentElement.previousSibling.getAttribute("id")})
     }
 
     handleDelete(trackId, artistId) {
@@ -90,14 +41,9 @@ class TrackItem extends React.Component {
         this.props.history.push(`/nav/track/comments/${trackId}`);
     }
 
-    // handleEdit(trackId) {
-    //     this.props.history.push('/nav/upload');
-    //     this.props.fetchTrack(trackId);
-    // }
-
     render() {
         const { track, idx } = this.props
-        const playPause = (this.state.playing === false) ? (
+        const playPause = (`track-id-${track.id}` !== this.state.currSongId) ? (
             <div>
                 <input className="play-button" type="image" src="https://d313rqwfqaf3f.cloudfront.net/musicPlayer/play_icon.svg" onClick={(e) => this.fetchTrack(e, track.id) } />
             </div>
@@ -157,4 +103,4 @@ class TrackItem extends React.Component {
     }
 }
 
-export default withRouter(TrackItem);
+export default withRouter(TrackItem2);
