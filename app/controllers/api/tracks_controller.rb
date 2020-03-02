@@ -11,6 +11,10 @@ class Api::TracksController < ApplicationController
         render :index
     end 
 
+    def search_string
+        @tracks = Track.where(`title = #{params[:search_string]}`)
+    end
+
     def show 
         @track = Track.find_by_id(params[:id])
         
