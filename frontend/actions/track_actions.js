@@ -7,6 +7,8 @@ export const REMOVE_TRACK_ERRORS = "REMOVE_TRACK_ERRORS";
 export const REMOVE_TRACK = "RECEIVE_ALL_TRACKS";
 export const RECEIVE_ARTIST_TRACKS = "RECEIVE_ARTIST_TRACKS";
 export const EMPTY_TRACKS = "EMPTY_TRACKS";
+export const RECEIVE_SEARCH_TRACKS = "RECEIVE_SEARCH_TRACKS";
+export const RECEIVE_SEARCH_ERRORS = "RECEIVE_SEARCH_ERRORS";
 
 const receiveAllTracks = tracks => ({
     type: RECEIVE_ALL_TRACKS,
@@ -28,14 +30,24 @@ const receiveTrackErrors = errors => ({
     errors
 })
 
-export const removeTrackErrors = () => ({
-    type: REMOVE_TRACK_ERRORS
-})
-
 const removeTrack = trackId => ({
     type: REMOVE_TRACK,
     trackId
 });
+
+const receiveSearchTracks = tracks => ({
+    type: RECEIVE_SEARCH_TRACKS,
+    tracks
+})
+
+const receiveSearchErrors = errors => ({
+    type: RECEIVE_SEARCH_ERRORS,
+    errors
+})
+
+export const removeTrackErrors = () => ({
+    type: REMOVE_TRACK_ERRORS
+})
 
 // export const emptyTracks = () => ({
 //     type: EMPTY_TRACKS
@@ -76,3 +88,10 @@ export const deleteTrack = trackId => dispatch => (
     trackUtils.deleteTrack(trackId)
         .then(() => dispatch(removeTrack()))
 );
+
+//search for track
+export const searchTracks = searchString => dispatch => (
+    trackUtils.searchTracks(searchString)
+        .then((tracks) => dispatch(receiveSearchTracks(tracks)),
+            ((err) => dispatch(receiveSearchErrors(err.responseJSON))))
+)

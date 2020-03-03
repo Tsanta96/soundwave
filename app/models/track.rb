@@ -1,5 +1,5 @@
 class Track < ApplicationRecord
-    validates :title, presence: true 
+    validates :title, presence: true, uniqueness: {case_sensitive: false} 
     validates :artist_id, presence: true
 
     validate :ensure_track_file

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { withRouter } from 'react-router';
+import SearchBar from '../search/searchbar';
 
 //Add links to navbar to navigate
 class NavBar extends React.Component {
@@ -28,19 +29,6 @@ class NavBar extends React.Component {
     }
 
     render() {
-        // const { currentUser } = this.props
-        // const authAction = currentUser ? (
-        //     <div className="nav-bar-profile-icon">
-        //         <h2>{currentUser.username}</h2>
-        //         <button onClick={this.handleLogout}>Log Out</button>
-        //     </div>
-        // ) : (
-        //     <div className="auth-btns">
-        //         <Link to="/signup" id="signup">Sign Up</Link>
-        //         <Link to="/login" id="login">Log In</Link>
-        //     </div>
-        // );
-
         return (
             <header className="nav-bar">
                 <div className="nav-bar-left-side">
@@ -51,9 +39,10 @@ class NavBar extends React.Component {
                     <button className="nav-stream-button">Stream</button>
                     <button className="nav-library-button">Library</button>
                 </div>
-                <div className="nav-bar-search">
+                <SearchBar />
+                {/* <div className="nav-bar-search">
                     <input className="search-input" type="text" placeholder="Search"></input>
-                </div>
+                </div> */}
                 <div className="nav-bar-right-side">
                     <button className="nav-upgrade-button" onClick={() => this.props.history.push('/nav/upgrade')}>Upgrade</button>
                     <button className="nav-upload-button" onClick={this.handleUploadButton}>Upload</button>

@@ -6,10 +6,23 @@ class Api::TracksController < ApplicationController
     end
 
     def artist_tracks
-        #Might need to find current user first and use that user instead of 'current_user'
         @tracks = User.find_by_id(params[:artist_id]).tracks
         render :index
     end 
+
+    def search_string
+        #Retreive tracks that include the search string. If none, return status error and no results found 
+        search_string_lower = params[:search_string].downcase
+        search_string_cap = params[:search_string].capitalize
+    
+        @tracks = Track.where("title LIKE ?", "%#{search_string_lower}%").or(Track.where("title Like ?", "%#{search_string_cap}%"))
+
+        if @tracks.length > 0
+            render :index
+        else 
+            render json: ["Could not find tracks"], status: 400
+        end
+    end
 
     def show 
         @track = Track.find_by_id(params[:id])
