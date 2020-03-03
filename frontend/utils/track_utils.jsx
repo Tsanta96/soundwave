@@ -47,9 +47,9 @@ export const deleteTrack = trackId => (
 
 
 //Search for tracks 
-export const searchTracks = searchString => {
+export const searchTracks = searchString => (
     $.ajax({
         method: 'GET',
         url: `api/tracks/search_tracks/${searchString}`
     })
-}
+)

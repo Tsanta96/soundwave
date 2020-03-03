@@ -8,6 +8,7 @@ export const REMOVE_TRACK = "RECEIVE_ALL_TRACKS";
 export const RECEIVE_ARTIST_TRACKS = "RECEIVE_ARTIST_TRACKS";
 export const EMPTY_TRACKS = "EMPTY_TRACKS";
 export const RECEIVE_SEARCH_TRACKS = "RECEIVE_SEARCH_TRACKS";
+export const RECEIVE_SEARCH_ERRORS = "RECEIVE_SEARCH_ERRORS";
 
 const receiveAllTracks = tracks => ({
     type: RECEIVE_ALL_TRACKS,
@@ -37,6 +38,11 @@ const removeTrack = trackId => ({
 const receiveSearchTracks = tracks => ({
     type: RECEIVE_SEARCH_TRACKS,
     tracks
+})
+
+const receiveSearchErrors = errors => ({
+    type: RECEIVE_SEARCH_ERRORS,
+    errors
 })
 
 export const removeTrackErrors = () => ({
@@ -86,5 +92,6 @@ export const deleteTrack = trackId => dispatch => (
 //search for track
 export const searchTracks = searchString => dispatch => (
     trackUtils.searchTracks(searchString)
-        // .then((tracks) => dispatch(receiveSearchTracks(tracks)))
+        .then((tracks) => dispatch(receiveSearchTracks(tracks)),
+            ((err) => dispatch(receiveSearchErrors(err.responseJSON))))
 )

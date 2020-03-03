@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import { compose } from 'redux';
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom';
+import { searchTracks, removeTrackErrors } from '../../actions/track_actions';
 
 export class SearchBar extends Component {
     constructor(props) {
@@ -14,6 +16,12 @@ export class SearchBar extends Component {
         this.handleSearchSubmit = this.handleSearchSubmit.bind(this);
     }
 
+    componentDidUpdate(prevProps) {
+        if (prevProps.location.pathname !== this.props.location.pathname) {
+            this.props.searchTracks(this.state.searchString)
+        }
+    }
+
     handleSearchInput() {
         return e => {
             this.setState({ searchString: e.currentTarget.value })
@@ -21,7 +29,10 @@ export class SearchBar extends Component {
     }
 
     handleSearchSubmit() {
-        this.props.history.push(`/nav/search/${this.state.searchString}`)
+        if (this.state.searchString !== "") {
+            this.props.removeTrackErrors();
+            this.props.history.push(`/nav/search/${this.state.searchString}`);
+        }
     }
 
     render() {
@@ -42,14 +53,15 @@ export class SearchBar extends Component {
     }
 }
 
-export default withRouter(SearchBar);
+// export default withRouter(SearchBar);
 
-// const mapStateToProps = (state) => ({
-    
-// })
+const mapStateToProps = (state) => ({
+})
 
-// const mapDispatchToProps = {
-    
-// }
+const mapDispatchToProps = dispatch => ({
+    searchTracks: (tracks) => dispatch(searchTracks(tracks)),
+    removeTrackErrors: () => dispatch(removeTrackErrors())
+})
 
-// export default connect(mapStateToProps, mapDispatchToProps)(searchbar)
+// export default connect(mapStateToProps, mapDispatchToProps)(Searchbar)
+export default compose(withRouter, connect(mapStateToProps, mapDispatchToProps))(SearchBar);
