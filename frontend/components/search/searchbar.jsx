@@ -38,7 +38,7 @@ export class SearchBar extends Component {
     render() {
         return (
             <div className="nav-bar-search">
-                <form>
+                <form className="search-form">
                     <input 
                         className="search-input" 
                         type="text" 
@@ -46,7 +46,7 @@ export class SearchBar extends Component {
                         value={this.state.searchString}
                         onChange={this.handleSearchInput()}
                     />
-                    <button onClick={this.handleSearchSubmit}>Search</button>
+                    <button className="search-button" onClick={this.handleSearchSubmit}>Search</button>
                 </form>
             </div>
         )

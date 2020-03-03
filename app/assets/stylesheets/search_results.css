@@ -1,0 +1,27 @@
+.search-tracks {
+    margin-bottom: 48px;
+}
+
+.search-text {
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.default {
+    font-size: 20px;
+}
+
+.search-string {
+    margin-left: 10px;
+    font-size: 30px;
+    display: inline-block;
+}
+
+
+/* .search-tracks h1 {
+    font-size: 30px;
+    font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+    padding-top: 15px;
+    padding-bottom: 15px;
+} */

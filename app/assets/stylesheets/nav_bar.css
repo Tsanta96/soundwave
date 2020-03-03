@@ -84,14 +84,37 @@
     cursor: pointer;
 } */
 
+/* Search ----------*/
 .nav-bar-search .search-input {
-    width: 500px;
+    width: 400px;
     height: 25px;
     border-radius: 6px;
     border: 1px solid black;
     padding-left: 7px;
     font-size: 14px;
     background-color: rgb(223, 223, 223);
+}
+
+.search-form {
+    display: flex;
+    flex-direction: row;
+}
+
+.search-button {
+    margin-left: 10px;
+    background-color: #00b8e6;
+    border-radius: 5px;
+    border: none;
+    color: white;
+}
+
+.search-button:hover {
+    margin-left: 10px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: #009ec5;
+    cursor: pointer;
 }
 
 .nav-bar-right-side {
