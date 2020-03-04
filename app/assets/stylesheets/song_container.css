@@ -30,9 +30,25 @@
     margin-top: 20px;
 }
 
+.discover-comment:hover {
+    margin-top: 20px;
+    cursor: pointer;
+}
+
 .discover-like {
     margin-left: 40px;
     margin-top: 17px;
+}
+
+.discover-like:hover {
+    margin-left: 40px;
+    margin-top: 17px;
+    cursor: pointer;
+}
+
+.discover-like-number {
+    margin-left: 8px;
+    align-self: flex-end;
 }
 
 .song-container {
@@ -140,10 +156,30 @@
     margin-top: 35px;
 }
 
+.comments-likes .comment:hover {
+    font-size: 15px;
+    margin-top: 35px;
+    cursor: pointer
+}
+
 .comments-likes .like {
     font-size: 15px;
     margin-top: 32px;
     margin-left: 40px;
+}
+
+.comments-likes .like:hover {
+    font-size: 15px;
+    margin-top: 32px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.comments-like-number {
+    margin-left: 8px;
+    margin-bottom: 5px;
+    align-self: flex-end;
+    font-size: 15px;
 }
 
 

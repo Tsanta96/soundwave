@@ -6,4 +6,10 @@ class Like < ApplicationRecord
     belongs_to :user, 
     foreign_key: :user_id, 
     class_name: :User
+
+    #belongs to a track
+    belongs_to :track,
+    foreign_key: :track_id,
+    class_name: :Track
+    
 end
