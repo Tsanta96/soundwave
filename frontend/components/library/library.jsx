@@ -13,9 +13,9 @@ export class library extends React.Component {
     render() {
         return (
             <div>
-                <div>
+                <div className="library-tracks">
                     <h1>Library</h1>
-                    <p>These are tracks that you've liked. You can remove them by unliking them</p>
+                    <p className="library-note">These are tracks that you've liked. You can remove them by unliking them</p>
                     {this.props.tracks.map((track, idx) => <TrackItemContainer2 key={track.id} idx={idx} track={track} />)}
                 </div>
             </div>

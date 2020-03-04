@@ -62,7 +62,7 @@ class TrackItem2 extends React.Component {
             </div>
         )
 
-        const trackContainer = (this.props.match.path === '/nav/tracks') ? (
+        const trackContainer = ((this.props.match.path === '/nav/tracks') || (this.props.match.path === '/nav/library')) ? (
                 <div className="song-container">
                     <img src={track.imgFile} height="120" width="120" className="song-img"></img>
                     <div className="song-content">
