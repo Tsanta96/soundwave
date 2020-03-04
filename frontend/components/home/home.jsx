@@ -5,6 +5,7 @@ const Home = ({ openModal, removeErrors }) => {
         <nav className="auth-btns">
             <button id="login" onClick={() => openModal('login')}>Login</button>
             <button id="signup" onClick={() => {openModal('signup');removeErrors()}}>Signup</button>
+            <a href="https://github.com/Tsanta96" target="_blank" className="github-icon" height="40" width="40"><img src="http://d313rqwfqaf3f.cloudfront.net/design/github-icon-32.png"></img></a>
         </nav>
     );
 
@@ -30,6 +31,3 @@ const Home = ({ openModal, removeErrors }) => {
 }
 
 export default Home;
-
-    // < Link to = "/login" id = "login" > Log In</Link >
-    // <Link to="/signup" id="signup">Sign Up</Link>

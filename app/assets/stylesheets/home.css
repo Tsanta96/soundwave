@@ -38,6 +38,7 @@
 }
 
 .auth-btns {
+    position: relative;
     text-decoration: none;
     display: flex;
     justify-content: space-between;
@@ -81,6 +82,13 @@
 
 #signup:hover {
     cursor: pointer;
+}
+
+.github-icon {
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    left: 230px;
 }
 
 .home h1 {
