@@ -9,9 +9,10 @@ class TrackItem2 extends React.Component {
             id: this.props.track.id,
             title: this.props.track.title,
             artistId: this.props.artistId,
-            // playing: false,
-            // currSongId: undefined
+            update: 0
         }
+
+        this.commentsClick = this.commentsClick.bind(this);
     }
 
     componentDidMount() {
@@ -28,17 +29,25 @@ class TrackItem2 extends React.Component {
         // this.setState({ currSongId: e.target.parentElement.previousSibling.getAttribute("id")})
     }
 
-    handleDelete(trackId, artistId) {
+    handleDelete(trackId, userId) {
         const delSong = confirm("Are you sure you want to delete this song?");
         if (delSong === true) {
             this.props.deleteTrack(trackId)
-            this.props.fetchArtistTracks(artistId);
+            this.props.fetchArtistTracks(userId);
         }
     }
 
     commentsClick(trackId) {
         this.props.removeAllComments();
         this.props.history.push(`/nav/track/comments/${trackId}`);
+    }
+
+    likeClick(trackId, userId) {
+        this.props.addLike(trackId, userId);
+
+        //attempting to manually update state to cause rerender
+        this.setState({ update: this.state.update + 1 });
+        // this.forceUpdate();
     }
 
     render() {
@@ -53,7 +62,7 @@ class TrackItem2 extends React.Component {
             </div>
         )
 
-        const trackContainer = (this.props.match.path === '/nav/tracks') ? (
+        const trackContainer = ((this.props.match.path === '/nav/tracks') || (this.props.match.path === '/nav/library')) ? (
                 <div className="song-container">
                     <img src={track.imgFile} height="120" width="120" className="song-img"></img>
                     <div className="song-content">
@@ -66,7 +75,8 @@ class TrackItem2 extends React.Component {
                         {playPause}
                         <div className="discover-comments-likes">
                             <img src="https://d313rqwfqaf3f.cloudfront.net/design/speech-bubble.svg" className="discover-comment" height="15" width="15" onClick={() => this.commentsClick(track.id)}></img>
-                            <img src="https://d313rqwfqaf3f.cloudfront.net/design/like-icon.svg" className="discover-like" height="16" width="16"></img>
+                            <img src="https://d313rqwfqaf3f.cloudfront.net/design/like-icon.svg" className="discover-like" height="16" width="16" onClick={() => this.likeClick(track.id, this.props.currentUser.id)}></img>
+                            <p className="discover-like-number">{track.likes}</p>
                         </div>
                     </div>
                 </div>
@@ -88,7 +98,8 @@ class TrackItem2 extends React.Component {
                             </div>
                             <div className="comments-likes">
                                 <img src="https://d313rqwfqaf3f.cloudfront.net/design/speech-bubble.svg" className="comment" height="15" width="15" onClick={() => this.commentsClick(track.id)}></img>
-                                <img src="https://d313rqwfqaf3f.cloudfront.net/design/like-icon.svg" className="like" height="16" width="16"></img>
+                                <img src="https://d313rqwfqaf3f.cloudfront.net/design/like-icon.svg" className="like" height="16" width="16" onClick={() => this.likeClick(track.id, this.props.currentUser.id)}></img>
+                                <p className="comments-like-number">{track.likes}</p>
                             </div>
                         </div>
                     </div>

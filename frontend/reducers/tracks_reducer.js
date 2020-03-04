@@ -4,8 +4,9 @@ import {
     REMOVE_TRACK,
     RECEIVE_ARTIST_TRACKS,
     EMPTY_TRACKS,
-    RECEIVE_SEARCH_TRACKS
+    RECEIVE_SEARCH_TRACKS,
 } from '../actions/track_actions';
+import { RECEIVE_LIKED_TRACKS } from '../actions/like_actions';
 
 const TracksReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
@@ -23,6 +24,8 @@ const TracksReducer = (oldState = {}, action) => {
         case EMPTY_TRACKS:
             return Object.assign({}, []);
         case RECEIVE_SEARCH_TRACKS:
+            return Object.assign({}, action.tracks)
+        case RECEIVE_LIKED_TRACKS:
             return Object.assign({}, action.tracks)
         default:
             return oldState;

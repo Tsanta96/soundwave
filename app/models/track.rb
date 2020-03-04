@@ -13,6 +13,10 @@ class Track < ApplicationRecord
     foreign_key: :track_id,
     class_name: :Comment
 
+    has_many :likes,
+    foreign_key: :track_id,
+    class_name: :Like
+
     has_one_attached :track_file
     has_one_attached :img_file
 

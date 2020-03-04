@@ -37,12 +37,9 @@ class NavBar extends React.Component {
                     </div>
                     <button className="nav-discover-button" onClick={this.handleDiscoverButton}>Discover</button>
                     <button className="nav-stream-button">Stream</button>
-                    <button className="nav-library-button">Library</button>
+                    <button className="nav-library-button" onClick={() => this.props.history.push(`/nav/library`)}>Library</button>
                 </div>
                 <SearchBar />
-                {/* <div className="nav-bar-search">
-                    <input className="search-input" type="text" placeholder="Search"></input>
-                </div> */}
                 <div className="nav-bar-right-side">
                     <button className="nav-upgrade-button" onClick={() => this.props.history.push('/nav/upgrade')}>Upgrade</button>
                     <button className="nav-upload-button" onClick={this.handleUploadButton}>Upload</button>

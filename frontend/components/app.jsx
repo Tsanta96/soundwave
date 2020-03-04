@@ -14,6 +14,7 @@ import MusicPlayerContainer from './music_player/music_player_container';
 import CommentsContainer from './comments/comments_container';
 import UpgradeComponent from './upgrade/upgrade';
 import SearchResultsContainer from './search/search_results_container';
+import LibraryContainer from './library/library_containter';
 
 
 const App = () => {
@@ -30,6 +31,7 @@ const App = () => {
                 <Route path="/nav/track/comments/:id" component={CommentsContainer}/>
                 <Route path="/nav/upgrade" component={UpgradeComponent}/>
                 <Route path="/nav/search/:searchString" component={SearchResultsContainer} />
+                <Route path="/nav/library" component={LibraryContainer} />
             </div>
         </div>
     )

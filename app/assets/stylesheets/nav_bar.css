@@ -76,13 +76,13 @@
     color: lightgray;
 }
 
-/* .nav-bar-left-side .nav-library-button:hover {
+.nav-bar-left-side .nav-library-button:hover {
     width: 104px;
     background-color: black;
     border: none;
     color: white;
     cursor: pointer;
-} */
+}
 
 /* Search ----------*/
 .nav-bar-search .search-input {

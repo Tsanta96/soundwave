@@ -13,8 +13,9 @@ class User < ApplicationRecord
     class_name: :comment,
     dependent: :destroy
 
-    # has_many_attached :tracks
-
+    has_many :likes,
+    foreign_key: :user_id,
+    class_name: :Like
 
     attr_reader :password 
 
