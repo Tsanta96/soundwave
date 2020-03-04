@@ -42,13 +42,11 @@ class Signup extends React.Component {
             email: "Demo@soundwave.com",
             password: "DemoUserPass"
         }
-        
-        this.props.createNewUser(demoUser)
-            .then(() => this.props.history.push('/nav/tracks')),
-                    this.props.login(demoUser)
-                        .then(() => this.props.history.push('/nav/tracks'))
-                            .then(this.props.closeModal)
-                                .then(setTimeout(this.props.removeErrors, 1000)); //switch this with closeModal?
+
+        this.props.login(demoUser)
+            .then(() => this.props.history.push('/nav/tracks'))
+            .then(this.props.closeModal)
+            .then(setTimeout(this.props.removeErrors, 1000)); 
     }
 
     renderErrors() {
