@@ -126,9 +126,7 @@
     width: 80px;
     font-size: 14px;
     background-color: #333333;
-    border-top: none;
-    border-right: none;
-    border-bottom: 1px solid black;
+    border: none;
     border-left: 1px solid black;
     color: lightgray;
 }
@@ -147,9 +145,7 @@
     width: 80px;
     font-size: 14px;
     background-color: #333333;
-    border-top: none;
-    border-right: none;
-    border-bottom: 1px solid black;
+    border: none;
     border-left: 1px solid black;
     color: #00b8e6;
 }
