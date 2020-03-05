@@ -22,24 +22,9 @@ html {
 }
 
 body {
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    overflow: auto;
     background-image: linear-gradient(black, rgb(0, 0, 255));
     background-attachment: fixed;
 }
-
-/* #top-app {
-    height: 100%;
-    width: 100%;
-}
-
-#root {
-    height: 100%;
-    width: 100%;
-} */
 
 /* remember to define focus styles! */
 :focus {
