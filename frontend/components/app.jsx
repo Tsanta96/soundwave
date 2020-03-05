@@ -19,7 +19,7 @@ import LibraryContainer from './library/library_containter';
 
 const App = () => {
     return (
-        <div>
+        <div className="the-container">
             <Modal />
             <Route path="/nav/" component={NavBarContainer}/>
             <Route path="/nav/" component={MusicPlayerContainer}/> 

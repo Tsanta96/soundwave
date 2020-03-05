@@ -28,11 +28,13 @@
     color: black;
     font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
     border-bottom: 2px solid lightgray;
+    color: white;
 
 }
 
 
 .upload-nav a.chosen {
     border-bottom: 2px solid #00b8e6;
+    color: white;
 }
 
