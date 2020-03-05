@@ -8,9 +8,7 @@
 }
 
 .upload-nav .upload {
-    /* padding: 12px 215px; */
     text-align: center;
-    /* align-content: center; */
     padding-bottom: 5px;
     width: 50%;
     text-decoration: none;
@@ -20,7 +18,6 @@
 }
 
 .upload-nav .your-tracks {
-    /* padding: 12px 165px; */
     padding-bottom: 5px;
     width: 50%;
     text-align: center;

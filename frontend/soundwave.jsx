@@ -23,13 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 
-window.createComment = createComment;
+// window.createComment = createComment;
 // window.fetchComments = fetchComments;
-window.fetchArtistTracks = fetchArtistTracks;
-window.fetchTracks = fetchTracks;
-window.fetchTrack = fetchTrack;
-window.createTrack = createTrack;
-window.deleteTrack = deleteTrack;
+// window.fetchArtistTracks = fetchArtistTracks;
+// window.fetchTracks = fetchTracks;
+// window.fetchTrack = fetchTrack;
+// window.createTrack = createTrack;
+// window.deleteTrack = deleteTrack;
 
 // const testComment = ({comment: {body: "this is the body", author_id: 2, track_id: 2}});
 

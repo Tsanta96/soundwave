@@ -53,8 +53,6 @@ export class SearchBar extends Component {
     }
 }
 
-// export default withRouter(SearchBar);
-
 const mapStateToProps = (state) => ({
 })
 

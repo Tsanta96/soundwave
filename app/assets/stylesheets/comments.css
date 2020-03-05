@@ -3,6 +3,7 @@
     font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
     padding-top: 15px;
     padding-bottom: 15px;
+    color: white;
 }
 
 .comments-form {
@@ -44,7 +45,6 @@
     padding-top: 30px;
     margin-top: 15px;
     border-top: 2px solid lightgray;
-    /* width: 600px; */
 }
 
 .comment-content {
@@ -58,6 +58,7 @@
     font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
     margin-top: 5px;
     margin-bottom: 20px;
+    color: white;
 }
 .comment-content h2 {
     place-content: end;

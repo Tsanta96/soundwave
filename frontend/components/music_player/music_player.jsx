@@ -82,5 +82,3 @@ class MusicPlayer extends React.Component {
 }
 
 export default withRouter(MusicPlayer);
-
-// const testTrack = document.getElementById('track-id-1');

@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import TrackItemContainer2 from '../tracks/track_item_container2';
+import TrackItemContainer from '../tracks/track_item_container';
 
 class YouTracks extends React.Component {
     constructor(props) {
@@ -20,7 +20,7 @@ class YouTracks extends React.Component {
                 </div>
                 <div className="your-tracks-body">
                     <h1 className="your-tracks-header">Your tracks</h1>
-                    <h1>{this.props.tracks.map((track, idx) => <TrackItemContainer2 key={track.id} idx={idx} track={track}/>)}</h1>
+                    <h1>{this.props.tracks.map((track, idx) => <TrackItemContainer key={track.id} idx={idx} track={track}/>)}</h1>
                 </div>
             </div>
         )
