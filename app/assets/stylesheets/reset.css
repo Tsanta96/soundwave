@@ -16,6 +16,16 @@ caption,tbody,tfoot,thead,tr,th,td {
     vertical-align: baseline;
 }
 
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-image: linear-gradient(black, rgb(0, 0, 255));
+    background-attachment: fixed;
+}
+
 /* remember to define focus styles! */
 :focus {
     outline: 0;
@@ -23,8 +33,7 @@ caption,tbody,tfoot,thead,tr,th,td {
 
 body {
     line-height: 1;
-    color: black;
-    background: white;
+    background-color: white;
 }
 
 ol, ul {
