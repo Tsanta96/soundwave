@@ -19,11 +19,7 @@
 
 .music-player-container {
     display: flex;
-    /* flex-direction: row;
-    align-items: center; */
 }
-
-/* .current-track-display */
 
 input[type="image"] {
     height: 20px;
@@ -51,7 +47,6 @@ input[type="image"] {
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* background-color: black; */
     width: 250px;
     height: 45px;
 }

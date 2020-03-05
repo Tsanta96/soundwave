@@ -59,10 +59,3 @@ class Comments extends React.Component {
 }
 
 export default Comments;
-
-{/* <div>
-    <h1>hello</h1>
-    <h1>{this.props.currentUser.username}</h1>
-    <h1>{this.props.trackId}</h1>
-    <button></button>
-</div> */}

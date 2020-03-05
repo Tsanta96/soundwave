@@ -1,5 +1,5 @@
 import React from 'react';
-import TrackItemContainer2 from './track_item_container2';
+import TrackItemContainer from './track_item_container';
 
 class TrackIndex extends React.Component {
     constructor(props) {
@@ -14,7 +14,7 @@ class TrackIndex extends React.Component {
         return (
             <div className="discover-tracks">
                 <h1>Discover</h1>
-                {this.props.tracks.map((track, idx) => <TrackItemContainer2 key={track.id} idx={idx} track={track}/>)}
+                {this.props.tracks.map((track, idx) => <TrackItemContainer key={track.id} idx={idx} track={track}/>)}
             </div>
 
         )

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import TrackItemContainer2 from '../tracks/track_item_container2';
+import TrackItemContainer from '../tracks/track_item_container';
 
 export class SearchResults extends Component {
     constructor(props) {
@@ -39,7 +39,7 @@ export class SearchResults extends Component {
                     <div className="search-text">
                         <div className="default">{this.props.tracks.length} Search Results for: <div className="search-string">"{this.props.match.params.searchString}"</div></div>
                     </div>
-                    {this.props.tracks.map((track, idx) => <TrackItemContainer2 key={track.id} idx={idx} track={track} />)}
+                    {this.props.tracks.map((track, idx) => <TrackItemContainer key={track.id} idx={idx} track={track} />)}
                 </div>
             </div>
         )

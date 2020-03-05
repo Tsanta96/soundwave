@@ -27,7 +27,6 @@
 
 .upload-track-form > label:last-of-type {
     padding-bottom: 30px;
-    /* margin-bottom: 30px; */
     font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-seri;
     font-size: 20px;
     padding-left: 30px;
@@ -40,7 +39,6 @@
 
 .upload-track-form input[type=text] {
     border-radius: 2px;
-    /* border: 1px solid lightgray; */
     font-size: 20px;
     border-top: none;
     border-left: none;
@@ -59,7 +57,6 @@
     margin-bottom: 20px;
     margin-left: 25px;
     color: rgb(255, 95, 95);
-    /* color: rgb(0, 121, 190); */
     font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-seri;
     font-size: 13px;
 }
@@ -71,7 +68,6 @@
 .upload-track-form-submit {
     height: 70px;
     background-color: #00b8e6;
-    /* margin-top: 25px; */
     color: white;
     font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-seri;
     font-size: 25px;
