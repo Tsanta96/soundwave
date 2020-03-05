@@ -9,7 +9,6 @@ class TrackItem extends React.Component {
             id: this.props.track.id,
             title: this.props.track.title,
             artistId: this.props.artistId,
-            update: 0
         }
 
         this.commentsClick = this.commentsClick.bind(this);
@@ -20,7 +19,6 @@ class TrackItem extends React.Component {
     }
 
     // componentDidUpdate(prevProps) {
-
     // }
 
     fetchTrack(e, trackId) {
@@ -45,9 +43,8 @@ class TrackItem extends React.Component {
     likeClick(trackId, userId) {
         this.props.addLike(trackId, userId);
 
-        //attempting to manually update state to cause rerender
-        this.setState({ update: this.state.update + 1 });
-        // this.forceUpdate();
+        //Force a re render
+        this.props.fetchTracks()
     }
 
     render() {

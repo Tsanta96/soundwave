@@ -44,7 +44,6 @@ class NavBar extends React.Component {
                     <button className="nav-upgrade-button" onClick={() => this.props.history.push('/nav/upgrade')}>Upgrade</button>
                     <button className="nav-upload-button" onClick={this.handleUploadButton}>Upload</button>
                     <div className="nav-bar-profile-icon">
-                        {console.log(this.props.currentUser.username)}
                         <h2>{this.props.currentUser.username}</h2>
                         <button onClick={this.handleLogout}>Log Out</button>
                     </div>
