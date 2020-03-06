@@ -9,6 +9,7 @@ class Api::CommentsController < ApplicationController
         @comment = Comment.new(comment_params)
 
         if @comment.save
+            @comments = Track.find(@comment.track_id).comments
             render :index
         else 
             render json: @comment.errors.full_messages, status: 400

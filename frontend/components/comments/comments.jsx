@@ -26,9 +26,10 @@ class Comments extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.createComment(this.state);
+        this.props.createComment(this.state)
 
-        this.setState({ body: "" });
+        this.setState({ body: "" })
+        // this.props.fetchComments(this.props.trackId)
     }
 
     render() {
