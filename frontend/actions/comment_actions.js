@@ -35,11 +35,11 @@ export const fetchComments = trackId => dispatch => (
         .then(comments => dispatch(receiveAllComments(comments)))
 );
 
-export const createComment = newComment => dispatch => {
+export const createComment = newComment => dispatch => (
     commentUtils.createComment(newComment)
-        .then((comment => dispatch(receiveComment(comment))),
-            (err => dispatch(receiveCommentErrors(err))))
-};
+        .then((comment => dispatch(receiveComment(comment)))),
+            (err => dispatch(receiveCommentErrors(err)))
+);
 
 export const deleteComment = commentId => dispatch => (
     commentUtils.deleteComment(commentId) 
