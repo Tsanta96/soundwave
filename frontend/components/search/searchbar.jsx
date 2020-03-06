@@ -16,11 +16,8 @@ export class SearchBar extends Component {
         this.handleSearchSubmit = this.handleSearchSubmit.bind(this);
     }
 
-    componentDidUpdate(prevProps) {
-        if (prevProps.location.pathname !== this.props.location.pathname) {
-            this.props.searchTracks(this.state.searchString)
-        }
-    }
+    // componentDidUpdate(prevProps) {
+    // }
 
     handleSearchInput() {
         return e => {
@@ -30,8 +27,10 @@ export class SearchBar extends Component {
 
     handleSearchSubmit() {
         if (this.state.searchString !== "") {
+            this.props.searchTracks(this.state.searchString);
             this.props.removeTrackErrors();
             this.props.history.push(`/nav/search/${this.state.searchString}`);
+            this.setState({ searchString: ""});
         }
     }
 

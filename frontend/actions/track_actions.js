@@ -90,8 +90,8 @@ export const deleteTrack = trackId => dispatch => (
 );
 
 //search for track
-export const searchTracks = searchString => dispatch => (
+export const searchTracks = searchString => dispatch => {
     trackUtils.searchTracks(searchString)
         .then((tracks) => dispatch(receiveSearchTracks(tracks)))
             // ((err) => dispatch(receiveSearchErrors(err.responseJSON))))
-)
+}
