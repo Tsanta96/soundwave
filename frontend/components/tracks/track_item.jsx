@@ -58,10 +58,18 @@ class TrackItem extends React.Component {
 
     render() {
         const { track, idx } = this.props
-        const musicPlayerSrc = document.getElementById('music-player').getAttribute("src")
-        const checkTrack = document.getElementById(`track-id-${track.id}`);
-        if (checkTrack != null) {
-            var trackSrc = checkTrack.getAttribute("src");
+        let musicPlayerSrc;
+        let checkTrack;
+        let trackSrc;
+        if (document.getElementById('music-player') !== null) {
+            musicPlayerSrc = document.getElementById('music-player').getAttribute("src")
+        }
+        // if (document.getElementById(`track-id-${track.id}`) !== null) {
+            // debugger;
+            checkTrack = document.getElementById(`track-id-${track.id}`);
+        // }
+        if (checkTrack !== null) {
+            trackSrc = checkTrack.getAttribute("src");
         }
         const playPause = (musicPlayerSrc !== trackSrc) ? (
             <div>
