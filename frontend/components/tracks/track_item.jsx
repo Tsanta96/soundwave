@@ -9,6 +9,7 @@ class TrackItem extends React.Component {
             id: this.props.track.id,
             title: this.props.track.title,
             artistId: this.props.artistId,
+            audio: null
         }
 
         this.commentsClick = this.commentsClick.bind(this);
@@ -24,7 +25,10 @@ class TrackItem extends React.Component {
     fetchTrack(e, trackId) {
         e.preventDefault();
         this.props.fetchCurrentTrack(this.props.track);
-        // this.setState({ currSongId: e.target.parentElement.previousSibling.getAttribute("id")})
+    }
+
+    pauseAud() {
+        
     }
 
     handleDelete(trackId, userId) {
@@ -52,15 +56,24 @@ class TrackItem extends React.Component {
         }
     }
 
+
+    //if src of track is equal to the src of the track on the music player, then add the class to differentiate
+
     render() {
         const { track, idx } = this.props
-        const playPause = (`track-id-${track.id}` !== this.state.currSongId) ? (
+        const musicPlayerSrc = document.getElementById('music-player').getAttribute("src")
+        const checkTrack = document.getElementById(`track-id-${track.id}`);
+        if (checkTrack != null) {
+            var trackSrc = checkTrack.getAttribute("src");
+        }
+        const playPause = (musicPlayerSrc !== trackSrc) ? (
             <div>
                 <input className="play-button" type="image" src="https://d313rqwfqaf3f.cloudfront.net/musicPlayer/play_icon.svg" onClick={(e) => this.fetchTrack(e, track.id) } />
             </div>
         ) : (
             <div>
-                <input className="pause-button" type="image" src="https://d313rqwfqaf3f.cloudfront.net/musicPlayer/pause_icon.svg" onClick={this.pauseAud}/>            
+                {/* <input className="pause-button" type="image" src="https://d313rqwfqaf3f.cloudfront.net/musicPlayer/pause_icon.svg" onClick={() => this.pauseAud(track.id)}/>  */}
+                <input className="play-button-active" type="image" src="https://d313rqwfqaf3f.cloudfront.net/musicPlayer/play_icon.svg" onClick={() => this.pauseAud(track.id)} />                       
             </div>
         )
 

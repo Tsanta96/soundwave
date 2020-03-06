@@ -90,6 +90,18 @@
     border: 1px solid rgb(27, 125, 182);
 }
 
+.song-content .play-button-active {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: 20px;
+    bottom: 35px;
+    background-color: rgb(228, 252, 255);
+    border-radius: 30px;
+    padding: 10px;
+    border: 3px solid white;
+}
+
 .song-content .pause-button {
     position: absolute;
     width: 25px;
