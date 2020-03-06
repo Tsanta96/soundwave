@@ -135,7 +135,7 @@
     height: 20px;
     background-color: lightblue;
     border-left: 15px;
-    margin-left: 10px;
+    /* margin-left: 10px; */
 }
 
 .delete:hover {

@@ -105,7 +105,7 @@ class TrackItem extends React.Component {
                         {playPause}
                         <div className="bottom-container">
                             <div className="edit-delete">
-                                <button className="edit" onClick={() => this.handleEdit(track.id)}>Edit</button>
+                                {/* <button className="edit" onClick={() => this.handleEdit(track.id)}>Edit</button> */}
                                 <button className="delete" onClick={() => this.handleDelete(track.id, track.artistId)}>Delete</button>
                             </div>
                             <div className="comments-likes">
