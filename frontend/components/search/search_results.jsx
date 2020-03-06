@@ -40,6 +40,7 @@ export class SearchResults extends Component {
                     </div>
                     {this.props.tracks.map((track, idx) => <TrackItemContainer key={track.id} idx={idx} track={track} />)}
                 </div>
+                <div id="sound-wave-everywhere"><img id="sound-wave-everywhere" src="http://d313rqwfqaf3f.cloudfront.net/design/wave_white.svg" width="400" height="400"></img></div>
             </div>
         )
     }
