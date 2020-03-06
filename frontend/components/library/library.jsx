@@ -17,6 +17,7 @@ export class library extends React.Component {
                     <h1>Library</h1>
                     <p className="library-note">These are tracks that you've liked. You can remove them by unliking them</p>
                     {this.props.tracks.map((track, idx) => <TrackItemContainer key={track.id} idx={idx} track={track} />)}
+                    <div id="sound-wave-everywhere"><img id="sound-wave-everywhere" src="http://d313rqwfqaf3f.cloudfront.net/design/wave_white.svg" width="400" height="400"></img></div>
                 </div>
             </div>
         )

@@ -22,6 +22,7 @@ class YouTracks extends React.Component {
                     <h1 className="your-tracks-header">Your tracks</h1>
                     <h1>{this.props.tracks.map((track, idx) => <TrackItemContainer key={track.id} idx={idx} track={track}/>)}</h1>
                 </div>
+                <div id="sound-wave-everywhere"><img id="sound-wave-everywhere" src="http://d313rqwfqaf3f.cloudfront.net/design/wave_white.svg" width="400" height="400"></img></div>
             </div>
         )
     }

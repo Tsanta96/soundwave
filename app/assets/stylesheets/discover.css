@@ -1,4 +1,5 @@
 .discover-tracks {
+    position: relative;
     margin-bottom: 48px;
 }
 
@@ -8,4 +9,43 @@
     padding-top: 15px;
     padding-bottom: 15px;
     color: white;
+}
+
+#sound-wave-everywhere {
+    position: fixed;
+    right: 150px;
+    top: 140px;
+    /* width: 150px;
+    height: 150px; */
+    opacity: 0.5;
+    z-index: -1;
+    /* animation-name: pulse; */
+    /* animation-duration: 15s; */
+    /* animation-iteration-count: infinite;
+    background-color: orange;
+    border: 2px solid rgb(114, 114, 255);
+    border-radius: 40px; */
+}
+
+@keyframes pulse {
+    0% {
+        background-color: orange;
+        border: 2px solid rgb(114, 114, 255);
+    }
+    25% {
+        background-color: purple;
+        border: 2px solid rgb(210, 114, 255);
+    }
+    50% {
+        background-color: rgb(0, 148, 216);
+        border: 2px solid rgb(253, 255, 114);
+    }
+    75% {
+        background-color: rgb(0, 216, 151);
+        border: 2px solid rgb(255, 177, 114);
+    }
+    100% {
+        background-color: orange;
+        border: 2px solid rgb(114, 114, 255);
+    }
 }
