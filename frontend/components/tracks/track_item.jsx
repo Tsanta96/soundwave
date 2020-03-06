@@ -56,9 +56,6 @@ class TrackItem extends React.Component {
         }
     }
 
-
-    //if src of track is equal to the src of the track on the music player, then add the class to differentiate
-
     render() {
         const { track, idx } = this.props
         const musicPlayerSrc = document.getElementById('music-player').getAttribute("src")
