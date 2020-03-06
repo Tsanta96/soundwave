@@ -5,9 +5,9 @@ export class SearchResults extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            update: 0
-        }
+        // this.state = {
+        //     update: 0
+        // }
     }
 
     componentDidMount() {
@@ -16,9 +16,8 @@ export class SearchResults extends Component {
 
     componentDidUpdate(prevProps) {
         if (prevProps.location.pathname !== this.props.location.pathname) {
-            this.setState({ update: this.state.update + 1})
+            this.props.searchTracks(this.props.match.params.searchString);
         }
-        console.log(this.state.update);
     }
 
     // renderErrors() {

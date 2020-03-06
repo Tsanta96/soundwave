@@ -20,7 +20,8 @@ class Api::TracksController < ApplicationController
         if @tracks.length > 0
             render :index
         else 
-            render json: ["Could not find tracks"], status: 400
+            render :index
+            #json: ["Could not find tracks"], status: 400
         end
     end
 
