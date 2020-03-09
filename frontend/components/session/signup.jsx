@@ -37,10 +37,15 @@ class Signup extends React.Component {
     handleDemoSubmit(e) {
         e.preventDefault()
         
+        // const demoUser = {
+        //     username: "DemoUser22",
+        //     email: "Demo@soundwave.com",
+        //     password: "DemoUserPass"
+        // }
+
         const demoUser = {
-            username: "DemoUser22",
-            email: "Demo@soundwave.com",
-            password: "DemoUserPass"
+            username: "teo",
+            password: "password"
         }
 
         this.props.login(demoUser)
