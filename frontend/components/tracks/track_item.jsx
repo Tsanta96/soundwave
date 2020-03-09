@@ -48,7 +48,6 @@ class TrackItem extends React.Component {
         this.props.addLike(trackId, userId);
 
         //Force a re render
-        console.log(this.props);
         if (this.props.location.pathname === '/nav/tracks') {
             this.props.fetchTracks();
         } else if (this.props.location.pathname === '/nav/library') {
