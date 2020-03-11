@@ -81,8 +81,6 @@ These additions are:
  - Filters to display the tracks on the "Discover" page differently
  - Wave forms for the tracks
 
-* **Matteo Santavicca** - [SoundWave](https://github.com/Tsanta96/soundwave)
-
 ## Acknowledgments
 
 * SoundCloud for serving as the inspiration to this project
