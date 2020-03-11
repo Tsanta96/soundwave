@@ -49,6 +49,21 @@ allow for intended play and pause of the current track in the music player while
 
 ![Continuous_Play](app/assets/gifs/continuous_play.gif)
 
+### Search
+
+Users are able to search for songs using part of the song's title or the full song title. Along with
+the results, the number of results are displayed. 
+
+### Likes
+
+Users are able to like tracks. Each song displays the amount of likes that it has received. A user's 
+liked tracks are stored in their "Library".
+
+### Comments 
+
+Users are able to comment on any given track. The Comment display page shows all relevant comments and
+authors of the comment for any given track. 
+
 ## Design
 
 The design was based off of the SoundCloud website and although I took some noticable liberties 
