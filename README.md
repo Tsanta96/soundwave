@@ -77,7 +77,6 @@ decoration that is recognized on the actual SouncCloud logo.
 
 I plan on adding additional features to the site to increase overall functionality.
 These additions are:
- - The ability to like other's tracks
  - A profile page 
  - Filters to display the tracks on the "Discover" page differently
  - Wave forms for the tracks
