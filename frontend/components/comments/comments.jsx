@@ -59,6 +59,8 @@ const Comments = props => {
     )
 }
 
+export default Comments;
+
 //Class component w/o hooks
 
 // class Comments extends React.Component {
@@ -118,5 +120,3 @@ const Comments = props => {
 //         )
 //     }
 // }
-
-export default Comments;
