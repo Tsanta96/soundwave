@@ -1,62 +1,122 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import CommentItem from './comment_item';
 
-class Comments extends React.Component {
-    constructor(props) {
-        super(props);
+//Function component using hooks
 
-        this.state = {
-            body: "",
-            author_id: this.props.currentUser.id,
-            track_id: this.props.trackId
-        }
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
+const Comments = props => {
+    const [body, setBody] = useState('');
+    const [author_id, setAuthor_id] = useState(props.currentUser.id);
+    const [track_id, setTrack_id] = useState(props.trackId);
 
-    componentDidMount() {
-        this.props.fetchComments(this.props.trackId);
-        this.props.fetchTrack(this.props.trackId);
-    }
+    useEffect(() => {
+        props.fetchComments(props.trackId);
+        props.fetchTrack(props.trackId);
+        // console.log("hello")
+    }, [])
 
-    handleInput() {
+    const handleInput = () => {
         return e => {
-            this.setState({ body: e.currentTarget.value})
+            setBody(e.currentTarget.value)
         }
     }
 
-    handleSubmit(e) {
+    const handleSubmit = (e) => {
         e.preventDefault();
-        this.props.createComment(this.state)
 
-        this.setState({ body: "" })
-        // this.props.fetchComments(this.props.trackId)
+        const comment = {
+            body: body,
+            author_id: author_id,
+            track_id: track_id
+        }
+
+        props.createComment(comment);
+
+        setBody('');
     }
 
-    render() {
-        return (
-            <div>
-                <div className="comment-title">
-                    <h1>Comments</h1>
-                </div>
-                <form className="comments-form">
-                    <label className="comment-body">
-                        <textarea rows="4" cols="80"
-                            type="textArea"
-                            placeholder="Say something about this track"
-                            value={this.state.body}
-                            onChange={this.handleInput('body')}
-                        />
-                    </label>
-                    <button className="comment-button" onClick={this.handleSubmit}>Comment</button>
-                </form>
-                <div>
-                    <ul className="comments-box">
-                        {this.props.comments.map((comment, idx) => <CommentItem key={comment.id} idx={idx} comment={comment} />)}
-                    </ul>
-                </div>
+    return (
+        <div>
+            <div className="comment-title">
+                <h1>Comments</h1>
             </div>
-        )
-    }
+            <form className="comments-form">
+                <label className="comment-body">
+                    <textarea rows="4" cols="80"
+                        type="textArea"
+                        placeholder="Say something about this track"
+                        value={body}
+                        onChange={handleInput('body')}
+                    />
+                </label>
+                <button className="comment-button" onClick={handleSubmit}>Comment</button>
+            </form>
+            <div>
+                <ul className="comments-box">
+                    {props.comments.map((comment, idx) => <CommentItem key={comment.id} idx={idx} comment={comment} />)}
+                </ul>
+            </div>
+        </div>
+    )
 }
 
 export default Comments;
+
+//Class component w/o hooks
+
+// class Comments extends React.Component {
+//     constructor(props) {
+//         super(props);
+
+//         this.state = {
+//             body: "",
+//             author_id: this.props.currentUser.id,
+//             track_id: this.props.trackId
+//         }
+//         this.handleSubmit = this.handleSubmit.bind(this);
+//     }
+
+//     componentDidMount() {
+//         this.props.fetchComments(this.props.trackId);
+//         this.props.fetchTrack(this.props.trackId);
+//     }
+
+//     handleInput() {
+//         return e => {
+//             this.setState({ body: e.currentTarget.value})
+//         }
+//     }
+
+//     handleSubmit(e) {
+//         e.preventDefault();
+//         this.props.createComment(this.state)
+
+//         this.setState({ body: "" })
+//         // this.props.fetchComments(this.props.trackId)
+//     }
+
+//     render() {
+//         return (
+//             <div>
+//                 <div className="comment-title">
+//                     <h1>Comments</h1>
+//                 </div>
+//                 <form className="comments-form">
+//                     <label className="comment-body">
+//                         <textarea rows="4" cols="80"
+//                             type="textArea"
+//                             placeholder="Say something about this track"
+//                             value={this.state.body}
+//                             onChange={this.handleInput('body')}
+//                         />
+//                     </label>
+//                     <button className="comment-button" onClick={this.handleSubmit}>Comment</button>
+//                 </form>
+//                 <div>
+//                     <ul className="comments-box">
+//                         {this.props.comments.map((comment, idx) => <CommentItem key={comment.id} idx={idx} comment={comment} />)}
+//                     </ul>
+//                 </div>
+//             </div>
+//         )
+//     }
+// }
