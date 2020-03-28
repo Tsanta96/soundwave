@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
-import { useDidMountEffect } from '../../utils/custom_hooks';
 
 const MusicPlayer = props => {
     const [player, setPlayer] = useState(undefined);
