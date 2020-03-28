@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 import { searchTracks, removeTrackErrors } from '../../actions/track_actions';
 
 const SearchBar = (props) => {
-    const [searchString, setSearchString] = useState('');
+    const [searchString, setSearchString] = useState("");
     
     const handleSearchInput = () => {
         return e => {
