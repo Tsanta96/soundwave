@@ -16,8 +16,9 @@ const Library = props => {
             </div>
         </div>
     )
-
 }
+
+export default Library;
 
 // export class library extends React.Component {
 //     constructor(props) {
@@ -42,4 +43,4 @@ const Library = props => {
 //     }
 // }
 
-export default Library;
+
