@@ -13,7 +13,7 @@ const Login = (props) => {
     const handleInput = (field) => {
         return e => {
             if (field === 'username') setUsername(e.currentTarget.value);
-            if (field === 'password') setPassword(e.currentTarget.value)
+            if (field === 'password') setPassword(e.currentTarget.value);
         }
     }
 
