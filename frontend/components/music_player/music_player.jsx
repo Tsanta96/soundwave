@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 
-const MusicPlayer = props => {
+const MusicPlayer = (props) => {
     const [player, setPlayer] = useState(undefined);
     const [progressBar, setProgressBar] = useState(undefined);
 

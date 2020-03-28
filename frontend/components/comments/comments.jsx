@@ -3,7 +3,7 @@ import CommentItem from './comment_item';
 
 //Function component using hooks
 
-const Comments = props => {
+const Comments = (props) => {
     const [body, setBody] = useState('');
     const [author_id, setAuthor_id] = useState(props.currentUser.id);
     const [track_id, setTrack_id] = useState(props.trackId);

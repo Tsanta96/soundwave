@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import TrackItemContainer from '../tracks/track_item_container';
 
-const Library = props => {
+const Library = (props) => {
     useEffect(() => {
         props.fetchLikedTracks(props.currentUser.id);
     }, []);
