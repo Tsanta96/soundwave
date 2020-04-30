@@ -29,6 +29,20 @@ const Login = (props) => {
             .then(props.closeModal);
     };
 
+    const handleDemoSubmit = (e) => {
+        e.preventDefault()
+
+        const demoUser = {
+            username: "teo",
+            password: "password"
+        }
+
+        props.login(demoUser)
+            .then(() => props.history.push('/nav/tracks'))
+            .then(props.closeModal)
+            .then(setTimeout(props.removeErrors, 1000));
+    }
+
     const renderErrors = () => {
         if (props.errors) {
             return Object.values(props.errors)
@@ -60,6 +74,7 @@ const Login = (props) => {
                     {renderErrors()}
                 </ul>
                 <button className="session-form-btn" id="login-btn" onClick={handleSubmit}>Log In</button>
+                <button className="session-form-btn" onClick={handleDemoSubmit}>Demo</button>
             </form>
             <p className="switch-form">Or <button onClick={changeForm}>Sign up</button></p>
         </div>
