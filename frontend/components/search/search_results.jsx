@@ -33,16 +33,30 @@ export class SearchResults extends Component {
 
     render() {
         return (
-            <div>
-                <div className="search-tracks">
-                    <div className="search-text">
-                        <div className="default">{this.props.tracks.length} Search Results for: <div className="search-string">"{this.props.match.params.searchString}"</div></div>
-                    </div>
-                    {this.props.tracks.map((track, idx) => <TrackItemContainer key={track.id} idx={idx} track={track} />)}
+          <div>
+            <div className="search-tracks">
+              <div className="search-text">
+                <div className="default">
+                  {this.props.tracks.length} Search Results for:{" "}
+                  <div className="search-string">
+                    "{this.props.match.params.searchString}"
+                  </div>
                 </div>
-                <div id="sound-wave-everywhere"><img id="sound-wave-everywhere" src="http://d313rqwfqaf3f.cloudfront.net/design/wave_white.svg" width="400" height="400"></img></div>
+              </div>
+              {this.props.tracks.map((track, idx) => (
+                <TrackItemContainer key={track.id} idx={idx} track={track} />
+              ))}
             </div>
-        )
+            <div id="sound-wave-everywhere">
+              <img
+                id="sound-wave-everywhere"
+                src="http://dsmug1izjrtvi.cloudfront.net/design/wave_white.svg"
+                width="400"
+                height="400"
+              ></img>
+            </div>
+          </div>
+        );
     }
 }
 

@@ -58,60 +58,109 @@ const TrackItem = (props) => {
     if (checkTrack !== null) {
         trackSrc = checkTrack.getAttribute("src");
     }
-    const playPause = (musicPlayerSrc !== trackSrc) ? (
+    const playPause =
+      musicPlayerSrc !== trackSrc ? (
         <div>
-            <input className="play-button" type="image" src="https://d313rqwfqaf3f.cloudfront.net/musicPlayer/play_icon.svg" onClick={(e) => fetchTrack(e, track.id)} />
+          <input
+            className="play-button"
+            type="image"
+            src="https://dsmug1izjrtvi.cloudfront.net/musicPlayer/play_icon.svg"
+            onClick={(e) => fetchTrack(e, track.id)}
+          />
         </div>
-    ) : (
-            <div>
-                {/* <input className="pause-button" type="image" src="https://d313rqwfqaf3f.cloudfront.net/musicPlayer/pause_icon.svg" onClick={() => this.pauseAud(track.id)}/>  */}
-                <input className="play-button-active" type="image" src="https://d313rqwfqaf3f.cloudfront.net/musicPlayer/play_icon.svg" onClick={() => pauseAud(track.id)} />
-            </div>
-        )
+      ) : (
+        <div>
+          {/* <input className="pause-button" type="image" src="https://d313rqwfqaf3f.cloudfront.net/musicPlayer/pause_icon.svg" onClick={() => this.pauseAud(track.id)}/>  */}
+          <input
+            className="play-button-active"
+            type="image"
+            src="https://dsmug1izjrtvi.cloudfront.net/musicPlayer/play_icon.svg"
+            onClick={() => pauseAud(track.id)}
+          />
+        </div>
+      );
 
-    const trackContainer = (props.match.path !== '/nav/you/tracks') ? (
+    const trackContainer =
+      props.match.path !== "/nav/you/tracks" ? (
         <div className="song-container">
-            <img src={track.imgFile} height="120" width="120" className="song-img"></img>
-            <div className="song-content">
-                <div className="discover-song-container-name">
-                    <p id="discover-song-name">{track.title}</p>
-                </div>
-                <p id="artist-name">{track.userName}</p>
-                <audio id={`track-id-${track.id}`} src={track.trackFile}>
-                </audio>
-                {playPause}
-                <div className="discover-comments-likes">
-                    <img src="https://d313rqwfqaf3f.cloudfront.net/design/speech-bubble.svg" className="discover-comment" height="15" width="15" onClick={() => commentsClick(track.id)}></img>
-                    <img src="https://d313rqwfqaf3f.cloudfront.net/design/like-icon.svg" className="discover-like" height="16" width="16" onClick={() => likeClick(track.id, props.currentUser.id)}></img>
-                    <p className="discover-like-number">{track.likes}</p>
-                </div>
+          <img
+            src={track.imgFile}
+            height="120"
+            width="120"
+            className="song-img"
+          ></img>
+          <div className="song-content">
+            <div className="discover-song-container-name">
+              <p id="discover-song-name">{track.title}</p>
             </div>
+            <p id="artist-name">{track.userName}</p>
+            <audio id={`track-id-${track.id}`} src={track.trackFile}></audio>
+            {playPause}
+            <div className="discover-comments-likes">
+              <img
+                src="https://dsmug1izjrtvi.cloudfront.net/design/speech-bubble.svg"
+                className="discover-comment"
+                height="15"
+                width="15"
+                onClick={() => commentsClick(track.id)}
+              ></img>
+              <img
+                src="https://dsmug1izjrtvi.cloudfront.net/design/like-icon.svg"
+                className="discover-like"
+                height="16"
+                width="16"
+                onClick={() => likeClick(track.id, props.currentUser.id)}
+              ></img>
+              <p className="discover-like-number">{track.likes}</p>
+            </div>
+          </div>
         </div>
-    ) : (
+      ) : (
         <div className="song-container">
-            <img src={track.imgFile} height="120" width="120" className="song-img"></img>
-            <div className="song-content">
-                <div className="song-container-name">
-                    <h1 className="song-name">{track.title}</h1>
-                </div>
-                <h2 className="artist-name">{track.userName}</h2>
-                <audio id={`track-id-${track.id}`} src={track.trackFile}>
-                </audio>
-                {playPause}
-                <div className="bottom-container">
-                    <div className="edit-delete">
-                        {/* <button className="edit" onClick={() => this.handleEdit(track.id)}>Edit</button> */}
-                        <button className="delete" onClick={() => handleDelete(track.id, track.artistId)}>Delete</button>
-                    </div>
-                    <div className="comments-likes">
-                        <img src="https://d313rqwfqaf3f.cloudfront.net/design/speech-bubble.svg" className="comment" height="15" width="15" onClick={() => commentsClick(track.id)}></img>
-                        <img src="https://d313rqwfqaf3f.cloudfront.net/design/like-icon.svg" className="like" height="16" width="16" onClick={() => likeClick(track.id, props.currentUser.id)}></img>
-                        <p className="comments-like-number">{track.likes}</p>
-                    </div>
-                </div>
+          <img
+            src={track.imgFile}
+            height="120"
+            width="120"
+            className="song-img"
+          ></img>
+          <div className="song-content">
+            <div className="song-container-name">
+              <h1 className="song-name">{track.title}</h1>
             </div>
+            <h2 className="artist-name">{track.userName}</h2>
+            <audio id={`track-id-${track.id}`} src={track.trackFile}></audio>
+            {playPause}
+            <div className="bottom-container">
+              <div className="edit-delete">
+                {/* <button className="edit" onClick={() => this.handleEdit(track.id)}>Edit</button> */}
+                <button
+                  className="delete"
+                  onClick={() => handleDelete(track.id, track.artistId)}
+                >
+                  Delete
+                </button>
+              </div>
+              <div className="comments-likes">
+                <img
+                  src="https://dsmug1izjrtvi.cloudfront.net/design/speech-bubble.svg"
+                  className="comment"
+                  height="15"
+                  width="15"
+                  onClick={() => commentsClick(track.id)}
+                ></img>
+                <img
+                  src="https://dsmug1izjrtvi.cloudfront.net/design/like-icon.svg"
+                  className="like"
+                  height="16"
+                  width="16"
+                  onClick={() => likeClick(track.id, props.currentUser.id)}
+                ></img>
+                <p className="comments-like-number">{track.likes}</p>
+              </div>
+            </div>
+          </div>
         </div>
-        )
+      );
 
     return (
         <div>
