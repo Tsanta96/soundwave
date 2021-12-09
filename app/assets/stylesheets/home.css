@@ -1,18 +1,16 @@
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 .home {
     display: grid;
     height: 100%;
-}
-
-.blue-bar {
-    background-color: black;
-    height: 5px;
+    animation: fadein 3s;
 }
 
 .home-view {
-    background-image: url("https://dsmug1izjrtvi.cloudfront.net/design/soundwave-home-img4.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    z-index: -1;
     width: 100%;
     height: 100%;
     position: fixed;
@@ -24,8 +22,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0 , 0.4);
+    background-color: rgba(102, 0, 185, 0.95);
+    animation: fadein 3s;
     padding: 1em;
+    border: 2px solid white;
+    border-top: 0;
+    border-radius: 0 0 10px 10px;
 }
 
 .home-logo {
@@ -105,7 +107,6 @@
 }
 
 .home p {
-    /* margin: 100px auto; */
     color: #ccefff;
     font-weight: bolder;
     text-align: center;
@@ -113,5 +114,3 @@
     font-size: 30px;
     font-weight: 1000px;
 }
-
-
