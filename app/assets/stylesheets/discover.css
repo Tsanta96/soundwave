@@ -1,8 +1,3 @@
-.discover-tracks {
-    position: relative;
-    margin-bottom: 48px;
-}
-
 .discover-tracks h1 {
     font-size: 30px;
     font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
@@ -11,20 +6,16 @@
     color: white;
 }
 
+.tracklist-container {
+    margin-bottom: 35px;
+}
+
 #sound-wave-everywhere {
     position: fixed;
     right: 150px;
     top: 140px;
-    /* width: 150px;
-    height: 150px; */
     opacity: 0.5;
     z-index: -1;
-    /* animation-name: pulse; */
-    /* animation-duration: 15s; */
-    /* animation-iteration-count: infinite;
-    background-color: orange;
-    border: 2px solid rgb(114, 114, 255);
-    border-radius: 40px; */
 }
 
 @keyframes pulse {
