@@ -9,9 +9,11 @@ const TrackIndex = (props) => {
     return (
       <div className="discover-tracks">
         <h1>Discover</h1>
-        {props.tracks.map((track, idx) => (
-          <TrackItemContainer key={track.id} idx={idx} track={track} />
-        ))}
+        <div className="tracklist-container">
+          {props.tracks.map((track, idx) => (
+            <TrackItemContainer key={track.id} idx={idx} track={track} />
+          ))}
+        </div>
         <div id="sound-wave-everywhere">
           <img
             id="sound-wave-everywhere"
@@ -20,6 +22,7 @@ const TrackIndex = (props) => {
             height="400"
           ></img>
         </div>
+        <div>Hey im just here so i don't get fined</div>
       </div>
     );
 }
