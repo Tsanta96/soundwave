@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import CommentItem from './comment_item';
 
 //Function component using hooks
-
 const Comments = (props) => {
     const [body, setBody] = useState('');
     const [author_id, setAuthor_id] = useState(props.currentUser.id);

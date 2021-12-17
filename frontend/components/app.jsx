@@ -38,9 +38,3 @@ const App = () => {
 }
 
 export default App;
-
-/* 
-<ProtectedRoute path="/profile/:id" component={ProfileComponent} />
-<ProtectedRoute path="/create/" component={CreateAudioComponent} />
-<ProtectedRoute path="/stream" component={StreamComponent} /> 
-*/

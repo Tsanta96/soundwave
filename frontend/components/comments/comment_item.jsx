@@ -1,7 +1,6 @@
 import React from 'react';
 
 const CommentItem = ({ comment }) => {
-
     return (
         <div className="comment-content">
             <h1>{comment.body}</h1>
