@@ -12,7 +12,7 @@ const Home = ({ openModal, removeErrors }) => {
         }}>Signup
         </button>
       <a
-        href="https://github.com/Tsanta96"
+        href="https://github.com/Tsanta96/soundwave"
         target="_blank"
         className="github-icon"
         height="40"
