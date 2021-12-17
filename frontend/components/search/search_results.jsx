@@ -4,10 +4,6 @@ import TrackItemContainer from '../tracks/track_item_container';
 export class SearchResults extends Component {
     constructor(props) {
         super(props);
-
-        // this.state = {
-        //     update: 0
-        // }
     }
 
     componentDidMount() {
@@ -19,17 +15,6 @@ export class SearchResults extends Component {
             this.props.searchTracks(this.props.match.params.searchString);
         }
     }
-
-    // renderErrors() {
-    //     console.log(this.props.errors.length);
-    //     if (this.props.errors.length > 0) {
-    //         return (
-    //             <div className="search-errors">
-    //                 {this.props.errors[0]}
-    //             </div>
-    //         )
-    //     }
-    // }
 
     render() {
         return (

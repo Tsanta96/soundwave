@@ -46,5 +46,4 @@ const mapDispatchToProps = dispatch => ({
     removeTrackErrors: () => dispatch(removeTrackErrors())
 })
 
-// export default connect(mapStateToProps, mapDispatchToProps)(Searchbar)
 export default compose(withRouter, connect(mapStateToProps, mapDispatchToProps))(SearchBar);

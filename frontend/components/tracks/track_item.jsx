@@ -132,7 +132,6 @@ const TrackItem = (props) => {
             {playPause}
             <div className="bottom-container">
               <div className="edit-delete">
-                {/* <button className="edit" onClick={() => this.handleEdit(track.id)}>Edit</button> */}
                 <button
                   className="delete"
                   onClick={() => handleDelete(track.id, track.artistId)}

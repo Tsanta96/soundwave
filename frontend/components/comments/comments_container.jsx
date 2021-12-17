@@ -17,7 +17,6 @@ const mapStateToProps = (state, ownProps) => {
         currentUser: state.session.currentUser,
         trackId: ownProps.match.params.id,
         comments: stateCommentsArr,
-        // track: Object.values(state.entities.tracks)[0].title
     }
 };
 
