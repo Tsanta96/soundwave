@@ -10,7 +10,6 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
     logout: () => dispatch(logout()),
-    // fetchTracks: () => dispatch(fetchTracks())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(NavBar);

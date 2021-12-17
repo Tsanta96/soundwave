@@ -45,7 +45,6 @@ export const deleteTrack = trackId => (
     })
 )
 
-
 //Search for tracks 
 export const searchTracks = searchString => (
     $.ajax({

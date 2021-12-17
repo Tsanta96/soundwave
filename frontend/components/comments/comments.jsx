@@ -11,7 +11,6 @@ const Comments = (props) => {
     useEffect(() => {
         props.fetchComments(props.trackId);
         props.fetchTrack(props.trackId);
-        // console.log("hello")
     }, [])
 
     const handleInput = () => {

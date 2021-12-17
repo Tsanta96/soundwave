@@ -49,11 +49,6 @@ export const removeTrackErrors = () => ({
     type: REMOVE_TRACK_ERRORS
 })
 
-// export const emptyTracks = () => ({
-//     type: EMPTY_TRACKS
-// })
-
-
 //thunk action creators 
 export const fetchTracks = () => dispatch => (
     trackUtils.fetchTracks()

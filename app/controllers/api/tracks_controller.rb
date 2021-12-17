@@ -11,7 +11,7 @@ class Api::TracksController < ApplicationController
     end 
 
     def search_string
-        #Retreive tracks that include the search string. If none, return status error and no results found 
+        #Retrieve tracks that include the search string. If none, return status error and no results found 
         search_string_lower = params[:search_string].downcase
         search_string_cap = params[:search_string].capitalize
     
@@ -21,7 +21,6 @@ class Api::TracksController < ApplicationController
             render :index
         else 
             render :index
-            #json: ["Could not find tracks"], status: 400
         end
     end
 
@@ -43,10 +42,6 @@ class Api::TracksController < ApplicationController
             render :index 
         end
     end
-
-    # "create" test
-    # newtrack = ({track: {title: "song3", artist_id: 1}})
-    # window.createTrack(newtrack)
 
     def update 
         @track = Track.find_by_id(params[:id])
