@@ -1,4 +1,3 @@
-import React from 'react';
 import { connect } from 'react-redux';
 import MusicPlayer from './music_player';
 import { fetchCurrentTrack } from '../../actions/music_player_actions';

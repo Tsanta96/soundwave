@@ -17,8 +17,9 @@ class Track < ApplicationRecord
     foreign_key: :track_id,
     class_name: :Like
 
-    has_one_attached :track_file
-    has_one_attached :img_file
+    #has_one_attached/has_many_attached is how ActiveStorage communicates with the tables
+    has_one_attached :track_file # Becomes a virtual attribute on each instance of our model.
+    has_one_attached :img_file # Becomes a virtual attribute on each instance of our model.
 
     def ensure_track_file 
         unless self.track_file.attached?

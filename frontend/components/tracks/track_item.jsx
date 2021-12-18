@@ -51,10 +51,9 @@ const TrackItem = (props) => {
     if (document.getElementById('music-player') !== null) {
         musicPlayerSrc = document.getElementById('music-player').getAttribute("src")
     }
-    // if (document.getElementById(`track-id-${track.id}`) !== null) {
-    // debugger;
+
     checkTrack = document.getElementById(`track-id-${track.id}`);
-    // }
+
     if (checkTrack !== null) {
         trackSrc = checkTrack.getAttribute("src");
     }
@@ -70,7 +69,6 @@ const TrackItem = (props) => {
         </div>
       ) : (
         <div>
-          {/* <input className="pause-button" type="image" src="https://d313rqwfqaf3f.cloudfront.net/musicPlayer/pause_icon.svg" onClick={() => this.pauseAud(track.id)}/>  */}
           <input
             className="play-button-active"
             type="image"
