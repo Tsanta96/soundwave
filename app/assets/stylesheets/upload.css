@@ -60,7 +60,7 @@
   padding-top: 40px;
 }
 
-.upload-track-form input[type="text"] {
+.upload-track-form input[type='text'] {
   border-radius: 2px;
   font-size: 20px;
   border-top: none;
@@ -71,7 +71,7 @@
   margin-left: 20px;
 }
 
-.upload-track-form input[type="file"] {
+.upload-track-form input[type='file'] {
   margin-left: 20px;
 }
 

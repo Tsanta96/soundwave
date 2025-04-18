@@ -2,7 +2,7 @@
 
 Soundwave is a clone of the popular music sharing site, SoundCloud. This is my fullstack project for App Academy.
 
-** CORE FEATURES: ****************************\*\*\*\*******************************
+** CORE FEATURES: ************\*\***************\*\*\*\***************\*\***************
 
 ### 1. New account creation, login, and guest/demo login (12/16/2019, 2 days)
 
@@ -47,7 +47,7 @@ Soundwave is a clone of the popular music sharing site, SoundCloud. This is my f
 
 ### 8.5. Production ReadMe
 
-** ADDITIONAL FEATURES: **************************\*\*****************************
+** ADDITIONAL FEATURES: **********\*\*\*\*************\*\*************\*\*\*\*************
 
 ### 9. Add playlists
 

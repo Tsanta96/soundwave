@@ -5,8 +5,8 @@ import {
   RECEIVE_ARTIST_TRACKS,
   EMPTY_TRACKS,
   RECEIVE_SEARCH_TRACKS,
-} from "../actions/track_actions";
-import { RECEIVE_LIKED_TRACKS } from "../actions/like_actions";
+} from '../actions/track_actions';
+import { RECEIVE_LIKED_TRACKS } from '../actions/like_actions';
 
 const TracksReducer = (oldState = {}, action) => {
   Object.freeze(oldState);

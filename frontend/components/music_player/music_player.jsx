@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
-import { withRouter } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { withRouter } from 'react-router-dom';
 
 const MusicPlayer = (props) => {
   const [player, setPlayer] = useState(undefined);
   const [progressBar, setProgressBar] = useState(undefined);
 
   useEffect(() => {
-    setPlayer(document.getElementById("music-player"));
+    setPlayer(document.getElementById('music-player'));
   });
 
   useEffect(() => {
@@ -17,9 +17,9 @@ const MusicPlayer = (props) => {
         player.play();
       }
 
-      setProgressBar(document.getElementById("progress-bar"));
+      setProgressBar(document.getElementById('progress-bar'));
       if (progressBar !== undefined) {
-        player.addEventListener("timeupdate", () => {
+        player.addEventListener('timeupdate', () => {
           progressBar.value = player.currentTime / player.duration;
         });
       }
@@ -35,7 +35,7 @@ const MusicPlayer = (props) => {
   };
 
   const changeVol = () => {
-    player.volume = document.getElementById("vol-bar").value;
+    player.volume = document.getElementById('vol-bar').value;
   };
 
   const { currentTrack } = props;

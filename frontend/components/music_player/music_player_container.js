@@ -1,7 +1,7 @@
-import { connect } from "react-redux";
-import MusicPlayer from "./music_player";
-import { fetchCurrentTrack } from "../../actions/music_player_actions";
-import { fetchTracks } from "../../actions/track_actions";
+import { connect } from 'react-redux';
+import MusicPlayer from './music_player';
+import { fetchCurrentTrack } from '../../actions/music_player_actions';
+import { fetchTracks } from '../../actions/track_actions';
 
 const mapStateToProps = (state) => {
   let tracks = Object.values(state.entities.tracks);

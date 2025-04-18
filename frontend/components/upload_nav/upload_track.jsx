@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 
 class UploadTrackForm extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      title: "",
-      imgFile: "",
-      trackFile: "",
+      title: '',
+      imgFile: '',
+      trackFile: '',
       artist_id: this.props.currentUser.id,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -43,18 +43,18 @@ class UploadTrackForm extends React.Component {
     e.preventDefault();
 
     const formData = new FormData();
-    formData.append("track[title]", this.state.title);
-    formData.append("track[img_file]", this.state.imgFile);
-    formData.append("track[track_file]", this.state.trackFile);
-    formData.append("track[artist_id]", this.props.currentUser.id);
+    formData.append('track[title]', this.state.title);
+    formData.append('track[img_file]', this.state.imgFile);
+    formData.append('track[track_file]', this.state.trackFile);
+    formData.append('track[artist_id]', this.props.currentUser.id);
     this.props.createTrack(formData); //Why does form data get sent up as an empty object {}? This makes it very hard to debug!
 
     this.setState({
-      title: "",
+      title: '',
       artist_id: this.props.currentUser.id,
     });
-    document.getElementById("upload-imgFile").value = "";
-    document.getElementById("upload-trackFile").value = "";
+    document.getElementById('upload-imgFile').value = '';
+    document.getElementById('upload-trackFile').value = '';
   }
 
   render() {
@@ -81,7 +81,7 @@ class UploadTrackForm extends React.Component {
                 id="upload-title"
                 type="text"
                 value={this.state.title}
-                onChange={this.handleInput("title")}
+                onChange={this.handleInput('title')}
               />
               <br></br>
             </label>
@@ -90,7 +90,7 @@ class UploadTrackForm extends React.Component {
               <input
                 id="upload-imgFile"
                 type="file"
-                onChange={this.handleFile("imgFile")}
+                onChange={this.handleFile('imgFile')}
               />
               <br></br>
             </label>
@@ -99,7 +99,7 @@ class UploadTrackForm extends React.Component {
               <input
                 id="upload-trackFile"
                 type="file"
-                onChange={this.handleFile("trackFile")}
+                onChange={this.handleFile('trackFile')}
               />
               <br></br>
             </label>

@@ -1,10 +1,10 @@
-import * as commentUtils from "../utils/comment_utils";
+import * as commentUtils from '../utils/comment_utils';
 
-export const RECEIVE_ALL_COMMENTS = "RECEIVE_ALL_COMMENTS";
-export const REMOVE_ALL_COMMENTS = "REMOVE_ALL_COMMENTS";
-export const RECEIVE_COMMENT = "RECEIVE_COMMENT";
-export const RECEIVE_COMMENT_ERRORS = "RECEIVE_COMMENT_ERRORS";
-export const REMOVE_COMMENT = "REMOVE_COMMENT";
+export const RECEIVE_ALL_COMMENTS = 'RECEIVE_ALL_COMMENTS';
+export const REMOVE_ALL_COMMENTS = 'REMOVE_ALL_COMMENTS';
+export const RECEIVE_COMMENT = 'RECEIVE_COMMENT';
+export const RECEIVE_COMMENT_ERRORS = 'RECEIVE_COMMENT_ERRORS';
+export const REMOVE_COMMENT = 'REMOVE_COMMENT';
 
 const receiveAllComments = (comments) => ({
   type: RECEIVE_ALL_COMMENTS,

@@ -1,18 +1,18 @@
 export const fetchComments = (trackId) =>
   $.ajax({
-    type: "GET",
+    type: 'GET',
     url: `/api/comments/track_comments/${trackId}`,
   });
 
 export const createComment = (comment) =>
   $.ajax({
-    type: "POST",
+    type: 'POST',
     url: `api/comments`,
     data: { comment },
   });
 
 export const deleteComment = (commentId) =>
   $.ajax({
-    type: "DELETE",
+    type: 'DELETE',
     url: `api/comments/${commentId}`,
   });

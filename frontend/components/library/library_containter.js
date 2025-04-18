@@ -1,6 +1,6 @@
-import Library from "./library";
-import { connect } from "react-redux";
-import { fetchLikedTracks } from "../../actions/like_actions";
+import Library from './library';
+import { connect } from 'react-redux';
+import { fetchLikedTracks } from '../../actions/like_actions';
 
 const mapStateToProps = (state) => {
   let stateTracksArr = Object.values(state.entities.tracks);

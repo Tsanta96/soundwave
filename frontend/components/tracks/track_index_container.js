@@ -1,6 +1,6 @@
-import { connect } from "react-redux";
-import { fetchTracks, emptyTracks } from "../../actions/track_actions";
-import TrackIndex from "./track_index";
+import { connect } from 'react-redux';
+import { fetchTracks, emptyTracks } from '../../actions/track_actions';
+import TrackIndex from './track_index';
 
 const mapStateToProps = (state) => {
   let stateTracksArr = Object.values(state.entities.tracks);

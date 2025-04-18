@@ -1,11 +1,11 @@
-import React, { Component, useState } from "react";
-import { compose } from "redux";
-import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
-import { searchTracks, removeTrackErrors } from "../../actions/track_actions";
+import React, { Component, useState } from 'react';
+import { compose } from 'redux';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import { searchTracks, removeTrackErrors } from '../../actions/track_actions';
 
 const SearchBar = (props) => {
-  const [searchString, setSearchString] = useState("");
+  const [searchString, setSearchString] = useState('');
 
   const handleSearchInput = () => {
     return (e) => {
@@ -14,11 +14,11 @@ const SearchBar = (props) => {
   };
 
   const handleSearchSubmit = () => {
-    if (searchString !== "") {
+    if (searchString !== '') {
       props.searchTracks(searchString);
       props.removeTrackErrors();
       props.history.push(`/nav/search/${searchString}`);
-      setSearchString("");
+      setSearchString('');
     }
   };
 

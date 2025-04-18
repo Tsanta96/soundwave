@@ -1,14 +1,14 @@
-import * as trackUtils from "../utils/track_utils";
+import * as trackUtils from '../utils/track_utils';
 
-export const RECEIVE_ALL_TRACKS = "RECEIVE_ALL_TRACKS";
-export const RECEIVE_TRACK = "RECEIVE_TRACK";
-export const RECEIVE_TRACK_ERRORS = "RECEIVE_TRACK_ERRORS";
-export const REMOVE_TRACK_ERRORS = "REMOVE_TRACK_ERRORS";
-export const REMOVE_TRACK = "RECEIVE_ALL_TRACKS";
-export const RECEIVE_ARTIST_TRACKS = "RECEIVE_ARTIST_TRACKS";
-export const EMPTY_TRACKS = "EMPTY_TRACKS";
-export const RECEIVE_SEARCH_TRACKS = "RECEIVE_SEARCH_TRACKS";
-export const RECEIVE_SEARCH_ERRORS = "RECEIVE_SEARCH_ERRORS";
+export const RECEIVE_ALL_TRACKS = 'RECEIVE_ALL_TRACKS';
+export const RECEIVE_TRACK = 'RECEIVE_TRACK';
+export const RECEIVE_TRACK_ERRORS = 'RECEIVE_TRACK_ERRORS';
+export const REMOVE_TRACK_ERRORS = 'REMOVE_TRACK_ERRORS';
+export const REMOVE_TRACK = 'RECEIVE_ALL_TRACKS';
+export const RECEIVE_ARTIST_TRACKS = 'RECEIVE_ARTIST_TRACKS';
+export const EMPTY_TRACKS = 'EMPTY_TRACKS';
+export const RECEIVE_SEARCH_TRACKS = 'RECEIVE_SEARCH_TRACKS';
+export const RECEIVE_SEARCH_ERRORS = 'RECEIVE_SEARCH_ERRORS';
 
 const receiveAllTracks = (tracks) => ({
   type: RECEIVE_ALL_TRACKS,

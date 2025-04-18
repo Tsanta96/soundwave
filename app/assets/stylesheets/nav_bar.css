@@ -23,7 +23,7 @@
 
 .logo {
   font-size: 45px;
-  font-family: "Quicksand", sans-serif;
+  font-family: 'Quicksand', sans-serif;
   color: #ccefff;
 }
 
@@ -182,7 +182,7 @@
 
 .nav-bar-profile-icon h2 {
   font-size: 14px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   border: 1px solid #00b8e6;
   padding: 10px;
   border-radius: 50px;

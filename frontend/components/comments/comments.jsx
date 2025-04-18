@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import CommentItem from "./comment_item";
+import React, { useState, useEffect } from 'react';
+import CommentItem from './comment_item';
 
 //Function component using hooks
 const Comments = (props) => {
-  const [body, setBody] = useState("");
+  const [body, setBody] = useState('');
   const [author_id, setAuthor_id] = useState(props.currentUser.id);
   const [track_id, setTrack_id] = useState(props.trackId);
 
@@ -29,7 +29,7 @@ const Comments = (props) => {
 
     props.createComment(comment);
 
-    setBody("");
+    setBody('');
   };
 
   return (
@@ -45,7 +45,7 @@ const Comments = (props) => {
             type="textArea"
             placeholder="Say something about this track"
             value={body}
-            onChange={handleInput("body")}
+            onChange={handleInput('body')}
           />
         </label>
         <button className="comment-button" onClick={handleSubmit}>

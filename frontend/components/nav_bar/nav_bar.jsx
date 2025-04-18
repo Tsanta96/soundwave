@@ -1,20 +1,20 @@
-import React from "react";
-import { withRouter } from "react-router";
-import SearchBar from "../search/searchbar";
+import React from 'react';
+import { withRouter } from 'react-router';
+import SearchBar from '../search/searchbar';
 
 const NavBar = (props) => {
   const handleUploadButton = (e) => {
     e.preventDefault();
-    props.history.push("/nav/upload");
+    props.history.push('/nav/upload');
   };
 
   const handleDiscoverButton = (e) => {
     e.preventDefault();
-    props.history.push("/nav/tracks");
+    props.history.push('/nav/tracks');
   };
 
   const handleLogout = () => {
-    props.logout().then(props.history.push("/"));
+    props.logout().then(props.history.push('/'));
   };
 
   return (
@@ -25,7 +25,7 @@ const NavBar = (props) => {
             src="http://dsmug1izjrtvi.cloudfront.net/design/wave_white.svg"
             height="40"
             width="40"
-            onClick={() => props.history.push("/nav/tracks")}
+            onClick={() => props.history.push('/nav/tracks')}
           ></img>
         </div>
         <button className="nav-discover-button" onClick={handleDiscoverButton}>
@@ -43,7 +43,7 @@ const NavBar = (props) => {
       <div className="nav-bar-right-side">
         <button
           className="nav-upgrade-button"
-          onClick={() => props.history.push("/nav/upgrade")}
+          onClick={() => props.history.push('/nav/upgrade')}
         >
           Upgrade
         </button>

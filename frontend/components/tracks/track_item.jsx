@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { withRouter } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { withRouter } from 'react-router-dom';
 
 const TrackItem = (props) => {
   const [id, setId] = useState(props.track.id);
@@ -8,7 +8,7 @@ const TrackItem = (props) => {
   const [audio, setAudio] = useState(null);
 
   useEffect(() => {
-    setAudio(document.getElementById("music-player"));
+    setAudio(document.getElementById('music-player'));
   }, []);
 
   const fetchTrack = (e, trackId) => {
@@ -19,7 +19,7 @@ const TrackItem = (props) => {
   const pauseAud = () => {};
 
   const handleDelete = (trackId, userId) => {
-    const delSong = confirm("Are you sure you want to delete this song?");
+    const delSong = confirm('Are you sure you want to delete this song?');
     if (delSong === true) {
       props.deleteTrack(trackId);
       props.fetchArtistTracks(userId);
@@ -35,9 +35,9 @@ const TrackItem = (props) => {
     props.addLike(trackId, userId);
 
     //Force a re render
-    if (props.location.pathname === "/nav/tracks") {
+    if (props.location.pathname === '/nav/tracks') {
       props.fetchTracks();
-    } else if (props.location.pathname === "/nav/library") {
+    } else if (props.location.pathname === '/nav/library') {
       props.fetchLikedTracks(userId);
     }
   };
@@ -46,16 +46,16 @@ const TrackItem = (props) => {
   let musicPlayerSrc;
   let checkTrack;
   let trackSrc;
-  if (document.getElementById("music-player") !== null) {
+  if (document.getElementById('music-player') !== null) {
     musicPlayerSrc = document
-      .getElementById("music-player")
-      .getAttribute("src");
+      .getElementById('music-player')
+      .getAttribute('src');
   }
 
   checkTrack = document.getElementById(`track-id-${track.id}`);
 
   if (checkTrack !== null) {
-    trackSrc = checkTrack.getAttribute("src");
+    trackSrc = checkTrack.getAttribute('src');
   }
   const playPause =
     musicPlayerSrc !== trackSrc ? (
@@ -79,7 +79,7 @@ const TrackItem = (props) => {
     );
 
   const trackContainer =
-    props.match.path !== "/nav/you/tracks" ? (
+    props.match.path !== '/nav/you/tracks' ? (
       <div className="song-container">
         <img
           src={track.imgFile}

@@ -1,4 +1,4 @@
-import { RECEIVE_CURRENT_TRACK } from "../actions/music_player_actions";
+import { RECEIVE_CURRENT_TRACK } from '../actions/music_player_actions';
 
 const MusicPlayerReducer = (oldState = {}, action) => {
   Object.freeze(oldState);

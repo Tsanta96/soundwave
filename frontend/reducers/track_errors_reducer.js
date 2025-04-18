@@ -2,7 +2,7 @@ import {
   RECEIVE_TRACK_ERRORS,
   REMOVE_TRACK_ERRORS,
   RECEIVE_SEARCH_ERRORS,
-} from "../actions/track_actions";
+} from '../actions/track_actions';
 
 const TrackErrorsReducer = (state = {}, action) => {
   Object.freeze(state);

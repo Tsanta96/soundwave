@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
-import { NavLink } from "react-router-dom";
-import TrackItemContainer from "../tracks/track_item_container";
+import React, { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
+import TrackItemContainer from '../tracks/track_item_container';
 
 const YouTracks = (props) => {
   useEffect(() => {

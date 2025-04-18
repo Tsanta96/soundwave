@@ -1,11 +1,11 @@
-import { connect } from "react-redux";
+import { connect } from 'react-redux';
 import {
   createNewUser,
   login,
   removeErrors,
-} from "../../actions/session_actions";
-import { closeModal, openModal } from "../../actions/modal_actions";
-import Signup from "./signup";
+} from '../../actions/session_actions';
+import { closeModal, openModal } from '../../actions/modal_actions';
+import Signup from './signup';
 
 const mapStateToProps = (state) => ({
   errors: state.errors.session,

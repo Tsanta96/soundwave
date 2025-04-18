@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import TrackItemContainer from "./track_item_container";
+import React, { useEffect } from 'react';
+import TrackItemContainer from './track_item_container';
 
 const TrackIndex = (props) => {
   useEffect(() => {

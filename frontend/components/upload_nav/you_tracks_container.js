@@ -1,6 +1,6 @@
-import { connect } from "react-redux";
-import YouTracks from "./you_tracks";
-import { fetchTracks, fetchArtistTracks } from "../../actions/track_actions";
+import { connect } from 'react-redux';
+import YouTracks from './you_tracks';
+import { fetchTracks, fetchArtistTracks } from '../../actions/track_actions';
 
 const mapStateToProps = (state) => {
   let stateTracksArr = Object.values(state.entities.tracks);

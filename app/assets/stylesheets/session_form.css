@@ -7,7 +7,7 @@
 }
 
 .session-form-errors {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 12px;
   bottom: 50px;
   color: #387997;
@@ -16,7 +16,7 @@
 .session-form-type {
   margin: auto;
   padding-top: 20px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 35px;
   color: #00b8e6;
 }
@@ -27,7 +27,7 @@
   margin: auto;
   margin-top: 65px;
   margin-bottom: 10px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .session-form label:first-of-type {
@@ -83,14 +83,14 @@ input:focus {
 .switch-form {
   align-self: center;
   padding-bottom: 30px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 15px;
 }
 
 .switch-form button {
   border: none;
   text-decoration: underline;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 15px;
 }
 

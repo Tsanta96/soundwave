@@ -1,6 +1,6 @@
-import * as likeUtils from "../utils/like_utils";
+import * as likeUtils from '../utils/like_utils';
 
-export const RECEIVE_LIKED_TRACKS = "RECEIVE_LIKED_TRACKS";
+export const RECEIVE_LIKED_TRACKS = 'RECEIVE_LIKED_TRACKS';
 
 const receiveLikedTracks = (tracks) => ({
   type: RECEIVE_LIKED_TRACKS,

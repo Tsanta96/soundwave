@@ -1,9 +1,9 @@
-import React from "react";
-import { closeModal } from "../../actions/modal_actions";
-import { removeErrors } from "../../actions/session_actions";
-import { connect } from "react-redux";
-import LoginContainer from "../session/login_container";
-import SignupContainer from "../session/signup_container";
+import React from 'react';
+import { closeModal } from '../../actions/modal_actions';
+import { removeErrors } from '../../actions/session_actions';
+import { connect } from 'react-redux';
+import LoginContainer from '../session/login_container';
+import SignupContainer from '../session/signup_container';
 
 const Modal = ({ modal, closeModal, removeErrors }) => {
   if (!modal) {
@@ -11,10 +11,10 @@ const Modal = ({ modal, closeModal, removeErrors }) => {
   }
   let component;
   switch (modal) {
-    case "login":
+    case 'login':
       component = <LoginContainer />;
       break;
-    case "signup":
+    case 'signup':
       component = <SignupContainer />;
       break;
     default:

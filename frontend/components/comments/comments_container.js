@@ -1,7 +1,7 @@
-import { connect } from "react-redux";
-import { createComment, fetchComments } from "../../actions/comment_actions";
-import { fetchTrack } from "../../actions/track_actions";
-import Comments from "./comments";
+import { connect } from 'react-redux';
+import { createComment, fetchComments } from '../../actions/comment_actions';
+import { fetchTrack } from '../../actions/track_actions';
+import Comments from './comments';
 
 const mapStateToProps = (state, ownProps) => {
   let stateCommentsArr = Object.values(state.entities.comments);

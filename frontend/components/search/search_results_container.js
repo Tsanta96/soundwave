@@ -1,6 +1,6 @@
-import { connect } from "react-redux";
-import SearchResults from "./search_results";
-import { searchTracks } from "../../actions/track_actions";
+import { connect } from 'react-redux';
+import SearchResults from './search_results';
+import { searchTracks } from '../../actions/track_actions';
 
 const mapStateToProps = (state) => {
   let stateTracksArr = Object.values(state.entities.tracks);

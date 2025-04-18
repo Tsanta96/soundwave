@@ -1,17 +1,17 @@
-import React from "react";
-import { Route } from "react-router-dom";
-import { ProtectedRoute } from "../utils/route_utils";
-import NavBarContainer from "./nav_bar/nav_bar_container";
-import HomeContainer from "./home/home_container";
-import Modal from "./modal/modal.jsx";
-import UploadTrackContainer from "./upload_nav/upload_track_container";
-import YouTracksContainer from "./upload_nav/you_tracks_container";
-import TrackIndexContainer from "./tracks/track_index_container";
-import MusicPlayerContainer from "./music_player/music_player_container";
-import CommentsContainer from "./comments/comments_container";
-import UpgradeComponent from "./upgrade/upgrade";
-import SearchResultsContainer from "./search/search_results_container";
-import LibraryContainer from "./library/library_containter";
+import React from 'react';
+import { Route } from 'react-router-dom';
+import { ProtectedRoute } from '../utils/route_utils';
+import NavBarContainer from './nav_bar/nav_bar_container';
+import HomeContainer from './home/home_container';
+import Modal from './modal/modal.jsx';
+import UploadTrackContainer from './upload_nav/upload_track_container';
+import YouTracksContainer from './upload_nav/you_tracks_container';
+import TrackIndexContainer from './tracks/track_index_container';
+import MusicPlayerContainer from './music_player/music_player_container';
+import CommentsContainer from './comments/comments_container';
+import UpgradeComponent from './upgrade/upgrade';
+import SearchResultsContainer from './search/search_results_container';
+import LibraryContainer from './library/library_containter';
 
 const App = () => {
   return (

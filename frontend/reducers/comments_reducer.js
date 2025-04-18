@@ -3,7 +3,7 @@ import {
   REMOVE_ALL_COMMENTS,
   RECEIVE_COMMENT,
   REMOVE_COMMENT,
-} from "../actions/comment_actions";
+} from '../actions/comment_actions';
 
 const CommentsReducer = (oldState = {}, action) => {
   Object.freeze(oldState);

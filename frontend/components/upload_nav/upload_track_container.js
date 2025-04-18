@@ -1,11 +1,11 @@
-import { connect } from "react-redux";
+import { connect } from 'react-redux';
 import {
   createTrack,
   fetchTracks,
   removeTrackErrors,
   fetchArtistTracks,
-} from "../../actions/track_actions";
-import UploadTrackForm from "./upload_track";
+} from '../../actions/track_actions';
+import UploadTrackForm from './upload_track';
 
 const mapStateToProps = (state) => {
   let stateTracksArr = Object.values(state.entities.tracks);

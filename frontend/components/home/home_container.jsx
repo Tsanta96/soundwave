@@ -1,8 +1,8 @@
-import { connect } from "react-redux";
+import { connect } from 'react-redux';
 
-import { logout, removeErrors } from "../../actions/session_actions";
-import { openModal } from "../../actions/modal_actions";
-import Home from "./home";
+import { logout, removeErrors } from '../../actions/session_actions';
+import { openModal } from '../../actions/modal_actions';
+import Home from './home';
 
 const mapStateToProps = ({ session }) => ({
   currentUser: session.currentUser,
