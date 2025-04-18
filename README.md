@@ -1,6 +1,6 @@
 # SoundWave
 
-[Live Demo](https://sound-wave-aa.herokuapp.com/#/ "Live Demo")
+[Live Demo](https://sound-wave-aa.herokuapp.com/#/ 'Live Demo')
 
 SoundWave is a music streaming website inspired by SoundCloud. It shares a lot of
 the same functionality and is similar in style to SoundCloud but has it's own blue
@@ -71,7 +71,7 @@ on some of the styling, I frequently referred back to Soundcloud's website to dr
 A prime example of this is the custom logo I added which is a wave with the sort of soundwave
 decoration that is recognized on the actual SouncCloud logo.
 
-![SoundWave_Logo](app/assets/images/soundwave_logo_img.png "SoundWave Logo")
+![SoundWave_Logo](app/assets/images/soundwave_logo_img.png 'SoundWave Logo')
 
 ## Future Features
 
@@ -86,8 +86,9 @@ These additions are:
 
 1. `bin/rails db:create`
 2. `bin/rails db:migrate`
-3. `rails s`
-4. Navigate to localhost:3000
+3. `bin/rails db:seed`
+4. `rails s`
+5. Navigate to localhost:3000
 
 ## Acknowledgments
 
