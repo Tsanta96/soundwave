@@ -19,9 +19,6 @@ const TrackIndex = (props) => {
         ) : (
           <div className="empty-list">This is a sad and empty list</div>
         )}
-        {props.tracks.map((track, idx) => (
-          <TrackItemContainer key={track.id} idx={idx} track={track} />
-        ))}
       </div>
       <div id="sound-wave-everywhere">
         <img

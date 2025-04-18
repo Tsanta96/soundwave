@@ -42,7 +42,7 @@ const TrackItem = (props) => {
     }
   };
 
-  const { track, idx } = props;
+  const { track } = props;
   let musicPlayerSrc;
   let checkTrack;
   let trackSrc;
