@@ -1,42 +1,47 @@
 .discover-tracks h1 {
-    font-size: 30px;
-    font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    color: white;
+  font-size: 30px;
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+    Garuda, Verdana, Tahoma, sans-serif;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: white;
+}
+
+.empty-list {
+  color: white;
 }
 
 .tracklist-container {
-    margin-bottom: 35px;
+  margin-bottom: 35px;
 }
 
 #sound-wave-everywhere {
-    position: fixed;
-    right: 150px;
-    top: 140px;
-    opacity: 0.5;
-    z-index: -1;
+  position: fixed;
+  right: 150px;
+  top: 140px;
+  opacity: 0.5;
+  z-index: -1;
 }
 
 @keyframes pulse {
-    0% {
-        background-color: orange;
-        border: 2px solid rgb(114, 114, 255);
-    }
-    25% {
-        background-color: purple;
-        border: 2px solid rgb(210, 114, 255);
-    }
-    50% {
-        background-color: rgb(0, 148, 216);
-        border: 2px solid rgb(253, 255, 114);
-    }
-    75% {
-        background-color: rgb(0, 216, 151);
-        border: 2px solid rgb(255, 177, 114);
-    }
-    100% {
-        background-color: orange;
-        border: 2px solid rgb(114, 114, 255);
-    }
+  0% {
+    background-color: orange;
+    border: 2px solid rgb(114, 114, 255);
+  }
+  25% {
+    background-color: purple;
+    border: 2px solid rgb(210, 114, 255);
+  }
+  50% {
+    background-color: rgb(0, 148, 216);
+    border: 2px solid rgb(253, 255, 114);
+  }
+  75% {
+    background-color: rgb(0, 216, 151);
+    border: 2px solid rgb(255, 177, 114);
+  }
+  100% {
+    background-color: orange;
+    border: 2px solid rgb(114, 114, 255);
+  }
 }

@@ -84,8 +84,10 @@ These additions are:
 
 ## To run project locally
 
-`rails s` to run backend server
-`npm run start` to run frontend server
+1. `bin/rails db:create`
+2. `bin/rails db:migrate`
+3. `rails s`
+4. Navigate to localhost:3000
 
 ## Acknowledgments
 
