@@ -1,37 +1,50 @@
 .upload-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    height: 40px;
-    margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 40px;
+  margin-bottom: 10px;
 }
 
 .upload-nav .upload {
-    text-align: center;
-    padding-bottom: 5px;
-    width: 50%;
-    text-decoration: none;
-    color: black;
-    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
-    border-bottom: 2px solid lightgray;
+  text-align: center;
+  padding-bottom: 5px;
+  width: 50%;
+  text-decoration: none;
+  color: black;
+  font-family:
+    Interstate,
+    Lucida Grande,
+    Lucida Sans Unicode,
+    Lucida Sans,
+    Garuda,
+    Verdana,
+    Tahoma,
+    sans-serif;
+  border-bottom: 2px solid lightgray;
 }
 
 .upload-nav .your-tracks {
-    padding-bottom: 5px;
-    width: 50%;
-    text-align: center;
-    text-decoration: none;
-    color: black;
-    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
-    border-bottom: 2px solid lightgray;
-    color: white;
-
+  padding-bottom: 5px;
+  width: 50%;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-family:
+    Interstate,
+    Lucida Grande,
+    Lucida Sans Unicode,
+    Lucida Sans,
+    Garuda,
+    Verdana,
+    Tahoma,
+    sans-serif;
+  border-bottom: 2px solid lightgray;
+  color: white;
 }
-
 
 .upload-nav a.chosen {
-    border-bottom: 2px solid #00b8e6;
-    color: white;
+  border-bottom: 2px solid #00b8e6;
+  color: white;
 }
-

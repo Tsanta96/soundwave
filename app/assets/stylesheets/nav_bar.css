@@ -1,60 +1,60 @@
 .nav-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333333;
-    height: 46px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333333;
+  height: 46px;
 }
 
 .nav-bar-logo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 69px;
-    height: 46px;
-    background-color: #00b8e6;
-    margin: 0 0 0 90px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 69px;
+  height: 46px;
+  background-color: #00b8e6;
+  margin: 0 0 0 90px;
 }
 
 .nav-bar-logo img {
-    margin: 0 auto;
-    cursor: pointer;
+  margin: 0 auto;
+  cursor: pointer;
 }
 
 .logo {
-    font-size: 45px;
-    font-family: 'Quicksand', sans-serif;
-    color: #ccefff;
+  font-size: 45px;
+  font-family: "Quicksand", sans-serif;
+  color: #ccefff;
 }
 
 .nav-bar-left-side {
-   display: flex;
+  display: flex;
 }
 
 .nav-bar-left-side .nav-discover-button {
-    width: 104px;
-    font-size: 14px;
-    background-color: #333333;
-    border: none;
-    border-right: 1px solid black;
-    color: lightgray;  
+  width: 104px;
+  font-size: 14px;
+  background-color: #333333;
+  border: none;
+  border-right: 1px solid black;
+  color: lightgray;
 }
 
 .nav-bar-left-side .nav-discover-button:hover {
-    width: 104px;
-    background-color: black;
-    border: none;
-    color: white;
-    cursor: pointer;
+  width: 104px;
+  background-color: black;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 
 .nav-bar-left-side .nav-stream-button {
-    width: 104px;
-    font-size: 14px;
-    background-color: #333333;
-    border: none;
-    border-right: 1px solid black;
-    color: lightgray;
+  width: 104px;
+  font-size: 14px;
+  background-color: #333333;
+  border: none;
+  border-right: 1px solid black;
+  color: lightgray;
 }
 
 /* .nav-bar-left-side .nav-stream-button:hover {
@@ -66,145 +66,143 @@
 } */
 
 .nav-bar-left-side .nav-library-button {
-    width: 104px;
-    font-size: 14px;
-    background-color: #333333;
-    border: none;
-    border-right: 1px solid black;
-    color: lightgray;
+  width: 104px;
+  font-size: 14px;
+  background-color: #333333;
+  border: none;
+  border-right: 1px solid black;
+  color: lightgray;
 }
 
 .nav-bar-left-side .nav-library-button:hover {
-    width: 104px;
-    background-color: black;
-    border: none;
-    color: white;
-    cursor: pointer;
+  width: 104px;
+  background-color: black;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 
 /* Search --------------------------------------------------------------------*/
 .nav-bar-search .search-input {
-    width: 300px;
-    height: 25px;
-    border-radius: 6px;
-    border: 1px solid black;
-    padding-left: 7px;
-    font-size: 14px;
-    background-color: rgb(223, 223, 223);
+  width: 300px;
+  height: 25px;
+  border-radius: 6px;
+  border: 1px solid black;
+  padding-left: 7px;
+  font-size: 14px;
+  background-color: rgb(223, 223, 223);
 }
 
 .search-form {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .search-button {
-    margin-left: 10px;
-    background-color: #00b8e6;
-    border-radius: 5px;
-    border: none;
-    color: white;
+  margin-left: 10px;
+  background-color: #00b8e6;
+  border-radius: 5px;
+  border: none;
+  color: white;
 }
 
 .search-button:hover {
-    margin-left: 10px;
-    border-radius: 5px;
-    border: none;
-    color: white;
-    background-color: #009ec5;
-    cursor: pointer;
+  margin-left: 10px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: #009ec5;
+  cursor: pointer;
 }
 
 .nav-bar-right-side {
-    display: flex;
-    flex-direction: row;
-    color: lightgray;
-    margin-right: 90px;
+  display: flex;
+  flex-direction: row;
+  color: lightgray;
+  margin-right: 90px;
 }
 
 .nav-bar-right-side .nav-upload-button {
-    width: 80px;
-    font-size: 14px;
-    background-color: #333333;
-    border: none;
-    border-left: 1px solid black;
-    color: lightgray;
+  width: 80px;
+  font-size: 14px;
+  background-color: #333333;
+  border: none;
+  border-left: 1px solid black;
+  color: lightgray;
 }
 
 .nav-bar-right-side .nav-upload-button:hover {
-    background-color: black;
-    width: 80px;
-    border-top: none;
-    border-right: none;
-    border-left: 1px solid black;
-    color: white;
-    cursor: pointer;
+  background-color: black;
+  width: 80px;
+  border-top: none;
+  border-right: none;
+  border-left: 1px solid black;
+  color: white;
+  cursor: pointer;
 }
 
 .nav-bar-right-side .nav-upgrade-button {
-    width: 80px;
-    font-size: 14px;
-    background-color: #333333;
-    border: none;
-    border-left: 1px solid black;
-    color: #00b8e6;
+  width: 80px;
+  font-size: 14px;
+  background-color: #333333;
+  border: none;
+  border-left: 1px solid black;
+  color: #00b8e6;
 }
 
 .nav-bar-right-side .nav-upgrade-button:hover {
-    background-color: black;
-    width: 80px;
-    border-top: none;
-    border-right: none;
-    border-left: 1px solid black;
-    color: #00b8e6;
-    cursor: pointer;
+  background-color: black;
+  width: 80px;
+  border-top: none;
+  border-right: none;
+  border-left: 1px solid black;
+  color: #00b8e6;
+  cursor: pointer;
 }
 
 .nav-bar-right-side .nav-upload-button:focus {
-    width: 80px;
-    border-top: none;
-    border-right: none;
-    border-left: 1px solid black;
-    color: white;
-    cursor: pointer;
+  width: 80px;
+  border-top: none;
+  border-right: none;
+  border-left: 1px solid black;
+  color: white;
+  cursor: pointer;
 }
 
 .nav-bar-profile-icon {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #333333;
-    border-left: 1px solid black;
-    height: 46px;
-    width: 180px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #333333;
+  border-left: 1px solid black;
+  height: 46px;
+  width: 180px;
 }
 
 .nav-bar-profile-icon h2 {
-    font-size: 14px;
-    font-family: 'Roboto', sans-serif;
-    border: 1px solid #00b8e6;
-    padding: 10px;
-    border-radius: 50px;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  border: 1px solid #00b8e6;
+  padding: 10px;
+  border-radius: 50px;
 }
 
 .nav-bar-profile-icon button {
-    width: 70px;
-    height: 30px;
-    background-color: #00b8e6;
-    border: none;
-    border-radius: 5px;
-    color: white;
-} 
-
-.nav-bar-profile-icon button:hover {
-    width: 70px;
-    height: 30px;
-    background-color: #009ec5;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
+  width: 70px;
+  height: 30px;
+  background-color: #00b8e6;
+  border: none;
+  border-radius: 5px;
+  color: white;
 }
 
-
+.nav-bar-profile-icon button:hover {
+  width: 70px;
+  height: 30px;
+  background-color: #009ec5;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}

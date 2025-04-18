@@ -1,75 +1,82 @@
 .music-player-background {
-    position: fixed;
-    bottom: -1px;
-    background-color: #efefef;
-    height: 48px;
-    width: 100%;
-    border-top: 1px solid darkgray;
-    z-index: 999;
+  position: fixed;
+  bottom: -1px;
+  background-color: #efefef;
+  height: 48px;
+  width: 100%;
+  border-top: 1px solid darkgray;
+  z-index: 999;
 }
 
 .player {
-    margin: 0 90px;
-    height: inherit;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  margin: 0 90px;
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .music-player-container {
-    display: flex;
+  display: flex;
 }
 
 input[type="image"] {
-    height: 20px;
-    width: 20px;
+  height: 20px;
+  width: 20px;
 }
 
 #play-button {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 #pause-button {
-    margin-left: 15px;
+  margin-left: 15px;
 }
 
 #progress-bar {
-    margin-left: 40px;
-    width: 400px;
+  margin-left: 40px;
+  width: 400px;
 }
 
 #vol-bar {
-    margin-left: 30px;
+  margin-left: 30px;
 }
 
 .current-track-display {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 250px;
-    height: 45px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 250px;
+  height: 45px;
 }
 
 .current-track-img {
-    height: 40px;
-    width: 40px;
-    background-color: darkgray;;
-    margin-left: 5px;
+  height: 40px;
+  width: 40px;
+  background-color: darkgray;
+  margin-left: 5px;
 }
 
 .current-track-details {
-    margin-left: 20px;
-    color: black;
-    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+  margin-left: 20px;
+  color: black;
+  font-family:
+    Interstate,
+    Lucida Grande,
+    Lucida Sans Unicode,
+    Lucida Sans,
+    Garuda,
+    Verdana,
+    Tahoma,
+    sans-serif;
 }
 
 #song-name {
-    font-size: 16px;
-    margin-bottom: 3px;
+  font-size: 16px;
+  margin-bottom: 3px;
 }
 
 #song-artist {
-    font-size: 12px;
+  font-size: 12px;
 }
-

@@ -29,7 +29,7 @@
                 followingUserIds: [1]
                 likedTracks: [20]
             }
-        }, 
+        },
         tracks: {
             10: {
                 id: 10,
@@ -122,7 +122,7 @@
     ui: {
         loading: true/false,
         currentUser: true/false,
-        currentTrack: id  
+        currentTrack: id
     },
     errors: {
         sessionErrors: ["Incorrect username/password combination", "username cannot be blank"]

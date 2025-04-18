@@ -1,26 +1,25 @@
-import {connect} from 'react-redux';
-import SearchResults from './search_results';
-import { searchTracks } from '../../actions/track_actions';
-
+import { connect } from "react-redux";
+import SearchResults from "./search_results";
+import { searchTracks } from "../../actions/track_actions";
 
 const mapStateToProps = (state) => {
-    let stateTracksArr = Object.values(state.entities.tracks);
+  let stateTracksArr = Object.values(state.entities.tracks);
 
-    stateTracksArr = stateTracksArr.map(obj => {
-        Object.keys(obj).forEach(key => {
-            obj = obj[key]
-        })
-        return obj
-    })
+  stateTracksArr = stateTracksArr.map((obj) => {
+    Object.keys(obj).forEach((key) => {
+      obj = obj[key];
+    });
+    return obj;
+  });
 
-    return {
-        tracks: stateTracksArr,
-        errors: state.errors.track
-    }
-}
+  return {
+    tracks: stateTracksArr,
+    errors: state.errors.track,
+  };
+};
 
-const mapDispatchToProps = dispatch => ({
-    searchTracks: (tracks) => dispatch(searchTracks(tracks))
-})
+const mapDispatchToProps = (dispatch) => ({
+  searchTracks: (tracks) => dispatch(searchTracks(tracks)),
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchResults);

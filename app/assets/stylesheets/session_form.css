@@ -1,120 +1,119 @@
 .session-container {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    height: 570px;
-    width: 400x;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  height: 570px;
+  width: 400x;
 }
 
 .session-form-errors {
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    bottom: 50px;
-    color: #387997;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  bottom: 50px;
+  color: #387997;
 }
 
 .session-form-type {
-    margin: auto;
-    padding-top: 20px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 35px;
-    color: #00b8e6;
+  margin: auto;
+  padding-top: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 35px;
+  color: #00b8e6;
 }
 
 .session-form {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    margin-top: 65px;
-    margin-bottom: 10px;
-    font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 65px;
+  margin-bottom: 10px;
+  font-family: "Roboto", sans-serif;
 }
 
 .session-form label:first-of-type {
-    border-top: 2px solid #ccefff;
-    padding-top: 60px;
+  border-top: 2px solid #ccefff;
+  padding-top: 60px;
 }
 
 .session-form label {
-    padding: 10px 0 10px 0;
-    width: 350px;
+  padding: 10px 0 10px 0;
+  width: 350px;
 }
 
 .session-form label:last-child {
-    padding: 10px;
+  padding: 10px;
 }
 
 .session-label {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .session-label input {
-    border: 2px solid #ccefff;
-    height: 35px;
-    width: 345px;
-    border-radius: 2px;
-    padding-left: 10px;
+  border: 2px solid #ccefff;
+  height: 35px;
+  width: 345px;
+  border-radius: 2px;
+  padding-left: 10px;
 }
 
 input:focus {
-    border: 2px solid #00b8e6;
+  border: 2px solid #00b8e6;
 }
 
 .session-form-btn {
-    height: 40px;
-    margin-top: 20px;
-    background-color: #00b8e6;
-    border-color: #ccefff;
-    font-size: 14px;
-    color: white;
-    font-weight: 200px;
+  height: 40px;
+  margin-top: 20px;
+  background-color: #00b8e6;
+  border-color: #ccefff;
+  font-size: 14px;
+  color: white;
+  font-weight: 200px;
 
-    border-radius: 2px;
-
+  border-radius: 2px;
 }
 
 .session-form-btn:hover {
-    background-color: #549fb8;
+  background-color: #549fb8;
 }
 
 #login-btn {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .switch-form {
-    align-self: center;
-    padding-bottom: 30px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
+  align-self: center;
+  padding-bottom: 30px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
 }
 
 .switch-form button {
-    border: none;
-    text-decoration: underline;
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
+  border: none;
+  text-decoration: underline;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
 }
 
 .switch-form button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 ::-webkit-input-placeholder {
-    /* Chrome/Opera/Safari */
-    color: rgb(95, 93, 93);
+  /* Chrome/Opera/Safari */
+  color: rgb(95, 93, 93);
 }
 
 ::-moz-placeholder {
-    /* Firefox 19+ */
-    color: rgb(95, 93, 93);
+  /* Firefox 19+ */
+  color: rgb(95, 93, 93);
 }
 
 :-ms-input-placeholder {
-    /* IE 10+ */
-    color: rgb(95, 93, 93);
+  /* IE 10+ */
+  color: rgb(95, 93, 93);
 }
 
 :-moz-placeholder {
-    /* Firefox 18- */
-    color: rgb(95, 93, 93);
+  /* Firefox 18- */
+  color: rgb(95, 93, 93);
 }

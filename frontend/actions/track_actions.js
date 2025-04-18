@@ -1,4 +1,4 @@
-import * as trackUtils from '../utils/track_utils';
+import * as trackUtils from "../utils/track_utils";
 
 export const RECEIVE_ALL_TRACKS = "RECEIVE_ALL_TRACKS";
 export const RECEIVE_TRACK = "RECEIVE_TRACK";
@@ -10,83 +10,79 @@ export const EMPTY_TRACKS = "EMPTY_TRACKS";
 export const RECEIVE_SEARCH_TRACKS = "RECEIVE_SEARCH_TRACKS";
 export const RECEIVE_SEARCH_ERRORS = "RECEIVE_SEARCH_ERRORS";
 
-const receiveAllTracks = tracks => ({
-    type: RECEIVE_ALL_TRACKS,
-    tracks
+const receiveAllTracks = (tracks) => ({
+  type: RECEIVE_ALL_TRACKS,
+  tracks,
 });
 
-const receiveArtistTracks = tracks => ({
-    type: RECEIVE_ARTIST_TRACKS,
-    tracks
-})
-
-const receiveTrack = track => ({
-    type: RECEIVE_TRACK,
-    track
+const receiveArtistTracks = (tracks) => ({
+  type: RECEIVE_ARTIST_TRACKS,
+  tracks,
 });
 
-const receiveTrackErrors = errors => ({
-    type: RECEIVE_TRACK_ERRORS,
-    errors
-})
-
-const removeTrack = trackId => ({
-    type: REMOVE_TRACK,
-    trackId
+const receiveTrack = (track) => ({
+  type: RECEIVE_TRACK,
+  track,
 });
 
-const receiveSearchTracks = tracks => ({
-    type: RECEIVE_SEARCH_TRACKS,
-    tracks
-})
+const receiveTrackErrors = (errors) => ({
+  type: RECEIVE_TRACK_ERRORS,
+  errors,
+});
 
-const receiveSearchErrors = errors => ({
-    type: RECEIVE_SEARCH_ERRORS,
-    errors
-})
+const removeTrack = (trackId) => ({
+  type: REMOVE_TRACK,
+  trackId,
+});
+
+const receiveSearchTracks = (tracks) => ({
+  type: RECEIVE_SEARCH_TRACKS,
+  tracks,
+});
+
+const receiveSearchErrors = (errors) => ({
+  type: RECEIVE_SEARCH_ERRORS,
+  errors,
+});
 
 export const removeTrackErrors = () => ({
-    type: REMOVE_TRACK_ERRORS
-})
+  type: REMOVE_TRACK_ERRORS,
+});
 
-//thunk action creators 
-export const fetchTracks = () => dispatch => (
-    trackUtils.fetchTracks()
-        .then((tracks) => {
-            dispatch(receiveAllTracks(tracks))
-        })
-);
+//thunk action creators
+export const fetchTracks = () => (dispatch) =>
+  trackUtils.fetchTracks().then((tracks) => {
+    dispatch(receiveAllTracks(tracks));
+  });
 
-export const fetchArtistTracks = artistId => dispatch => {
-    return trackUtils.fetchArtistTracks(artistId)
-    .then((tracks) => dispatch(receiveArtistTracks(tracks)))
+export const fetchArtistTracks = (artistId) => (dispatch) => {
+  return trackUtils
+    .fetchArtistTracks(artistId)
+    .then((tracks) => dispatch(receiveArtistTracks(tracks)));
 };
 
-export const fetchTrack = trackId => dispatch => (
-    trackUtils.fetchTrack(trackId)
-        .then((track) => dispatch(receiveTrack(track)))
-);
+export const fetchTrack = (trackId) => (dispatch) =>
+  trackUtils.fetchTrack(trackId).then((track) => dispatch(receiveTrack(track)));
 
-export const createTrack = newTrack => dispatch => (
-    trackUtils.createTrack(newTrack)
-        .then((track) => dispatch(receiveTrack(track)),
-            ((err) => dispatch(receiveTrackErrors(err.responseJSON))))
-);
+export const createTrack = (newTrack) => (dispatch) =>
+  trackUtils.createTrack(newTrack).then(
+    (track) => dispatch(receiveTrack(track)),
+    (err) => dispatch(receiveTrackErrors(err.responseJSON)),
+  );
 
-export const updateTrack = trackInfo => dispatch => (
-    trackUtils.updateTrack(trackInfo)
-        .then((trackInfo) => dispatch(receiveTrack(trackInfo)),
-            ((err) => dispatch(receiveTrackErrors(err.responsJSON))))
-);
+export const updateTrack = (trackInfo) => (dispatch) =>
+  trackUtils.updateTrack(trackInfo).then(
+    (trackInfo) => dispatch(receiveTrack(trackInfo)),
+    (err) => dispatch(receiveTrackErrors(err.responsJSON)),
+  );
 
-export const deleteTrack = trackId => dispatch => (
-    trackUtils.deleteTrack(trackId)
-        .then(() => dispatch(removeTrack()))
-);
+export const deleteTrack = (trackId) => (dispatch) =>
+  trackUtils.deleteTrack(trackId).then(() => dispatch(removeTrack()));
 
 //search for track
-export const searchTracks = searchString => dispatch => {
-    trackUtils.searchTracks(searchString)
-        .then((tracks) => dispatch(receiveSearchTracks(tracks)))
-            // ((err) => dispatch(receiveSearchErrors(err.responseJSON))))
-}
+export const searchTracks = (searchString) => (dispatch) => {
+  trackUtils
+    .searchTracks(searchString)
+    .then((tracks) => dispatch(receiveSearchTracks(tracks)));
+  // ((err) => dispatch(receiveSearchErrors(err.responseJSON))))
+};

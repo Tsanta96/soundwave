@@ -1,69 +1,90 @@
 .comment-title h1 {
-    font-size: 30px;
-    font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    color: white;
+  font-size: 30px;
+  font-family:
+    Interstate,
+    Lucida Grande,
+    Lucida Sans Unicode,
+    Lucida Sans,
+    Garuda,
+    Verdana,
+    Tahoma,
+    sans-serif;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: white;
 }
 
 .comments-form {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
-.comments-form textarea{
-    padding-left: 5px;
-    padding-top: 5px;
+.comments-form textarea {
+  padding-left: 5px;
+  padding-top: 5px;
 }
 
 .comments-form textarea:focus {
-    padding-left: 5px;
-    padding-top: 5px;
-    border: 1px solid #00b8e6;
+  padding-left: 5px;
+  padding-top: 5px;
+  border: 1px solid #00b8e6;
 }
 
-
 .comment-button {
-    height: 62px;
-    background-color: #00b8e6;
-    color: white;
-    border-radius: 5px;
-    margin-bottom: 10px;
-
+  height: 62px;
+  background-color: #00b8e6;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .comment-button:hover {
-    height: 62px;
-    background-color: #00a5ce;
-    color: white;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    cursor: pointer;
+  height: 62px;
+  background-color: #00a5ce;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .comments-box {
-    padding-top: 30px;
-    margin-top: 15px;
-    border-top: 2px solid lightgray;
+  padding-top: 30px;
+  margin-top: 15px;
+  border-top: 2px solid lightgray;
 }
 
 .comment-content {
-    width: 500px;
-    border-bottom: 1px solid lightgray;
+  width: 500px;
+  border-bottom: 1px solid lightgray;
 }
-
 
 .comment-content h1 {
-    font-size: 15px;
-    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
-    margin-top: 5px;
-    margin-bottom: 20px;
-    color: white;
+  font-size: 15px;
+  font-family:
+    Interstate,
+    Lucida Grande,
+    Lucida Sans Unicode,
+    Lucida Sans,
+    Garuda,
+    Verdana,
+    Tahoma,
+    sans-serif;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  color: white;
 }
 .comment-content h2 {
-    place-content: end;
-    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
-    font-size: 12px;
-    margin-bottom: 3px;
-    color: darkgray;
-} 
+  place-content: end;
+  font-family:
+    Interstate,
+    Lucida Grande,
+    Lucida Sans Unicode,
+    Lucida Sans,
+    Garuda,
+    Verdana,
+    Tahoma,
+    sans-serif;
+  font-size: 12px;
+  margin-bottom: 3px;
+  color: darkgray;
+}

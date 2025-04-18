@@ -1,20 +1,28 @@
 .search-tracks {
-    margin-bottom: 48px;
+  margin-bottom: 48px;
 }
 
 .search-text {
-    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    color: white;
+  font-family:
+    Interstate,
+    Lucida Grande,
+    Lucida Sans Unicode,
+    Lucida Sans,
+    Garuda,
+    Verdana,
+    Tahoma,
+    sans-serif;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: white;
 }
 
 .default {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .search-string {
-    margin-left: 10px;
-    font-size: 30px;
-    display: inline-block;
+  margin-left: 10px;
+  font-size: 30px;
+  display: inline-block;
 }

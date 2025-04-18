@@ -1,198 +1,226 @@
 .discover-song-container-name {
-    width: 450px;
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: space-between;
+  width: 450px;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
 }
 
 #discover-song-name {
-    font-size: 23px;
-    margin-left: 20px;
-    margin-top: 27px;
-    font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
-    margin-bottom: 10px;
+  font-size: 23px;
+  margin-left: 20px;
+  margin-top: 27px;
+  font-family:
+    Interstate,
+    Lucida Grande,
+    Lucida Sans Unicode,
+    Lucida Sans,
+    Garuda,
+    Verdana,
+    Tahoma,
+    sans-serif;
+  margin-bottom: 10px;
 }
 
 #artist-name {
-    margin-left: 20px;
-    font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+  margin-left: 20px;
+  font-family:
+    Interstate,
+    Lucida Grande,
+    Lucida Sans Unicode,
+    Lucida Sans,
+    Garuda,
+    Verdana,
+    Tahoma,
+    sans-serif;
 }
 
 .discover-comments-likes {
-    display: flex;
-    flex-direction: row;
-    margin-left: 250px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 250px;
 }
 
 .discover-comment {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .discover-comment:hover {
-    margin-top: 20px;
-    cursor: pointer;
+  margin-top: 20px;
+  cursor: pointer;
 }
 
 .discover-like {
-    margin-left: 40px;
-    margin-top: 17px;
+  margin-left: 40px;
+  margin-top: 17px;
 }
 
 .discover-like:hover {
-    margin-left: 40px;
-    margin-top: 17px;
-    cursor: pointer;
+  margin-left: 40px;
+  margin-top: 17px;
+  cursor: pointer;
 }
 
 .discover-like-number {
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 8px;
-    align-self: flex-end;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 8px;
+  align-self: flex-end;
 }
 
 .song-container {
-    display: flex;
-    flex-direction: row;
-    border: 1px solid black;
-    width: 600px;
-    height: 120px;
-    background-image: linear-gradient(#e9e9e9, #71e3ff);
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  width: 600px;
+  height: 120px;
+  background-image: linear-gradient(#e9e9e9, #71e3ff);
 }
 
 .song-container .song-name {
-    padding-left: 10px;
-    padding-top: 10px;
-    font-family: Interstate, Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
-    font-size: 20px;
-    padding-bottom: 5px;
+  padding-left: 10px;
+  padding-top: 10px;
+  font-family:
+    Interstate,
+    Lucida Grande,
+    Lucida Sans Unicode,
+    Lucida Sans,
+    Garuda,
+    Verdana,
+    Tahoma,
+    sans-serif;
+  font-size: 20px;
+  padding-bottom: 5px;
 }
 
 .song-container .artist-name {
-    padding-left: 10px;
-    font-family: Interstate, Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
-    font-size: 15px;
-    padding-bottom: 5px;
+  padding-left: 10px;
+  font-family:
+    Interstate,
+    Lucida Grande,
+    Lucida Sans Unicode,
+    Lucida Sans,
+    Garuda,
+    Verdana,
+    Tahoma,
+    sans-serif;
+  font-size: 15px;
+  padding-bottom: 5px;
 }
 
 .song-container .song-content {
-    position: relative;
+  position: relative;
 }
 
 .song-content .play-button {
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: 20px;
-    bottom: 35px;
-    background-color: rgb(228, 252, 255);
-    border-radius: 30px;
-    padding: 10px;
-    border: 1px solid rgb(27, 125, 182);
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: 20px;
+  bottom: 35px;
+  background-color: rgb(228, 252, 255);
+  border-radius: 30px;
+  padding: 10px;
+  border: 1px solid rgb(27, 125, 182);
 }
 
 .song-content .play-button-active {
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: 20px;
-    bottom: 35px;
-    background-color: rgb(228, 252, 255);
-    border-radius: 30px;
-    padding: 10px;
-    border: 3px solid white;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: 20px;
+  bottom: 35px;
+  background-color: rgb(228, 252, 255);
+  border-radius: 30px;
+  padding: 10px;
+  border: 3px solid white;
 }
 
 .song-content .pause-button {
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: 20px;
-    bottom: 35px;
-    background-color: rgb(228, 252, 255);
-    border-radius: 30px;
-    padding: 10px;
-    border: 1px solid rgb(27, 125, 182);
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: 20px;
+  bottom: 35px;
+  background-color: rgb(228, 252, 255);
+  border-radius: 30px;
+  padding: 10px;
+  border: 1px solid rgb(27, 125, 182);
 }
 
 .song-container-name {
-    width: 450px;
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: space-between;
+  width: 450px;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
 }
 
 .edit-delete {
-    margin-left: 30px;
-    margin-top: 22px;
-    width: 150px;
-
+  margin-left: 30px;
+  margin-top: 22px;
+  width: 150px;
 }
 
 .delete {
-    border: none;
-    width: 50px;
-    height: 20px;
-    background-color: lightblue;
-    border-left: 15px;
-    /* margin-left: 10px; */
+  border: none;
+  width: 50px;
+  height: 20px;
+  background-color: lightblue;
+  border-left: 15px;
+  /* margin-left: 10px; */
 }
 
 .delete:hover {
-    background-color: rgb(52, 126, 151);
-    color: white;
-    cursor: pointer;
+  background-color: rgb(52, 126, 151);
+  color: white;
+  cursor: pointer;
 }
 
 .edit {
-    border: none;
-    width: 50px;
-    height: 20px;
-    background-color: lightblue;
+  border: none;
+  width: 50px;
+  height: 20px;
+  background-color: lightblue;
 }
 
 .bottom-container {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .comments-likes {
-    display: flex;
-    flex-direction: row;
-    margin-left: 60px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 60px;
 }
 
 .comments-likes .comment {
-    font-size: 15px;
-    margin-top: 35px;
+  font-size: 15px;
+  margin-top: 35px;
 }
 
 .comments-likes .comment:hover {
-    font-size: 15px;
-    margin-top: 35px;
-    cursor: pointer
+  font-size: 15px;
+  margin-top: 35px;
+  cursor: pointer;
 }
 
 .comments-likes .like {
-    font-size: 15px;
-    margin-top: 32px;
-    margin-left: 40px;
+  font-size: 15px;
+  margin-top: 32px;
+  margin-left: 40px;
 }
 
 .comments-likes .like:hover {
-    font-size: 15px;
-    margin-top: 32px;
-    margin-left: 40px;
-    cursor: pointer;
+  font-size: 15px;
+  margin-top: 32px;
+  margin-left: 40px;
+  cursor: pointer;
 }
 
 .comments-like-number {
-    margin-left: 8px;
-    margin-bottom: 5px;
-    align-self: flex-end;
-    font-size: 15px;
+  margin-left: 8px;
+  margin-bottom: 5px;
+  align-self: flex-end;
+  font-size: 15px;
 }
-
-
-
