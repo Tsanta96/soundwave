@@ -1,19 +1,19 @@
-import React, { useState } from "react";
-import { withRouter } from "react-router-dom";
+import React, { useState } from 'react';
+import { withRouter } from 'react-router-dom';
 
 const Login = (props) => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
   const changeForm = () => {
     props.removeErrors();
-    props.openModal("signup");
+    props.openModal('signup');
   };
 
   const handleInput = (field) => {
     return (e) => {
-      if (field === "username") setUsername(e.currentTarget.value);
-      if (field === "password") setPassword(e.currentTarget.value);
+      if (field === 'username') setUsername(e.currentTarget.value);
+      if (field === 'password') setPassword(e.currentTarget.value);
     };
   };
 
@@ -26,23 +26,29 @@ const Login = (props) => {
     };
     props
       .login(user)
-      .then(() => props.history.push("/nav/tracks")) // ROUTE TO TRACK INDEX
+      .then(() => props.history.push('/nav/tracks')) // ROUTE TO TRACK INDEX
       .then(props.closeModal);
   };
 
-  const handleDemoSubmit = (e) => {
+  const handleDemoSubmit = async (e) => {
     e.preventDefault();
 
     const demoUser = {
-      username: "teo",
-      password: "password",
+      username: 'demouser',
+      password: 'password',
     };
 
-    props
-      .login(demoUser)
-      .then(() => props.history.push("/nav/tracks"))
-      .then(props.closeModal)
-      .then(setTimeout(props.removeErrors, 1000));
+    try {
+      await props.login(demoUser);
+      props.history.push('/nav/tracks');
+      props.closeModal();
+
+      setTimeout(() => {
+        props.removeErrors();
+      }, 1000);
+    } catch (data) {
+      console.log('data => ', data);
+    }
   };
 
   const renderErrors = () => {
@@ -62,7 +68,7 @@ const Login = (props) => {
             type="text"
             placeholder="Username"
             value={username}
-            onChange={handleInput("username")}
+            onChange={handleInput('username')}
           />
         </label>
         <label className="session-label">
@@ -70,7 +76,7 @@ const Login = (props) => {
             type="password"
             placeholder="Password"
             value={password}
-            onChange={handleInput("password")}
+            onChange={handleInput('password')}
           />
         </label>
         <ul className="session-form-errors">{renderErrors()}</ul>

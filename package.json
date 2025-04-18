@@ -44,5 +44,9 @@
   "bugs": {
     "url": "https://github.com/Tsanta96/soundwave/issues"
   },
-  "homepage": "https://github.com/Tsanta96/soundwave#readme"
+  "homepage": "https://github.com/Tsanta96/soundwave#readme",
+  "prettier": {
+    "semi": true,
+    "singleQuote": true
+  }
 }
