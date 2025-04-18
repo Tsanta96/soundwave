@@ -84,11 +84,13 @@ These additions are:
 
 ## To run project locally
 
-1. `bin/rails db:create`
-2. `bin/rails db:migrate`
-3. `bin/rails db:seed`
-4. `rails s`
-5. Navigate to localhost:3000
+1. Start postgres locally
+2. Create database - `bin/rails db:create`
+3. Migrate database - `bin/rails db:migrate`
+4. Seed database - `bin/rails db:seed`
+5. Run rails server - `rails s`
+6. Run frontend server - `npm run start`
+7. Navigate to localhost:3000
 
 ## Acknowledgments
 
