@@ -26,8 +26,8 @@
     "test": "test"
   },
   "engines": {
-    "node": "10.15.3",
-    "npm": "6.11.3"
+    "node": "18.x",
+    "npm": "9.x"
   },
   "scripts": {
     "postinstall": "webpack",
