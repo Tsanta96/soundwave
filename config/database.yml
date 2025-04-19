@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
-  database: soundwave_production
-  username: soundwave
-  password: <%= ENV['SOUNDWAVE_DATABASE_PASSWORD'] %>
+  # database: soundwave_production
+  # username: soundwave
+  # password: <%= ENV['SOUNDWAVE_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
