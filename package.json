@@ -2,7 +2,7 @@
   "name": "soundwave",
   "private": true,
   "dependencies": {
-    "babel-loader": "^8.0.6",
+    "babel-loader": "^8.4.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-redux": "^7.1.3",
